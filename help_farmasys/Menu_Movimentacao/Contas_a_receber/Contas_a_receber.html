@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas a Receber</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Contas a Receber</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é Contas a Receber?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>A tela de contas a receber de clientes em um sistema de farmácia é como um extrato detalhado de todas as
+                dívidas que os seus clientes possuem com a farmácia.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Filtro
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="filtro.png" class="img-medium" alt="filtro">
+                <p>Esta tela permite que você personalize sua busca por contas a receber de clientes de forma rápida e
+                    eficiente. Utilize os filtros disponíveis para encontrar as informações que você precisa de maneira
+                    precisa.
+
+                    <li>Convênio: Use este campo para selecionar um convênio específico e visualizar apenas as contas
+                        relacionadas a ele.</li>
+
+                    <li>Nome do Cliente: Digite o nome completo ou parte do nome do cliente para filtrar os resultados.
+                    </li>
+
+                    <li>Documentos a vencer nos próximos (X) dias: Defina um período de tempo para visualizar as contas
+                        que vencerão nos próximos dias.</li>
+
+                    <li>Documentos vencidos há mais de (X) dias: Utilize este filtro para encontrar contas que já estão
+                        vencidas há um determinado período.
+
+                    <li>A-Z: Ordenação alfabética crescente pelo nome do cliente.</li>
+                    <li>Z-A: Ordenação alfabética decrescente pelo nome do cliente.</li>
+
+                    <li>Bloqueados: Mostra apenas os clientes com contas bloqueadas.</li>
+                    <li>Liberados: Mostra apenas os clientes com contas liberadas.</li>
+                    <li>Todos: Mostra todos os clientes.</li>
+                    <li>Botão "Pesquisar": Ao clicar neste botão, o sistema irá exibir uma lista com todas as contas a
+                        receber que correspondem aos critérios de filtro selecionados.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Contas a receber
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Esta tela mostra um resumo detalhado de cada conta, mostrando numero de parcelas, data da entrada,
+                    vencimento, valor da conta, valor que foi fechado parcialmente, juro, multa e o total restante para
+                    pagamento.</p>
+                <img src="contas a receber.png" class="img-medium" alt="contas a receber">
+                <p>para dar baixa em uma conta em aberto, selecione e clique<img src="baixar.png" class="img-small"
+                        alt="baixar">sera aberto a tela de baixa.</p>
+                <img src="tela de baixa.png" class="img-medium" alt="tela de baixa">
+                <li>Valor Total: Mostra o valor total das contas selecionadas para pagamento.</li>
+                <li>Conta: Permite selecionar a conta bancária onde o pagamento foi depositado.</li>
+                <li>Recebido em: Data em que o pagamento foi recebido.</li>
+                <li>Valor em Dinheiro, Cheque, Cartão, PIX, Troco: Campos para informar os valores pagos em cada forma
+                    de pagamento.</li>
+                <li>Pagar Todos: Realiza a baixa de todas as contas selecionadas.</li>
+                <li>Repartir Proporcionalmente: Permite dividir o valor pago entre as contas selecionadas de forma
+                    proporcional.</li>
+                <li>Repartir o Pagamento: Permite distribuir o valor pago entre as contas selecionadas de forma
+                    personalizada.</li>
+                <li>Alterar Vencimentos: Permite alterar a data de vencimento das contas.</li>
+                <li>Liberar Descontos: Permite aplicar descontos nas contas.</li>
+                <li>Alterar Juros + Multa: Permite alterar o valor de juros e multa das contas.</li>
+                <li>Confirmar: Confirma as alterações realizadas e realiza a baixa das contas.</li>
+                <li>Desistir: Cancela a operação e volta para a tela anterior.</li>
+
+        </div>
+</body>
+
+</html>

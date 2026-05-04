@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Contas a Pagar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Novo Contas a Pagar</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">Contas a Pagar
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p>Neste tópico, são apresentadas as contas a pagar de fornecedores.
+                Agora, de forma mais dinâmica e consolidada, o novo módulo de contas a pagar oferece gráficos e
+                calendários que facilitam a visualização da previsão de valores a pagar, contas já quitadas e pendências
+                de pagamento.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Funcionamento
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Ao acessar o novo contas a pagar, presente no menu <strong>Movimentação -> a) Contas a pagar -> a)
+                        Contas a pagar</strong>, será processado todo o período de movimentação e ficarão visíveis
+                    apenas os meses que contenham documentos pendentes.</p>
+                <li>Clicando em algum dia do calendário, o sistema mostrará todos os documentos a pagar do dia
+                    selecionado.</li>
+                <li>A baixa de documentos pode ser realizada de duas formas: de maneira individual, para um único
+                    documento, ou em lote, selecionando vários documentos simultaneamente.</li>
+                <li>Após a seleção dos documentos, clique em <strong>Baixa</strong>, localizado no menu superior.</li>
+                <li>Será exibida uma tela contendo a data do pagamento, os juros pagos, descontos recebidos, valor total
+                    pago, formas de pagamento, conta desejada e observação.</li>
+                <p></p>
+                <p></p>
+                <div class="container-cpagar"><img src="gif1.gif"></div>
+                <p><strong>Atenção:</strong> Os valores do documento podem ser alterados, com um duplo clique no ícone
+                    de etiqueta, localizado ao lado do campo <strong>Valor total pago</strong> será habilitada a
+                    alteração.</p>
+                <p></p>
+                <p></p>
+                <li>Para a melhor identificação dos documentos, é possível alterar a forma de agrupamento dos mesmos. No
+                    menu superior, clique no ícone <strong>Agrupar</strong> e selecione o método de agrupamento
+                    desejado.</li>
+                <p></p>
+                <p></p>
+                <div class="container-cpagar"><img src="gif2.gif"></div>
+                <p></p>
+                <p></p>
+            </ul>
+
+            <h3 class="clique hover-title"> <span class="seta seta-direita">+</span>DDA</h3>
+            <ul class="mostra-esconde hidden-text">
+                <h4> O que é o dda ? </h4>
+                <p>O DDA (Débito Direto Autorizado) é uma solução tecnológica desenvolvida para facilitar a gestão de
+                    pagamentos de boletos eletrônicos. Por meio deste sistema, os clientes podem consultar e pagar
+                    boletos diretamente em um ambiente digital, reduzindo a necessidade de impressão de documentos
+                    físicos e contribuindo para a sustentabilidade.</p>
+                <h4> Como funciona ? </h4>
+                <p>O Itaú utiliza o intercâmbio eletrônico de arquivos para o funcionamento do DDA. Esse processo ocorre
+                    através da geração de um arquivo no formato CNAB 240, contendo informações de todos os documentos
+                    selecionados pelo cliente na aba DDA do sistema de Contas a Pagar.</p>
+                <p>1-Abra o sistema de Contas a Pagar e clique no ícone <strong>"DDA"</strong>, localizado no menu
+                    superior.</p>
+                <div class="container-cpagar">
+                    <img src="imagem1.png">
+                </div>
+                <p>2-No canto superior direito, clique no ícone <strong>"Dados Bancários"</strong>.</p>
+                <div class="container-cpagar">
+                    <img src="imagem2.png">
+                </div>
+                <p>3-preencha as informações do cliente e salve as alterações.</p>
+                <div class="container-cpagar">
+                    <img src="imagem3.png">
+                </div>
+                <p>4-Filtre os documentos por data, selecione os documentos a serem pagos e clique em <strong>"Gerar
+                        remessa"</strong></p>
+                <div class="container-cpagar">
+                    <img src="imagem4.png">
+                </div>
+                <p>5-Escolha dois diretórios: um para a remessa e outro para o retorno. Solicite ao cliente que indique
+                    um local adequado para o armazenamento dos arquivos, podendo ser alterado posteriormente</p>
+                <div class="container-cpagar">
+                    <img src="imagem5.png">
+                </div>
+                <p>6-O diretório de remessa será aberto e nele será gerado um arquivo de extensão
+                    <strong>".rem"</strong>.</p>
+                <p>7-Acesse o Internet Banking do Itaú e siga o caminho: Rota > Mais > Transmissão de Arquivos > Remessa
+                    > Enviar. Selecione o serviço <strong>SISPAG</strong>, insira o arquivo .rem criado anteriormente e
+                    faça o envio da remessa.</p>
+                <p>8-Todos os pagamentos enviados em ambiente de produção devem ser autorizados. Para isso, acesse:
+                    Contas a Pagar > Autorizar Pagamentos.</p>
+                <p>9-Todos os pagamentos enviados em ambiente de produção devem ser autorizados. Para isso, acesse:
+                    Contas a Pagar > Autorizar Pagamentos.<strong>Atenção: </strong>o documento de retorno não estará
+                    disponível imediatamente. Ele será disponibilizado a partir de 1 dia útil da efetivação do
+                    pagamento.</p>
+                <p>10-No sistema de Contas a Pagar, clique no ícone "Adicionar Retornos" para processar o arquivo de
+                    retorno. Este processo é importante para efetivar a baixa do documento no sistema.</p>
+                <div class="container-cpagar">
+                    <img src="imagem6.png">
+                </div>
+            </ul>
+        </div>
+</body>
+
+</html>

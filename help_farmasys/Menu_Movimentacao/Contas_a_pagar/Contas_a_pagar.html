@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas a pagar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Contas a pagar</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">Contas a pagar
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+        <p>Neste tópico, são apresentadas as contas a pagar de fornecedores.
+            É possível visualizar boletos em aberto para dar baixa e boletos já pagos que foram baixados.
+            Basta filtrar conforme desejado e clicar em "Pesquisar".</p>
+        
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Filtro</h3>
+                <ul class="mostra-esconde hidden-text">
+            <br>
+            <br>
+            <img src=image1.png>
+            <br>
+            <br>
+            </ul>
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Documentos</h3>
+                <ul class="mostra-esconde hidden-text">
+        <p>Na aba "Documentos", serão apresentadas as contas filtradas. Para baixar uma conta, siga os passos abaixo:
+        </p>
+        <p>1-Selecione a conta desejada.</p>
+        <p>2-Clique em "Baixa". Será aberta a janela de baixa do documento.</p>
+        <p>3-Informe os seguintes dados:</p>
+        <li><strong>Valor Total Pago:</strong> Valor total pago pelo cliente.</li>
+        <li><strong>Desconto Recebido:</strong> Caso haja algum desconto para esse cliente.</li>
+        <li><strong>Juros:</strong>Caso queira cobrar juros pelo atraso.</li>
+        <li><strong>Forma de pagamento:</strong>Informe como o cliente pagou.</li>
+        <p> Ao confirmar, a conta será considerada baixada no filtro e o valor entrará no caixa selecionado.</p>
+      
+            <img src=image2.png>
+        </ul>
+
+    </div>
+</body>
+
+</html>

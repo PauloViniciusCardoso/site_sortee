@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exporta XML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Exporta XML</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é o Exporta XML?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>O FARMASYS possui uma ferramenta para exportar os arquivos XML gerados ou recebidos pela empresa.
+                Para que possa exportar estes arquivos, o usuário devera seguir estes procedimentos.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Exporta XML
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <h5>Procedimentos para exportar os arquivos XML:</h5>
+                <H3><strong>1º passo:</strong></H3>
+                <p>Acesse o menu UTILITARIOS, clique em EXPORTA DADOS, clique em EXPORTAR XML. Irá abrir a seguinte
+                    tela:</p>
+                <p><img src="imagem01.png"></p>
+                <p>Nesta tela o usuário poderá configurar quais os modelos de XML que deseja exportar. Para
+                    selecionar os modelos a serem exportados clique neste ícone <img src="imagem02.png"
+                        class="img-small" alt="Ícone"> e será exibida uma guia para seleção.</p>
+                <img src="imagem03.png" class="img-large">
+                <h5>Explicação dos campos:</h5>
+                <ul>
+                    <li><strong>NF-e recebidas:</strong> São os arquivos XML recebidos do fornecedores podendo ser
+                        compra /transferências.</li>
+                    <li><strong>NF-e emitidas:</strong> São as notas que sua empresa emitiu, por exemplo devolução
+                        para fornecedores.</li>
+                    <li><strong>NF-e canceladas:</strong> São notas que sua empresa emitiu porém foram canceladas no
+                        fisco.</li>
+                    <li><strong>NFC-e emitidas:</strong> São os XML’s referente a cupons de venda.</li>
+                    <li><strong>NFC-e canceladas:</strong> São os XML’s referente cancelamento dos cupons de venda.
+                    </li>
+                    <li><strong>Exibir lista de XML:</strong> Será gerado uma listagem contendo as informações
+                        referente aos XML exportados.</li>
+                    <li><strong>Compactar XML:</strong> Será gerado um arquivo compactado, para que possa enviar por
+                        e-mail.</li>
+                    <li><strong>Enviar e-mail:</strong> Marcando esta opção o sistema irá enviar o arquivo
+                        compactado para o e-mail informado (configuração para envio automático de e-mail no final
+                        deste manual).</li>
+                </ul>
+                <p>Configurando também o período, a pasta que irá salvar os arquivos (clicando no ícone para
+                    selecionar o caminho).</p>
+                <p>No nosso exemplo a pasta foi configurada no diretório de DOCUMENTOS, e criado uma pasta com nome
+                    XML (opcional). Após selecionar o diretório, e os modelos a serem exportados, clique no ícone
+                    PROCESSAR <img src="imagem05.png" class="img-small" alt="Processar">, para que o sistema exporte
+                    os arquivos XML na pasta selecionada.</p>
+                <h5>Procedimentos para configuração do envio de e-mail pelo exporta XML</h5>
+                <p>Clique no ícone <img src="imagem07.png" class="img-small" alt="Configurar"> e será exibida a tela
+                    de configuração, caso não tenha e-mail configurado o sistema exibirá a seguinte mensagem:</p>
+                <p><img src="imagem06.png" class="img-medium" alt="Mensagem"></p>
+                <p>Clique em OK e será direcionado para a tela de configuração do e-mail:</p>
+                <p><img src="imagem08.png" class="img-large" alt="Configuração"></p>
+                <p>Lembrando que os dados configurados nesta tela são referentes ao e-mail interno da drogaria, pois
+                    a partir dele o sistema irá enviar os arquivos para o e-mail de destino anteriormente informado
+                    ao selecionar o campo enviar e-mail.</p>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

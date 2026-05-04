@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação Tributária</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Classificação Tributária</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é classificação tributária?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p>São as alíquotas tributárias que incidem sobre as mercadorias para emissão de documentos de saída (cupom fiscal, nota fiscal eletrônica). Aperte no topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar uma classificação tributária?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p>O cadastro da classificação tributária é efetuado de acordo com a impressora fiscal (ECF).</p>
+        <p>Para cadastrar, é necessário logar no Farmasys com o usuário administrador do sistema. Acesse o menu Utilitários &gt;&gt; Cadastro de Senhas.</p>
+        <img src="adm_01.PNG" alt="Menu Cadastro de Senhas">
+        <p>Clique duas vezes em "Liberar o acesso e classificação tributária dos produtos".</p>
+        <p>Informe uma senha e clique em "Salvar".</p>
+        <img src="adm_02.PNG" alt="Salvar Senha">
+        <p>Informe o código de liberação e clique em "OK". Obs: O código de liberação é DD/MM/AA. Ex: 150914.</p>
+        <img src="adm_03.PNG" alt="Código de Liberação">
+        <p>Confirme a senha e clique em "OK".</p>
+        <img src="adm_04.PNG" alt="Confirmar Senha">
+        <p><strong>OBS.: Esse processo deverá ser executado pelo suporte do sistema.</strong></p>
+        </ul>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Como alterar os dados de uma classificação tributária?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p>Aperte F5, informe a senha, selecione a classificação tributária, faça as alterações e tecle ENTER até a próxima linha.</p>
+        </ul>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>É possível excluir uma classificação tributária?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p>Sim, mas deve-se atentar aos seguintes detalhes:</p>
+        <p>Se existirem produtos vinculados a essa classificação tributária, a exclusão não será permitida.</p>
+        </ul>
+        
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Descrição dos campos:</h3>
+            <ul class="mostra-esconde hidden-text">
+            <img src="cad_clastrib01.PNG" alt="Tela de Cadastro de Classificação Tributária">
+        
+            <li><strong>Código:</strong> Preenchido automaticamente pelo sistema.</li>
+            <li><strong>Descrição:</strong> Informe a descrição da classificação tributária.</li>
+            <li><strong>ECF:</strong> Conforme a posição cadastrada na leitura X.</li>
+            <li><strong>Sub. trib:</strong> Selecione se a classificação for substituição tributária.</li>
+            <li><strong>%ICMS:</strong> Informe a porcentagem de ICMS.</li>
+            <li><strong>A tabela ao lado <strong>ICMS</strong> informa os valores em cada estado.</strong></li>
+        </ul>
+    </div>
+</body>
+
+</html>

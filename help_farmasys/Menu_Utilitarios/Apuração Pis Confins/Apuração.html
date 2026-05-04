@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuração</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Apuração</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">Apuração
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Filtro
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p><img src="aba filtro.png" class="img-medium" alt="aba filtro">
+        <li>Preencher o período desejado com data inicial e final.</li> 
+        <li>Selecionar o enquadramento correto da sua empresa.</li> 
+        <li>Clique  F5 e marque:</li>  
+                "Usar a classificação fiscal que está no cadastro para (SAÍDAS)."</li> 
+        <li>Clicar no botão Apurar para iniciar o processo de apuração.</li>
+        
+        </ul>
+            
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Apuração
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+        <p><img src="tela apuração.png" class="img-medium" alt="Apuração"></p>
+        <li>Neste quadro, são apresentados o código CST de PIS/COFINS e o Código TIPI.
+        <li>São estas informações que devem ser analisadas neste processo.
+        <li>Após a geração da apuração, se este quadro estiver com a informações em vermelho, quer dizer que possui produto classificado erroneamente.</li>
+        <li>Mas atente-se, quando não estiver em vermelho, nem sempre quer dizer 
+            que a apuração está correta. Por isso, sempre utilize a tabela apresentada abaixo, “CST’s Mais usadas”, como auxílio.</li> 
+        </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Classificação CST tabela TIPI
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>CSTs  E TIPIs MAIS USADAS</p>
+                
+                <p>OBS.: CLASSIFICAÇÃO CST 04 E 06 POSSUI OS SEGUINTES 
+                TIPIs</p>
+                
+                <p>CST (COLUNA CST) 04 
+                
+                <li>TIPI (COLUNA CÓDIGO) : 002 113 201 202  406 415 416 420 422 427</li> 
+                
+                <p>CST (COLUNA CST)  06
+                
+                <li>TIPI (COLUNA CÓDIGO) : 102 110 115 119 123 124 125 126 127 128 129 130 301 302 304 306 308 903 914 918</li>
+                
+                
+                <p><strong>OBS.:CLASSIFICAÇÃO CST 01 NUNCA POSSUI TIPI</strong>
+                      AS CSTs 04 E CST 06 DEVEM TER A CLASSIFICAÇÃO DE TIPI, OU SEJA, SE ESTIVER EM BRANCO É NECESSARIO CORRIGIR.</p>
+            </ul>
+            
+                      <h3 class="clique hover-title">
+                        <span class="seta seta-direita">+</span>Correção
+                    </h3>
+                    <ul class="mostra-esconde hidden-text">   
+
+                <p>Neste quadro, buscamos os produtos que estão classificados erroneamente. </p>
+                <img src="procurando erros apuração.png" class="img-medium" alt="erros apuração">
+
+                <p>APÓS CORRIGIR OS ERROS NA APURAÇÃO TEM DE VOLTAR NA ABA FILTRO E FAZER O PROCESSO 
+                NOVAMENTE</p>
+                
+            </ul>
+       
+        </ol>
+
+    </div>
+</body>
+
+</html>

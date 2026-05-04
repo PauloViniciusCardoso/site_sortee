@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda para clientes cadastrados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Venda para clientes cadastrados</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">Venda para clientes cadastrados
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+        <p>Esta funcionalidade apresenta um histórico detalhado de vendas realizadas para clientes previamente
+            cadastrados
+            no sistema, incluindo todas as transações feitas para esses clientes.
+        </p>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Guia Utilização do Filtro</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <li><strong>Seleção do Período:</strong> Informe o período desejado para a busca.
+        <li><strong>Opções de Detalhe:</strong> Se necessário, especifique mais opções para uma busca mais precisa.
+        <li><strong>Processar:</strong> Clique em "Processar" para iniciar a busca.
+            <img src=image1.png>
+            <p>O filtro buscará todas as informações de compras realizadas por clientes cadastrados no período
+                informado. Os
+                resultados serão apresentados na aba "Compras". Ao clicar no símbolo ao lado de cada compra, é possível
+                ver
+                detalhes dos produtos comprados pelo cliente.</p>
+
+            <img src=image2.png>
+
+            <p>Ao clicar em "Análise", serão apresentadas informações detalhadas do cliente selecionado.</p>
+            </ul>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Guia Estatística</h3>
+            <ul class="mostra-esconde hidden-text">
+            
+        <li><strong>Limite de Crédito:</strong>Limite de crédito liberado para o cliente.</li>
+        <li><strong>Saldo Devedor Total:</strong>Valor total que o cliente deve.</li>
+        <li><strong>Saldo Devedor Atrasado:</strong>Contas vencidas.</li>
+        <li><strong>Saldo em Crédito:</strong>Crédito disponível.</li>
+        <li><strong>Dia de Pagamento:</strong>Dia programado para pagamento, se houver.</li>
+        <li><strong>Desconto no Cadastro:</strong>Desconto específico para o cliente.</li>
+        <li><strong>Ticket Médio (90 dias):</strong>Média das vendas em valor para o cliente nos últimos 90 dias.</li>
+        <li><strong>Média de Compra Mensal (90 dias):</strong>Média mensal em valor das compras do cliente nos últimos
+            90
+            dias.
+        </li>
+        <li><strong>Média de Devolução Mensal (90 dias):</strong>Média mensal em valor das vendas devolvidas e
+            canceladas
+            pelo cliente nos últimos 90 dias.
+        </li>
+        <li><strong>Média de Atraso no Pagamento (dias):</strong>Média de dias de atraso no pagamento.</li>
+
+        <p>Ao selecionar um produto, são apresentadas as últimas 50 operações detalhadas daquele produto.</p>
+
+        <img src=image3.png>
+        </ul>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Guias Adicionais</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <li><strong>Compras:</strong>Detalhes das vendas realizadas para o cliente.</li>
+        <li><strong>Cheque:</strong>Histórico de vendas registradas em cheque.</li>
+        <li><strong>Contas a Receber:</strong>Contas abertas e pendentes de pagamento.</li>
+        <li><strong>Cartões:</strong>Informações de vendas realizadas com cartão.</li>
+        <li><strong>LOG's:</strong>Operações realizadas no cadastro do cliente.</li>
+        <li><strong>Créditos:</strong>Histórico de entradas e saídas de crédito.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Desconto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../styles.css">
+    <script src="../../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Tabela de Desconto</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é uma tabela de desconto?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <div id="dynamicContent">
+            <p>É uma tabela criada para cadastrar os descontos que serão aplicados aos produtos no ato da venda, podendo
+                ser
+                classificados por: DEPARTAMENTO, FAMÍLIA, LOCALIZAÇÃO e LABORATÓRIOS.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Procedimento para cadastrar uma tabela de desconto:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p><strong>No sistema:</strong></p>
+
+                <li>Clique no ícone <img src="help_tab_desconto01.png" class="img-small" alt="Ícone de ajuda"> ou
+                    pressione
+                    (F3).</li>
+                <li>Para que o sistema gere um código sequencial (automático), note que campos CÓDIGO e DATA serão
+                    preenchidos automaticamente. As opções Assumir tablóides e Assumir promoções serão marcadas.</li>
+                <li>Você pode, se desejar, informar/digitar o seu código de controle. Caso este código não esteja
+                    utilizado,
+                    o sistema permitirá o cadastro.</li>
+                <li>Informe a porcentagem de desconto a ser aplicada ao produto no ato da venda, de acordo com a forma
+                    escolhida de classificação.</li>
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível alterar uma tabela de desconto?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Sim, selecione a tabela em questão, e informe os dados a serem alterados e tecle ENTER para salvar.
+                </p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível excluir uma tabela de desconto?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Sim, mas deve-se atentar aos seguintes detalhes:</p>
+                <li>Se a tabela estiver vinculada a algum convênio, a exclusão não será permitida.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos da tabela de desconto:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_tab_desconto03.png" alt="Tela de Cadastro de Tabela de Desconto">
+                <li><strong>Código:</strong> Gerado automaticamente pelo sistema, ou pode ser informado manualmente.
+                </li>
+                <li><strong>Data:</strong> Gerado automaticamente pelo sistema quando clicar em novo.</li>
+                <li><strong>Assumir promoções:</strong> Quando selecionado essa opção, se tiver alguma promoção
+                    cadastrada
+                    no produto, o sistema assumirá o valor da promoção em vez do desconto cadastrado na tabela.</li>
+                <li><strong>Assumir tablóides:</strong> Quando selecionado essa opção, se tiver algum tablóide
+                    cadastrado
+                    para o produto, o sistema assumirá o preço do tablóide, em vez do desconto cadastrado na tabela.
+                </li>
+                <li><strong>Permite alterar o desconto na venda:</strong>selecione para permitir informar desconto na
+                    venda.
+                </li>
+                <li><strong>Aceita brindes:</strong>Marque para aceitar brindes.</li>
+                <li><strong>Aceita desconto progressivo:</strong>Marque caso seja permitido desconto progressivo.</li>
+                <li><strong>Assumir desconto do produto:</strong>irá assumir sempre o desconto informado no cadastro do
+                    produto.</li>
+                <li><strong>Aceita trocar preços na pré-venda:</strong>marque se será permitido alterar preços na pré
+                    venda
+                </li>
+                <li><strong>Assumir como acréscimo quando houver desconto negativo:</strong>marque para assumir como
+                    acrescimo um desconto negativo. </li>
+                <li><strong>Calcular o desconto adicional sobre o desconto aplicado:</strong>Marque caso seja permitido
+                    o
+                    desconto adicional sobre o desconto aplicado para o convenio.</li>
+                <li><strong>Descrição:</strong> Informar uma descrição para a tabela de desconto.</li>
+                <li><strong>Desconto classificado por:</strong>
+
+                <li>Selecione a forma que serão classificados os descontos.</li>
+
+                </li>
+
+                <img src="help_tab_desconto04.png" class="img-medium" alt="Exemplo de Desconto Classificado">
+
+                <p>Após selecionar a forma de classificação, informe o percentual de desconto a ser aplicado no ato da
+                    venda.</p>
+                    <li><strong>%Desc:</strong> Aplica o desconto informado em porcentagem sobre o preço de venda.</li>
+                    <li><strong>+%Desc:</strong> Aplica um desconto adicional em porcentagem sobre a porcentagem de desconto já predefinida na venda.</li>
+                <p>Após criar a tabela, retorne ao cadastro do convênio e vincule a tabela da seguinte forma:</p>
+
+                <li>Informe o código da tabela.</li>
+
+                <img src="help_tab_desconto05.png" class="img-medium" alt="Vinculação da Tabela">
+
+                <p>Caso o convênio selecionado possua algum tipo de desconto cadastrado, o sistema informará com a
+                    seguinte
+                    mensagem:</p>
+                <img src="help_tab_desconto06.png" alt="Mensagem de Desconto">
+
+                <p>Clicando em OK será exibida a seguinte mensagem:</p>
+                <img src="help_tab_desconto07.png" alt="Mensagem Final">
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

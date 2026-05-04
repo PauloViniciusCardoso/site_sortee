@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forma de pagamento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Forma de pagamento</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é uma Forma de pagamento?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p>Define as diferentes formas de pagamento que um cliente pode utilizar para adquirir um produto ou serviço.
+            Ela é
+            como um menu de opções que você configura para oferecer aos seus clientes.</p> 
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Para que serve?</h3>
+            <ul class="mostra-esconde hidden-text">
+            
+        <li>Flexibilidade: Permite oferecer diversas opções de pagamento aos clientes, como dinheiro, cartão, cheque,
+            PIX e outras formas mais específicas, como descontos ou convênios.</li>
+        <li>Organização: Ajuda a organizar as diferentes formas de pagamento, facilitando a gestão e o controle das
+            transações.</li>
+        <li>Personalização: Permite personalizar as opções de pagamento de acordo com as necessidades do seu negócio e
+            as preferências dos seus clientes.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Como funciona?</h3>
+            <ul class="mostra-esconde hidden-text">
+            <img src="image1.png" alt="formas de pagamento">
+        <li>Código: Cada forma de pagamento possui um código para identificação.</li>
+        <li>Descrição: Uma breve descrição da forma de pagamento, como "Venda com desconto" ou "Pagamento à prazo".</li>
+        <li>Usar preço: Define como o preço final será calculado, considerando descontos, promoções ou outras regras.
+        </li>
+        <li>Tabela: Indica qual tabela de preços ou descontos será utilizada para aquela forma de pagamento.</li>
+        <li>Ativa: Define se a forma de pagamento está ativa ou não.</li>
+        <li> Dinheiro, Cheque, Cartão, Convênio, Resgate, Pontos, PIX: Indicam se a forma de pagamento aceita cada uma
+            dessas modalidades.</li>
+        </ul>
+      
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Entendendo a opção Usar preço e Tabela</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p><strong>-Usar preço</strong></p>
+        <li>Venda-Desconto: O preço final é o preço de venda menos o desconto cadastrado no produto.</li>
+        <li>Melhor preço: O sistema escolhe o menor preço entre as opções disponíveis (promoção, tabela, etc.).</li>
+        <li>Prazo: O preço final é o preço à prazo cadastrado no produto.</li>
+        <li>Tabela do convênio: Utiliza uma tabela de desconto específica para convênios.</li>
+        <li>Livre: O preço final não é alterado por nenhuma regra.</li>
+        <p><strong>-Tabela</strong></p>
+        <li>Referencia uma tabela de preços ou descontos que será utilizada para calcular o valor final da venda.</li>
+        </ul>
+        
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Exemplo</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p>Imagine que você vai oferecer um desconto de 10% para pagamentos à vista no dinheiro. Você criaria uma forma
+            de pagamento com as seguintes configurações:</p>
+        <p>Código: automatico</p>
+        <p>Descrição: Pagamento à vista no dinheiro</p>
+        <p>Usar preço: Venda-Desconto</p>
+        <p>Tabela: Tabela de desconto de 10%</p>
+        <p>Ativa: Sim</p>
+        <p>Dinheiro: Sim</p>
+        <p>Cheque: Não</p>
+        <p>Cartão: Não</p>
+        <p>...</p>
+        </ul>
+    </div>
+</body>
+
+</html>

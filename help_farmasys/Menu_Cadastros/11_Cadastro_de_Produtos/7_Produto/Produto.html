@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Produto</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é um produto?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p class="justified-text">É toda mercadoria colocada à venda. Aperte no topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Procedimentos para cadastrar um produto:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p class="justified-text"><strong>No Sistema:</strong></p>
+        <p class="justified-text">Clique no ícone <img src="help_produto01.png" class = "img-small" alt="Ícone do Produto"> ou pressione F3 :</p>
+        
+            <li class="justified-text">Para que o sistema gere um código sequencial (automático), clique na lâmpada amarela <img src="help_produto02.png" class = "img-small" alt="Lâmpada Amarela"></li>
+            <li class="justified-text">Você pode, se desejar, informar/digitar o seu código de controle. Caso este código não esteja utilizado, o sistema permitirá o cadastro.</li>
+            <li class="justified-text">Informe todos os campos pertinentes ao produto e tecle F10 para salvar o cadastro.</li>
+        
+        <p class="justified-text"><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+        </ul>
+        
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Como alterar os dados de um produto?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p class="justified-text">Pressione F3 e digite o código do produto já cadastrado. Caso não saiba o código, clique em consulta (F6).</p>
+        <p class="justified-text">A pesquisa poderá ser realizada através da descrição (nome), do código de barras, princípio ativo, registro MS do produto. Encontrado o produto, faça as alterações desejadas e clique em Salvar (F10).</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>É possível excluir os produtos?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p class="justified-text">Sim, mas deve-se atentar aos seguintes detalhes:</p>
+        <p class="justified-text">Se existir movimentação (venda/nota fiscal de saída) vinculada a este produto, a exclusão não será permitida.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Descrição dos campos de cadastro de produto:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto03.png" alt="Tela de Cadastro do Produto">
+
+            <li class="justified-text"><strong>Código:</strong> Gerado automaticamente pelo sistema ou pode ser informado manualmente.</li>
+            <li class="justified-text"><strong>Descrição:</strong> Informe a descrição do produto.
+                <br><strong>***Obs:</strong> Com dois cliques no campo descrição, abre uma tela de busca para medicamentos da ABC Farma, pesquise pelo código de barras e depois clique em copiar dados para tela de cadastro. (Para utilizar esse recurso é necessário que a lista de medicamentos esteja atualizada)</li>
+            <img src="help_produto_basedados.png" alt="Busca de Medicamentos">
+            <li class="justified-text"><strong>Princípio ativo:</strong> Informe o princípio ativo do produto.</li>
+            <li class="justified-text"><strong>Código de barras:</strong> Informe o código de barras do produto.</li>
+            <li class="justified-text"><strong>Registro MS:</strong> Informe o registro MS do produto.</li>
+            <li class="justified-text"><strong>Msg da venda:</strong>Informe uma observação, que irá aparecer na hora da venda.</li>
+            <li class="justified-text"><strong>Obs do pedido:</strong> Informe uma observação, que irá aparecer no pedido.</li>
+            <li class="justified-text"><strong>UN venda inteira:</strong> Informe o formato de unidade em que o produto vai ser vendido. Ex: CX, UN.</li>
+            <li class="justified-text"><strong>Qtde de apresentação:</strong> Informe a quantidade de comprimidos, doses ou ml do produto.
+                <br class="justified-text"><strong>***Obs:</strong> Para produtos com venda pelo farmácia popular é obrigatório o preenchimento desse campo.</li>
+            <li class="justified-text"><strong>Venda em fração:</strong> Caso o produto seja fracionado, informe a quantidade de fração do produto.
+                <br class="justified-text">*** Ex: Anador 500 mg 1 Caixa com 60 unidades. Venda em fração 1/60.</li>
+        </ul>
+           
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba grupos:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto04.png" alt="Aba Grupos">
+        
+            <li class="justified-text"><strong>Laboratório:</strong> Informe o laboratório do produto.</li>
+            <li class="justified-text"><strong>Departamento:</strong> Informe o departamento do produto.</li>
+            <li class="justified-text"><strong>Família:</strong> Informe a família do produto.</li>
+            <li class="justified-text"><strong>Locação:</strong> Informe a locação do produto.</li>
+            <li class="justified-text"><strong>Classif. Tributária:</strong> Informe a alíquota de ICMS, substituição tributária ou isento, conforme o produto é vendido no estado.</li>
+            <li class="justified-text"><strong>Classe fiscal:</strong> Informe a classe fiscal (NCM).</li>
+            <li class="justified-text"><strong>Código DCB:</strong> Informe o código DCB para os produtos controlados.</li>
+            <li class="justified-text"><strong>Destino:</strong> Informe a que se destina o produto.</li>
+            <li class="justified-text"><strong>Origem:</strong> Informe a origem do produto.</li>
+            <li class="justified-text"><strong>Agrup. molécula:</strong> Selecione qual produto será agrupado na molécula.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba valores:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto05.png" alt="Aba Valores">
+      
+            <li class="justified-text"><strong>Custo médio:</strong> Cálculo realizado pelo sistema da seguinte forma, preço da compra dividido pela quantidade de vezes que comprou o produto.</li>
+            <li class="justified-text"><strong>Preço de fábrica:</strong> Informe o preço de fábrica do produto, caso não tenha na nota pode ser colocado preço da primeira nota de entrada.</li>
+            <li class="justified-text"><strong>Preço de venda:</strong> Informe o preço de venda do produto.
+                <br class="justified-text"><strong>*** Obs:</strong> Se o produto for fracionado informe o preço do total e não o da fração.</li>
+            <li class="justified-text"><strong>Preço de promoção:</strong> Informe o preço de promoção do produto.
+                <br class="justified-text"><strong>*** Obs:</strong> Para produtos do farmácia popular, o preço de promoção será o valor pago pelo governo, caso o produto seja pago parcialmente deixe o valor integral.</li>
+            <li class="justified-text"><strong>Desconto:</strong> Informe o desconto em porcentagem do produto.</li>
+            <li class="justified-text"><strong>M.V.A:</strong> Informe a margem de valor agregado para produtos liberados, quando o produto for monitorado o preço o M.V.A. será de acordo com a lista PNN (positivos, negativo e neutros).</li>
+            <li class="justified-text"><strong>Lista PNN:</strong> Informe em que classificação da lista PNN o produto se encontra.</li>
+            <li class="justified-text"><strong>Estoque mínimo:</strong> Informe estoque mínimo desse produto, utilizado em pedidos de compra.</li>
+            <li class="justified-text"><strong>Estoque múltiplo:</strong> Caso o fornecedor venda o produto apenas em quantidade fixa, defina essa quantidade em estoque múltiplo.
+                <br class="justified-text">*** Ex: O produto é vendido em quantidades de 10 unidade, no pedido eletrônico ele irá arredondar para múltiplos de 10.</li>
+            <li class="justified-text"><strong>Lote econômico:</strong> Usado para produtos que na compra de uma quantidade maior tenha descontos.
+                <br class="justified-text">*** Ex: Na compra de um produto o preço sai a 2 reais, na compra de 10 produtos cada um sai a 1 real.</li>
+            <li class="justified-text"><strong>Tabloide:</strong> Exibe informações sobre esse produto quando ele está cadastrado em algum tabloide ativo.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba Barras:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto06.png" alt="Aba Cod_barras">
+        <p class="justified-text">Informe quando o produto possuir mais de um código de barras.</p>
+        <p class="justified-text">Ex.: Na caixa do produto veio um código de barras, porém no seu cadastro ele está com outro.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba Pis/Cofins:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto07.png" alt="Aba Pis/Cofins">
+        
+            <li class="justified-text"><strong>Cst Pis/Cofins:</strong> Informe o código de situação tributária referente ao pis e cofins.</li>
+            <li class="justified-text"><strong>%PIS:</strong> Informe a porcentagem de pis referente ao CST informado.</li>
+            <li class="justified-text"><strong>%CONFINS:</strong> Informe a porcentagem de cofins referente ao CST informado.</li>
+            <li class="justified-text"><strong>Médio de imposto:</strong> Informe o percentual médio de imposto de cada produto (Referência o NCM).</li>
+            <li class="justified-text"><strong>Consulta produto na base do SORTEE:</strong> Ferramenta da SORTEE que calcula os impostos de Pis/Cofins e atualiza a classe fiscal e o NCM de cada produto.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba Ofertas/trocas:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto08.png" alt="Aba Ofertas/trocas">
+        <h5>Cadastrar Ofertas/Brindes/Trocas</h5>
+      
+        <img src="help_produto_brinde.png" alt="Cadastro de Brindes">
+        
+        
+        <h5>Ofertas:</h5> 
+        <p class="justified-text">Usado para ofertar um produto mais barato, ou para agregar mais produtos na venda.
+            <br>*** Ex: Na compra de 1 pacote de fralda, ofereça um lenço umedecido.</p>
+        <p class="justified-text">Para cadastrar clique no botão Cadastrar ofertas/trocas/brindes.</p>
+        
+        
+            <li class="justified-text"><strong>Código:</strong> Informe o código do produto (ou F6 consulta) do produto a ser ofertado.</li>
+            <li class="justified-text"><strong>Descrição:</strong> Descrição do produto a ser ofertado.</li>
+            <li class="justified-text"><strong>Quantidade:</strong> Informe a quantidade a ser ofertada.</li>
+            <li class="justified-text"><strong>Função:</strong> Informe nesse campo oferta.</li>
+       
+
+        <h5>Troca:</h5>
+        <p class="justified-text">Usado para trocar um produto quando não se tem em estoque, para oferecer um produto com pouco giro de estoque ou perto do vencimento.
+            <br class="justified-text">*** Ex: Troca de uma fralda da turma da Mônica, por uma similar que está perto de vencer.</p>
+        <p class="justified-text">Para cadastrar clique no botão Cadastrar ofertas/trocas/brindes.</p>
+        
+        
+            <li class="justified-text"><strong>Código:</strong> Informe o código do produto (ou F6 consulta) do produto a ser trocado.</li>
+            <li class="justified-text"><strong>Descrição:</strong> Descrição do produto a ser trocado.</li>
+            <li class="justified-text"><strong>Quantidade:</strong> Informe a quantidade a ser trocado.</li>
+            <li class="justified-text"><strong>Função:</strong> Informe nesse campo troca.</li>
+       
+
+        <h5>Brinde:</h5>
+        <p class="justified-text">Usado para dar um brinde ao cliente.
+            <br class="justified-text">*** Ex: Na compra de 3 pacotes de fralda, o terceiro sai de graça.</p>
+        <p class="justified-text">Para cadastrar clique no botão Cadastrar ofertas/trocas/brindes.</p>
+        
+            <li class="justified-text"><strong>Código:</strong> Informe o código do produto ou F6 para consultar o produto a ser ofertado.</li>
+            <li class="justified-text"><strong>Descrição:</strong> Descrição do produto a ser ofertado.</li>
+            <li class="justified-text"><strong>Quantidade:</strong> Informe a quantidade a ser ofertada.</li>
+            <li class="justified-text"><strong>Função:</strong> Informe nesse campo brinde.</li>
+            <li class="justified-text"><strong>Quantas unidades vendidas:</strong> Na compra de quantos produtos para ganhar o brinde.</li>
+            <li class="justified-text"><strong>Valor da venda:</strong> Informe o valor que vai custar o brinde. Obs: O valor do brinde não pode ser zerado, informe pelo menos 0,01 centavos.</li>
+            <li class="justified-text"><strong>Múltiplo:</strong> Quando selecionada essa opção o sistema multiplica os brindes.
+                <br class="justified-text">*** Ex: Na compra de 3 unidades o cliente leva mais 1, na compra de 6 unidades o cliente leva mais 2.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba Classificação:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto09.png" alt="Aba Classificação">
+        
+            <li class="justified-text"><strong>Ativo:</strong> Informe se o produto está ativo.</li>
+            <li class="justified-text"><strong>R$ monitorado:</strong> Informe se o produto tem o preço monitorado pelo governo.</li>
+            <li class="justified-text"><strong>Atualiza preço:</strong> Informe se o produto vai aparecer na lista para atualizar o preço. Desde que tenha um código de barras válido.</li>
+            <li class="justified-text"><strong>Gratuidade no farmácia popular:</strong> Informe se o produto é vendido pelo farmácia popular.</li>
+            <li class="justified-text"><strong>Compõe pedido de compra:</strong> Informe se esse produto vai entrar em pedidos de compras.</li>
+            <li class="justified-text"><strong>PBM:</strong> Informe se o produto pertence a algum PBM.</li>
+            <li class="justified-text"><strong>Uso contínuo:</strong> Informe se o medicamento é de uso contínuo.</li>
+            <li class="justified-text"><strong>Exige CRM:</strong> Informe se o produto vai exigir CRM na hora da venda.</li>
+            <li class="justified-text"><strong>Genérico:</strong> Informe se o medicamento é genérico.</li>
+            <li class="justified-text"><strong>SNGPC:</strong> Informe se o produto é antibiótico ou psicotrópico.</li>
+            <li class="justified-text"><strong>Exportar para close-up:</strong> Informe se o produto vai exportar dados para close-up.</li>
+            <li class="justified-text"><strong>Exige informar a duração do tratamento na venda:</strong> Selecione se o produto exige a quantidade e dias de tratamento.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Aba Curva ABC:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto10.png" alt="Aba Curva ABC">
+        <p>Mostra a classificação do produto na curva ABC analisando o físico, financeiro e a lucratividade.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Fundo P:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto11.png" alt="Fundo P">
+        <p class="justified-text">O fundo de pobreza é um tributo adicional, similar a um imposto, que é cobrado sobre a comercialização de certos produtos ou serviços. Esse valor arrecadado é utilizado pelo governo para financiar programas e iniciativas que visam a redução da pobreza e a melhoria das condições de vida das populações mais vulneráveis.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Comissão:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_produto12.png" alt="Comissão">
+        <p class="justified-text">Limites de Comissão</p>
+        <li class="justified-text">% Comissão: Percentual de comissão que será aplicada.</li>  
+        <li class="justified-text">Até: Valor limite até o qual o percentual de comissão será válido.</li>   
+        <li class="justified-text">% Desconto: Percentual de desconto aplicado.</li>    
+        <li class="justified-text">Comissão por Unidade Vendida: que especifica o valor da comissão paga por cada unidade do produto vendida. Este valor está atualmente configurado como 0.00 R$, indicando que, no momento, não há comissão definida por unidade.</li>    
+        <p class="justified-text">Pontuação:</p>   
+        <li class="justified-text">Acumula: Pontos acumulados por unidade vendida.</li>   
+        <li class="justified-text">Vale: Pontos necessários para resgate na venda.</li> 
+        <li class="justified-text">Valor de venda no resgate: Valor monetário correspondente ao resgate dos pontos.</li> 
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Desconto:</h3>
+            <ul class="mostra-esconde hidden-text">
+            
+        <img src="desconto.png" alt="desconto"> 
+        <p class="justified-text">A tabela de desconto progressivo permite ao administrador do sistema configurar descontos escalonados baseados em quantidades compradas. As opções incluem:</p>
+            <li class="justified-text">Definir um percentual de desconto.</li>
+            <li class="justified-text">Aplicar um desconto adicional.</li>
+            <li class="justified-text">Estabelecer um preço unitário fixo após o desconto.</li>
+        <p class="justified-text">Além disso, as datas de início e validade garantem que os descontos sejam aplicados somente durante o período desejado. Isso facilita a criação de promoções e incentivos de compra para clientes que adquirirem grandes quantidades de um produto específico.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>UN C:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="UNC.png" alt="UN C">
+        <p class="justified-text">A aba UN C é essencial para garantir a conformidade legal e facilitar a clareza das informações apresentadas ao consumidor nas etiquetas de preços. Ao definir corretamente os fatores de conversão e as unidades de medida, o sistema assegura que os preços e as quantidades exibidas nas gôndolas sejam precisas e fáceis de entender.</p>
+        </ul>
+        
+    </div>
+</body>
+
+</html>

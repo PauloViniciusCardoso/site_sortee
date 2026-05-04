@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Vendas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Consulta Vendas</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é a consulta de vendas?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>Neste tópico, você poderá consultar as vendas realizadas e realizar devoluçoes caso seja preciso. Aperte
+                no topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Filtro
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>Informe no filtro a data desejada. Caso seja um cupom específico, você pode simplificar a pesquisa
+                    informando o número do cupom.
+                    Após configurar o filtro, clique em <strong>Consulta</strong> para abrir as vendas filtradas na aba
+                    <strong>Vendas</strong>.
+                </p>
+                <img src=image1.png>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Vendas
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src=image2.png>
+                <p>Na tela de Vendas, serão apresentadas todas as operações relacionadas a vendas, tanto as realizadas
+                    quanto as
+                    que foram canceladas ou devolvidas. As operações destacadas por cores podem ser identificadas pela
+                    legenda
+                    apresentada na tela de filtro. <strong>REFERÊNCIA DE CORES</strong>
+                </p>
+
+
+
+                <p>Caso queira consultar as informações dessa venda basta selecionar e apertar a tecla enter no seu
+                    teclado,
+                    será apresentado os dados do cliente dessa venda, o atendente que realizou, e informações do produto
+                    como
+                    quantidade e valor da venda</p>
+                <img src=image3.png>
+                <li><strong>Devolução:</strong> vinculada a essa venda.</li>
+                <li><strong>SAT/NFCe:</strong> é possível visualizar chave de acesso gerada.</li>
+                <li><strong>LOGs:</strong> é apresentada todas as operações feitas nessa venda.</li>
+                <li><strong>Crédito:</strong> apresenta créditos e débitos gerados na venda.</li>
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Criar Devolução
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p><strong>Esse processo deve ser realizado quando uma venda não pode ser cancelada no emissor devido ao
+                        tempo de 30 minutos após a efetivação ter sido excedido.</strong></p>
+
+                <p>Para a emissão da NF-e de devolução, é necessário ter o CPF válido do destinatário. Por isso, é
+                    recomendado que sempre
+                    sejam cadastradas as informações do comprador.</p>
+                <p>Caso a venda à vista tenha sido feita para um consumidor padrão, terá realizar o cadastro desse
+                    cliente e alterar a venda já realizada. Siga os passos abaixo:</p>
+
+                <p><strong>Cadastrar o Cliente:</strong></p>
+                <li>Realize o cadastro do cliente no sistema, incluindo todas as informações necessárias.</li>
+                <p><strong>Alterar a Venda:</strong></p>
+                <img width="512" height="298" src=image4.png>
+                <li>Selecione a venda que deseja alterar.</li>
+                <li>Clique em <strong>Alterar</strong>.</li>
+                <li>Na tela que abrir, pressione "F9" no teclado.</li>
+                <li>Procure o cliente que foi cadastrado anteriormente para a devolução.</li>
+                <li>Confirme a alteração.</li>
+
+
+
+                <p>Selecione a venda e clique em <strong>Criar Devolução</strong>. Será aberta uma tela apresentando os
+                    produtos da venda.
+                    Na coluna <strong>Qtde Dev</strong>, informe a quantidade que foi devolvida pelo cliente. Caso tenha
+                    devolvido apenas um produto, selecione o produto e clique na tesoura para eliminar o produto da
+                    devolução dos demais produtos.
+                    Informe o lote do produto. Caso não tenha, preencha com uma numeração aleatória.
+                </p>
+                <img width="698" height="488" src=image5.png>
+
+
+                <p>Após confirmar, será aberta uma tela para informar o valor devolvido:
+                    Para vendas à vista, informe na opção <strong>Dinheiro</strong>.
+                    Para vendas de convênio, selecione a conta do convênio.
+                    Na opção <strong>Máquina</strong>, informe se o valor da devolução será abatido de algum caixa. Caso
+                    afirmativo, informe o número da máquina do caixa. Caso contrário, deixe em branco.
+                    Confirme as informações.</p>
+                <img width="548" height="351" src=image6.png>
+
+
+                <p>A nota fiscal será gerada. Clique em <strong>OK</strong> e, na tela que aparece, clique em
+                    <strong>Sim</strong>.
+                </p>
+                <img src=image7.png class="img-medium">
+
+
+                <p>Em casos de devolução de venda, o campo transportadora pode ficar em branco ou conter o nome da
+                    farmácia.
+                    Clique em <strong>Confirmar</strong> para continuar.</p>
+                <img width="567" height="488" src=image8.png>
+
+
+                <p>Caso apareçam avisos, como o da cidade apresentada abaixo, ou algum outro, a mensagem indicará o
+                    problema
+                    no cadastro do cliente. Nesse caso, saia da tela de consulta e vá até o cadastro do cliente em
+                    questão
+                    para corrigir o problema.</p>
+                <img src=image9.png class="img-medium">
+
+
+                <p>Após corrigir, volte à consulta e consulte novamente pelo período em que foi feita a devolução. A
+                    devolução aparecerá em verde, indicando que ainda não foi finalizada. Para finalizar, vá em
+                    <strong>NFe</strong>.
+                </p>
+                <img width="333" height="151" src=image10.png>
+
+
+
+                <p>Será aberto o emissor de NF-e. Selecione a nota e clique em <strong>Emitir NFe</strong>. Clique em
+                    <strong>Sim</strong> na mensagem que aparecer. Caso apareça a tela de certificado digital, confira
+                    se
+                    está correto e clique em <strong>OK</strong>. Se surgir uma mensagem pedindo para confirmar a
+                    inscrição
+                    estadual, verifique se o cliente possui CNPJ. Caso seja CPF, clique em <strong>Não</strong>.
+                </p>
+                <img width="333" height="151" src=image11.png>
+
+
+                <p>A nota será emitida. Confira se o status está como <strong>Autorizada</strong>. Caso seja
+                    <strong>Rejeitada</strong>, verifique o motivo apresentado logo abaixo. Se necessário, entre em
+                    contato
+                    com o suporte para assistência na resolução do problema.
+                </p>
+                <img width="333" height="151" src=image12.png>
+            </ul>
+
+
+        </div>
+</body>
+
+</html>

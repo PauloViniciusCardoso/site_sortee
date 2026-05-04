@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Convênio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Cadastro de Convênio</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+            
+            <H3 class="header-title">O que é um Convênio?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>É um acordo firmado entre a loja e uma determinada empresa ou instituição, no intuito de conceder
+                condições especiais nas vendas para os colaboradores cadastrados nesse convênio. Aperte no topico
+                que
+                deseja para conhecer a funcionalidade de cada opção.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar um Convênio?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <strong>No sistema:</strong>
+
+                <li>Clique no ícone <img src="help_convenio01.png" class="img-small"> ou pressione F3.</li>
+                <li>Para que o sistema gere um código sequencial (automático), clique na lâmpada amarela <img
+                        src="help_convenio02.png" class="img-small">.</li>
+                <li>Você pode, se desejar, informar/digitar o seu código de controle. Caso este código não esteja
+                    utilizado, o sistema permitirá o cadastro.</li>
+                <li>Informe todos os campos pertinentes ao convênio e tecle F10 para salvar o cadastro.</li>
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo, estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Como alterar os dados de um Convênio?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Pressione F3 e digite o código do convênio já cadastrado. Caso não saiba o código, clique em
+                    consulta (F6) e consulte pelo nome.</li>
+                <li>Encontrado o convênio, faça as alterações desejadas e clique em Salvar (F10).</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível excluir o convênio?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Sim, mas deve-se atentar aos seguintes detalhes:</li>
+                <li>Se existirem clientes cadastrados, ou movimentação (venda/nota fiscal de saída) vinculada a este
+                    convênio, a exclusão não será permitida.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos do Convênio:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_convenio04.png" alt="Tela de Cadastro de Convênio">
+                <li><strong>Nome:</strong> Informe a Razão Social do convênio.</li>
+                <li><strong>CEP:</strong> Digite o CEP, e o sistema pesquisará na base de dados da Sortee. Caso
+                    retorne
+                    que não encontrou os dados de endereço, digite esses dados da seguinte forma: <br>
+                    <strong>***RUA, NÚMERO (respeitando o espaço após a vírgula), se não tiver número coloque 0 ou
+                        então
+                        deixe sem nada, não colocar letras após a vírgula, pois em caso de emissão de Nota Fiscal
+                        Eletrônica dá erro.</strong>
+                </li>
+                <li><strong>Bairro:</strong> Informe o bairro.</li>
+                <li><strong>Cidade:</strong> Informe a cidade.</li>
+                <li><strong>UF:</strong> Informe o estado.</li>
+                <li><strong>Contato:</strong> Informe o nome do contato na empresa.</li>
+                <li><strong>CNPJ:</strong> Informe o CNPJ.</li>
+                <li><strong>Insc. Estadual:</strong> Informe a inscrição estadual.</li>
+                <li><strong>E-mail:</strong> Informe um e-mail para contato.</li>
+                <li><strong>OBS.:</strong> Esta observação será exibida no momento da venda, quando um cliente
+                    cadastrado neste convênio for selecionado.</li>
+                <li><strong>mensagem no relatório gerencial:</strong></li>
+                <li><strong>Telefone:</strong> Informe o telefone para contato com o convênio. (Se tiver mais de um
+                    telefone, digite na próxima linha).</li>
+                <li><strong>Liberado:</strong> Marque a opção se o convênio está liberado para venda.</li>
+                <li><strong>Pede Receita:</strong> Marque a opção se o convênio exigir a informação da receita no
+                    ato da
+                    venda.</li>
+                <li><strong>Permite cadastrar clientes pelo emissor:</strong>é possivel informar o convenio no
+                    cadastro
+                    do cliente diretamente pelo emissor.</li>
+                <li><strong>Acumular pontos:</strong>caso deseje acumular pontos para esse convenio informe o numero
+                    1
+                    caso nao deseje a opçao informe o 0.</li>
+                <li><strong>Cobra taxa de entrega:</strong>Informe se será cobrado taxa de entrega para esse
+                    convênio.
+                </li>
+                <li><strong>Oferecer sempre o preço a prazo:</strong> Marque a opção se para esse convenio for
+                    permitido
+                    a venda a prazo (parcelado).</li>
+                <li><strong>Usar I.Est. na nota de saida:</strong>quando for emitir alguma nota para este convênio
+                    será
+                    informado a Iscrição Estadual.</li>
+                <li><strong>Formas de pagamento:</strong> Marque quais são as formas de pagamento disponíveis para
+                    esse
+                    convênio:<br>
+                    <img src="help_convenio07.png" class="img-medium" alt="Formas de pagamento">
+                </li>
+                <li><strong>Limite de crédito:</strong> Informe se esse convênio terá algum limite para compras.<br>
+                    Este limite é controlado pela compra de todos os clientes/colaboradores deste convênio.</li>
+
+
+                <p>Observação importante: É possível informar o limite de crédito de todos os clientes (de uma só
+                    vez)
+                    deste convênio da seguinte forma:</p>
+
+                <li>Digite o limite a ser cadastrado nos clientes.</li>
+                <li>Clique com o botão direito do mouse sobre o campo limite de crédito. Será exibida a seguinte
+                    mensagem:<br>
+                    <img src="help_convenio06.png" class="img-medium" alt="Mensagem de Limite de Crédito">
+                </li>
+
+
+
+                <li><strong>Dia de fechamento:</strong> Define o dia de vencimento das vendas a prazo:<br>
+                    Exemplo: Se eu informar dia 30, então tudo o que foi vendido no período do dia 01 até o dia 29
+                    entrará com o vencimento no dia 30 do mês corrente. O que for vendido após o dia 29, entrará no
+                    próximo mês.</li>
+                <li><strong>Desconto:</strong> Se terá algum desconto GERAL nas vendas.<br>
+                    <strong>(Lembrando que, se tiver cadastrado algum desconto para o cliente, ou então, alguma
+                        tabela
+                        de descontos, o sistema calculará desconto sobre desconto).</strong>
+                </li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Tabelas do convênio
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Informação opcional. O convênio não é obrigado a ter uma tabela de desconto ou bloqueio.</p>
+
+
+                <li><strong>Tabela de desconto:</strong><br>
+                    Tabela criada com descontos especiais (por departamento, família, etc...).<br>
+                    No momento da venda, ao selecionar um cliente deste convênio, os produtos receberão o desconto
+                    cadastrado na tabela.</li>
+                <li><strong>Tabela de bloqueio:</strong><br>
+                    Tabela criada para bloquear a venda de determinados produtos (por departamento, família,
+                    etc...).<br>
+                    Exemplo: O convênio contrata apenas a venda de medicamentos e veda a venda de perfumaria. Sendo
+                    assim, eu crio uma tabela de bloqueio com perfumaria para este convênio.</li>
+
+                <strong>Para cadastrar estas tabelas, acesse o menu cadastro / convênio / tabelas de desconto ou
+                    bloqueio.</strong>
+            </ul>
+
+        </div>
+</body>
+
+</html>

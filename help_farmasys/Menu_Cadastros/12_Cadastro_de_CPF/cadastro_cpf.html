@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPF/CNPJ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>CPF/CNPJ</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que são CPF/CNPJ?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p>São numeros identificadores de pessoas fisicas ou jurídicas perante a receita.</p>
+            
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar um CPF/CNPJ?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li><strong>No sistema:</strong></li>
+                <li>No menu utilitários, clique em parâmentros, na guia vendas informe se pesquisa CPF quando lança
+                    cheque.</li>
+                <li>Retorne ao cadastro do CPF/CNPJ.</li>
+                <li>Informe o CPF ou CNPJ, se estará bloqueado e alguma mensagem para aparacer no ato da venda e tecle
+                    ENTER até a proxíma linha para salvar.</li>
+                <li>OBS.: as informações sobre cada campo, estão no final da página.</li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Como alterar os dados do CPF/CNPJ?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Selecione o CPF/CNPJ, faça as alterações e tecle ENTER até a proxíma linha para salvar.
+                </li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>É possível excluir CPF/CNPJ?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Sim, selecione o CPF/CNPJ e clique no botão excluir CPF/CNPJ.</li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Tela de cadastro de CPF/CNPJ:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p></p>
+                <div class="container-gif"><img src="help_cpf.png"></div>
+                <p></p>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Descrição dos campos:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li><strong>Numero:</strong> Digite o numero do CPF/CNPJ.</li>
+                <li><strong>Bloq:</strong> Informe se deseja bloquear vendas para esse CPF/CNPJ.</li>
+                <li><strong>Mensagem:</strong> Informe alguma mensagem que irá aparecer no ato da venda. *** Ex:
+                    "Consulte esse CNPJ".</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

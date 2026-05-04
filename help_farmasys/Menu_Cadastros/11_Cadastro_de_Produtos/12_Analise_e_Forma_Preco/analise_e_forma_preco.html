@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise Forma Preço</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Análise Forma Preço</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é análise e formação de preço?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p class="justified-text">É uma forma de verificar se o preço da empresa está competitivo com o mercado sem levar prejuízo.</p>
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Passo a passo para utilizar o Analise forma preço:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Passo 1:
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p class="justified-text">O filtro é composto por diversos critérios que permitem selecionar produtos de acordo com características específicas, como grupo de departamentos, família, laboratório, entre outros. Ao aplicar os filtros, o sistema exibirá apenas os produtos que atendem aos critérios selecionados.</p>
+                    <img src="help_analiseformapreco01.png" alt="Filtro de análise e formação de preço">
+                    
+                    <p class="justified-text">Como Utilizar o Filtro:</p>
+                    <li class="justified-text"><strong>Selecione os critérios:</strong>Marque as opções desejadas em cada campo do filtro.</li> 
+                    <li class="justified-text"><strong>Clique em "Pesquisar":</strong> Após definir todos os critérios, clique no botão "Pesquisar" para exibir os produtos que atendem aos filtros.</li>
+                    
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Passo 2:
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    
+                    <p class="justified-text">A aba "Produtos" apresenta uma lista filtrada de produtos, exibindo informações relevantes para a análise de preços e gestão de estoque. Através dessa aba, é possível visualizar as características de cada produto, como código, descrição, laboratório, preços, margens e outras métricas importantes para a tomada de decisão.</p>
+                    <img src="help_analiseformapreco05.png" alt="Produtos">
+                    <li class="justified-text">As colunas "Sobra" e "Perda" são cruciais para a análise de rentabilidade e precificação dos produtos.</li>
+                    <li class="justified-text">Elas indicam se o preço de venda final está gerando um lucro (sobra) ou um prejuízo (perda) em relação aos valores praticados.</li>   
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Passo 3:
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p class="justified-text">A aba "Dados" é uma ferramenta para a gestão de preços e produtos. Ela apresenta fucionalidades para analise e precificação de produtos em massa.</p>
+                    <img src="help_analiseformapreco005.png" alt="Dados">
+                    <li class="justified-text" >O custo operacional, referente às despesas gerais da farmácia e fornecido pela contabilidade, pode ser adicionado aos produtos como uma porcentagem. É fundamental analisar os valores de mercado para garantir a viabilidade desse ajuste.</li>
+                    <li class="justified-text">Basta informar o percentual desejado no campo "Custo operacional" e verificar se as opções presentes em (analisar desconto, analisar custo e analisar sobre o valor de) estão marcadas da forma que deseja vizualizar, clique em "Analisar". Na tela de produtos, será possível identificar quais itens estão gerando prejuízo com o custo operacional atual e avaliar a necessidade de ajustar o preço de venda."</li>
+                    <img src="help_analiseformapreco08.png" class="img-medium" alt="Custo operacional">
+                    <p class="justified-text">Produtos monitorados não podem ultrapassar o PMC, então é viável ajustar a sobra dos produtos que
+                        são liberados, na aba dados opção liberado é possível informar uma porcentagem de sobra que
+                        deseja fixar em cima de produtos liberados.</p>
+                    <img src="help_analiseformapreco09.png" class="img-medium" alt="liberado">
+                    <p class="justified-text">É possível definir uma margem de lucro mínima desejada sobre o custo de cada produto, mesmo após
+                        aplicar descontos. Ao informar a porcentagem de lucro desejada na opção 'desconto', o sistema
+                        calculará automaticamente o valor máximo de desconto que pode ser concedido sem comprometer essa
+                        margem.</p>
+                    <img src="help_analiseformapreco10.png" class="img-medium" alt="desconto">
+                    <p class="justified-text">Após analisar os dados e definir os novos preços e descontos, é necessário atualizar o cadastro
+                        de cada produto. Para isso, utilize as opções disponíveis em 'atualizar cadastro do produto'.
+                    </p>
+                    <img src="help_analiseformapreco11.png" class="img-medium" alt="atualizar cadastro">
+
+                    </ul>
+
+                    <h3 class="clique hover-title">
+                        <span class="seta seta-direita">+</span>Outras opções:
+                    </h3>
+                    <ul class="mostra-esconde hidden-text"> 
+                    <img src="help_analiseformapreco15.png" class="img-medium" alt="outras opções">
+                    <p class="justified-text">Geração de Etiquetas:</p>
+                    <li class="justified-text"><strong>Gerar com a quantidade da nota:</strong>Permite gerar etiquetas com a quantidade de produtos especificada em uma nota fiscal, ideal para organização de produtos recém-adquiridos.</li>
+                    <li class="justified-text"><strong>Gerar com a quantidade do estoque:</strong>Gera etiquetas com base na quantidade de produtos em estoque, útil para reposição de etiquetas ou organização da prateleira. Filtragem de Produtos:</li>
+                    <p class="justified-text">Deixar apenas produtos cuja compra atual tenha o custo acima da anterior em %:</p>
+                        <li class="justified-text">Essa opção filtra os produtos que tiveram um aumento de custo superior ao percentual definido, permitindo a identificação de produtos com maior variação de preço.</li>
+                    <p class="justified-text">Promoções e Preços a Prazo:</p>
+                    <li class="justified-text"><strong>Com margem de %:</strong>Define a margem de lucro desejada sobre o custo do produto, sendo utilizada para calcular o preço de venda.</li>
+                    <li class="justified-text"><strong>Com desconto de % sobre o preço de venda:</strong>Aplica um desconto percentual sobre o preço de venda do produto, útil para a criação de promoções.</li>
+                    <li class="justified-text"><strong>Calcular promoção:</strong>Realiza o cálculo do preço de venda com base na margem de lucro ou desconto definido, gerando o valor final do produto na promoção.</li>
+                    <li class="justified-text"><strong>Calcular preço a prazo:</strong>Calcula o valor a ser pago em uma venda a prazo, considerando o preço de venda e as condições de pagamento acordadas.</li>
+
+                    </ul>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Igualar Valores
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_analiseformapreco12.png" alt="igualar valores">
+                <p class="justified-text">A ferramenta "Igualar Valores" é uma funcionalidade poderosa que permite ajustar os preços de
+                    diversos produtos de forma rápida e uniforme. Para utilizar essa ferramenta, siga os passos abaixo:
+                </p>
+                <p class="justified-text">Como Utilizar:</p>
+                <li class="justified-text"><strong>Selecione os produtos:</strong>Na listagem de produtos, marque os itens que deseja ajustar
+                    os preços.</li>
+                <li class="justified-text"><strong>Escolha o tipo de ajuste:</strong>Selecione uma das opções disponíveis para definir o tipo
+                    de ajuste que deseja realizar (preço de venda, desconto, promoção ou preço à prazo).</li>
+                <li class="justified-text"><strong>Informe o novo valor:</strong>Digite o novo valor que será aplicado a todos os produtos
+                    selecionados.</li>
+                <li class="justified-text"><strong>Confirme a alteração:</strong>Clique no botão de confirmação para aplicar os ajustes.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Desconto Médio
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_analiseformapreco13.png" alt="Desconto Médio">
+                <p class="justified-text"><strong>Obs.:</strong>Para acessar esta aba, siga estes passos: na aba "Dados", aplique os filtros, analise a situação cadastral e, em seguida, calcule o desconto no campo correspondente. Após concluir essas etapas, a aba desejada estará disponível.</p>
+                <p class="justified-text"> A tela "Desconto Médio" fornece uma visão geral dos descontos concedidos em um período específico
+                    para os produtos selecionados. Essa ferramenta é fundamental para acompanhar o desempenho das vendas
+                    e avaliar a eficácia das estratégias de preços.</p>
+                <p class="justified-text">Como Utilizar:</p>
+                <li><strong>Selecione o Período:</strong> Defina o intervalo de tempo que deseja analisar (por exemplo,
+                    mês, trimestre, ano).</li>
+                <li class="justified-text"><strong>Escolha o Agrupamento:</strong> Selecione o critério de agrupamento (laboratório,
+                    departamento ou família) para detalhar a análise.</li>
+                <li class="justified-text"><strong>Clique em "Processar":</strong> O sistema irá calcular e apresentar os resultados.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

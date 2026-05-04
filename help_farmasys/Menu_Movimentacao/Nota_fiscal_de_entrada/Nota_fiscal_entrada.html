@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota fiscal de entrada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Nota fiscal de entrada</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é Nota fiscal de entrada?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p>A entrada de mercadorias é um processo muito importante para o controle da farmacia, nela entrará a
+                mercadoria comprada pela farmacia junto ao fornecedor, com todas as informações de custo e tributações
+                enviados em um XML.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Consulta
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Para poder procurar e importar uma nota fiscal, clique em consulta. <img src="icone consulta.png"
+                        class="img-small" alt="tela inicial"> </p>
+
+                <li>E na tela seguinte clique em XML. <img src="icone xml.png" class="img-small" alt="XML"></p>
+
+                <li>No importador de XML, você pode localizar um arquivo XML já baixado em seu computador, indicando o
+                    caminho completo na opção "Diretório/pasta".</li>
+                <li>A opção "Baixar XML" possibilita a busca por um arquivo específico por meio de sua chave de acesso,
+                    sendo realizada diretamente na SEFAZ com o uso do certificado digital.
+                <li>A opção "Lista de Notas" apresenta todos os XMLs emitidos para o CNPJ associado ao certificado
+                    digital.</p>
+                <li>Ao clicar em 'Abrir XML', serão exibidos todos os produtos constantes na nota fiscal.</li>
+                <img src="abrir xml.png" class="img-medium" alt="abrir XML">
+
+
+                <li>Nessa etapa, é fundamental conferir a vinculação dos produtos da nota com os já cadastrados no
+                    sistema.</li>
+                <li>Caso o produto não exista, será necessário criar um novo cadastro.</li>
+                <li>Para agilizar esse processo, você pode buscar um produto semelhante já existente e clicar em 'Copiar
+                    Cadastro'. Dessa forma, será criado um novo cadastro com as mesmas informações do produto original,
+                    permitindo que você realize as alterações necessárias, como código de barras, valores e descrição,
+                    de acordo com os dados da nota fiscal.</li>
+                <li>Após concluir a vinculação dos produtos, clique em 'Importar Nota'.</p>
+
+                    <img src="importação de nota.png" class="img-medium" alt="Importação de nota">
+
+            </ul>
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Filtro de compra
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Após a importação, a nota fiscal estará disponível para ser incluída no sistema.</li>
+                <li>Basta filtrar as notas pelo período em que a importação foi realizada, e ela será aberta na aba
+                    'Notas'.</p>
+                    <img src="filtro da compra.png" class="img-medium" alt="filtro da compra">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Notas
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Esta aba exibirá as notas fiscais importadas que correspondem aos critérios de busca aplicados.</li>
+                <li>É possível visualizar o status de cada nota. As notas com status 'Aberta' ainda não foram salvas no
+                    sistema e requerem a confirmação das informações para serem processadas.</li>
+                <li>As notas com status 'Fechada' já foram importadas e salvas, mas podem ser editadas se necessário.
+                </li>
+                <li>Para visualizar o conteúdo de uma nota, seja ela aberta ou fechada, basta selecioná-la e pressionar
+                    a tecla Enter.</p>
+                    <img src="consulta notas.png" class="img-medium" alt="consulta notas">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba valores
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba valores preenche automaticamente os campos com os dados da nota, como fornecedor, produtos,
+                    valores e impostos.</li>
+                <li>Caso haja algum erro, você pode editá-lo diretamente na tela.</p>
+                    <img src="aba valores.png" class="img-medium" alt="aba valores">
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba itens
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba Itens apresenta todos os produtos adquiridos na nota fiscal. Cada linha da tabela representa
+                    um item, com informações como quantidade, valor unitário, descontos e impostos.</li>
+                <li>É importante verificar se todos os dados estão corretos, pois eles serão utilizados para atualizar o
+                    estoque e gerar os lançamentos contábeis.</li>
+                <li>É possível acessar o cadastro do produto clicando na opção "Produto", caso seja necessário realizar
+                    alterações. </li>
+                <li>É importante informar a fração de venda. Por exemplo, se 1 fardo de fraldas contém 8 pacotes,
+                    deve-se informar o número "8" na fração. Assim, o sistema dividirá automaticamente o valor total do
+                    fardo por 8. </li>
+                <li>A coluna % ICMS indica a alíquota do Imposto sobre Circulação de Mercadorias e Serviços incidente
+                    sobre o produto. As colunas PIS e COFINS referem-se a outros impostos federais. O valor TT c/Desc é
+                    o valor total do item após os descontos e a aplicação dos impostos.</li>
+                <img src="aba itens.png" class="img-medium" alt="aba itens">
+                <li>Dando dois cliques no item irá abrir a tela de alteraçao de preços, onde é possivel editar os
+                    valores de venda praticados pela farmacia.</li>
+                <img src="atualiza preço.png" class="img-medium" alt="aba itens">
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba vencimentos
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A Aba Vencimentos apresenta os boletos a pagar das compras de mercadorias realizadas pela farmácia.
+                </li>
+                <li>Nela, você encontrará as datas de vencimento de cada fatura e o valor a ser pago.
+                <li>Ao consultar esta tela, você poderá se organizar para efetuar os pagamentos dentro do prazo e evitar
+                    atrasos.</li>
+
+                <li>Após salvar a entrada esses boletos vão entrar em suas contas a pagar.</p>
+                    <img src="Aba vencimentos.png" class="img-medium" alt="aba vencimentos">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba totais
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba totais apresenta um resumo completo de todos os valores envolvidos na transação.</li>
+                <li>Nela, você encontra o valor total da compra, os descontos obtidos, os impostos incidentes e o valor
+                    final a ser pago.</li>
+
+                <li>É importante observar que os valores de IPI, frete e despesas compõem a base de cálculo dos impostos
+                    PIS e COFINS, conforme destacado na imagem. Isso significa que esses valores influenciam diretamente
+                    o cálculo desses impostos.</li>
+
+                <li>Utilizando esta tela, você pode conferir se todos os valores estão corretos.</p>
+                    <img src="aba totais.png" class="img-medium" alt="aba totais">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba ST
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba ST é utilizada para definir como o imposto ST será calculado e registrado na nota fiscal.</li>
+                <li>A Substituição Tributária é um regime tributário especial em que o imposto é recolhido
+                    antecipadamente por um contribuinte.</li>
+
+                <li>O campo Tipo indica a situação específica da operação e influencia no cálculo do imposto. Por
+                    exemplo, se a opção for '1 - Pagamento de substituição tributária efetuada pelo destinatário', o
+                    valor do imposto será ajustado de acordo com essa condição.</li>
+
+                <li>É fundamental que os campos Base ST Complementar e Valor ST Complementar sejam preenchidos de acordo
+                    com as informações da nota fiscal, para garantir a correta contabilização do imposto.</li>
+                <img src="aba ST.png" class="img-medium" alt="ST">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Logs
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba LOG's apresenta um histórico detalhado de todas as ações realizadas na importação de notas
+                    fiscais eletrônicas.
+                <li>Cada linha do registro corresponde a uma ação específica, indicando a data, hora, usuário
+                    responsável, equipamento utilizado e uma descrição detalhada da operação.</li>
+
+                <li>Ao consultar os logs, é possível identificar quando uma determinada NF-e foi importada, por quem e
+                    quais foram os detalhes da operação.</li>
+                <li>Essa informação é fundamental para realizar auditorias, solucionar problemas e garantir a
+                    integridade dos dados.</li>
+                <img src="aba logs.png" class="img-medium" alt="logs">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba inconsistencia
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba Inconsistências apresenta uma lista detalhada dos problemas encontrados durante a importação
+                    da nota fiscal.</li>
+                <li>Essas inconsistências podem ser causadas por erros de digitação, divergências entre os cadastros do
+                    sistema e a nota fiscal, ou outras razões.</li>
+                <li>Para cada inconsistência encontrada, a tela indica o produto, o tipo de problema e uma sugestão de
+                    solução.</li>
+                <img src="inconsistencia.png" class="img-medium" alt="inconsistencia">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba analise de risco
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba analise de risco apresenta uma lista de produtos que podem gerar prejuízos para a farmácia.
+                </li>
+                <li>A análise considera fatores como a data de validade e a rotatividade dos produtos.</li>
+
+                <li>Produtos marcados como 'inviável/Sem vendas' estão próximos do vencimento e não têm sido vendidos,
+                    indicando um alto risco de perda.</li>
+
+                <li>Ao analisar este relatório, o usuário pode tomar decisões estratégicas para reduzir perdas, como
+                    criar promoções para produtos próximos do vencimento, ajustar os pedidos de compra e otimizar a
+                    gestão de estoque.</li>
+                <img src="Aba analise de risco.png" class="img-medium" alt="analise de risco">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba faltas
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba Faltas é utilizada para registrar as diferenças entre a quantidade de produtos solicitados em
+                    uma nota fiscal e a quantidade efetivamente recebida.</li>
+                <li>Essas diferenças podem ocorrer por diversos motivos, como erros na emissão da nota fiscal ou
+                    problemas no transporte.</li>
+
+                <li>Ao identificar uma falta, o usuário deve preencher os campos da tela com as informações do produto e
+                    da quantidade faltante.</li>
+                <li>As opções "Abater C.M." e "Financeiro" permitem definir como a falta será tratada em relação ao
+                    cálculo do custo médio e à geração de um débito financeiro.</li>
+
+                <li>É importante registrar todas as faltas para acompanhar o desempenho dos fornecedores e tomar as
+                    medidas necessárias para evitar que elas se repitam.</li>
+                <img src="aba falta.png" class="img-medium" alt="falta">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba preços
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>A aba preços apresenta um resumo das informações mais importantes sobre cada produto, como histórico
+                    de vendas, preços e promoções.</li>
+
+                <li>Ao analisar esta tela, o usuário pode identificar produtos com baixo desempenho, avaliar o impacto
+                    de promoções e tomar decisões estratégicas para otimizar o mix de produtos e aumentar as vendas.
+                </li>
+
+                <li>Embora a tela não apresente um campo específico para indicar faltas, é possível identificar produtos
+                    com possível falta comparando a quantidade vendida com a quantidade em estoque.</li>
+                <img src="aba preços.png" class="img-medium" alt="preços">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Fechamento de nota
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Após realizar a conferencia da entrada, clique em salvar e em sim, para que o sistema possa
+                    finalizar a entrada e atualizar o cadastro dos itens da nota.</p>
+                    <img src="salvar.png" class="img-medium" alt="salvar">
+
+            </ul>
+
+
+
+        </div>
+</body>
+
+</html>

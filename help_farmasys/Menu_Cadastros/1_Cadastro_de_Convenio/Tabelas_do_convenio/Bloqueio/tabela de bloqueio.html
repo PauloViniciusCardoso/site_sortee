@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Bloqueio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../styles.css">
+    <script src="../../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Tabela de Bloqueio</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é uma tabela de bloqueio?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <div id="dynamicContent">
+                <p>É uma tabela criada para bloquear produtos no ato da venda, podendo ser classificados por:
+                    DEPARTAMENTOS,
+                    FAMÍLIA, LOCAÇÃO e LABORATÓRIOS.</p>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Procedimento para cadastrar uma tabela de bloqueio?
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p>
+                        <strong>No sistema:</strong><br>
+                        Clique no ícone <img src="help_tab_bloqueio01.PNG" class="img-small"> ou pressione (F3):<br>
+                        -> Para que o sistema gere um código sequencial (automático), note que os campos CÓDIGO e DATA
+                        serão
+                        preenchidos automaticamente.<br>
+                        -> Você pode, se desejar, informar/digitar o seu código de controle. Caso este código não esteja
+                        utilizado, o sistema permitirá o cadastro.<br>
+                        -> Selecione todos os campos pertinentes a serem bloqueados.
+                    </p>
+                    <p>OBS.: as informações sobre cada campo, estão no final da página.</p>
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>É possível alterar uma tabela de bloqueio?
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p>Sim, selecione a tabela em questão, informe os dados a serem alterados e pressione ENTER para
+                        salvar.
+                    </p>
+                </ul>
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>É possível excluir uma tabela de bloqueio?
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p>
+                        Sim, mas deve-se atentar aos seguintes detalhes:<br>
+                        Se a tabela estiver vinculada em algum convênio, a exclusão não será permitida.
+                    </p>
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Descrição dos campos da tabela de bloqueio:
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <img src="help_tab_bloqueio03.png">
+
+                    <li><span class="parent_li">Campos</span>
+
+                    <li><b>Código:</b> Gerado automaticamente pelo sistema, ou pode ser informado manualmente.</li>
+                    <li><b>Data:</b> Gerado automaticamente pelo sistema quando clicar em novo.</li>
+                    <li><b>Descrição:</b> Informar uma descrição para a tabela de bloqueio.</li>
+                    <li><b>Bloqueio classificado por:</b>
+
+                    <li>Selecione a forma em que serão classificados os bloqueios, pode ser por:</li>
+                    <li><img src="help_tab_bloqueio04.png" class="img-medium"></li>
+                    <li>Após selecionar a forma de classificação, marque a opção a ser bloqueada no ato da venda.</li>
+
+
+                    <p>Criada a tabela retorne ao cadastro do convênio e vincule a mesma da seguinte forma:</p>
+                    <img src="help_tab_bloqueio05.png" class="img-medium">
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>

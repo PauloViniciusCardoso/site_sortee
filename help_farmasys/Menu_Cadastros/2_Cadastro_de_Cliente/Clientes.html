@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Cliente</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é o cadastro de cliente?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p>É toda e qualquer pessoa que visita ou somente procura a empresa com algum interesse em adquirir produtos
+                ou
+                serviços no momento presente ou futuro. Aperte no topico que deseja para conhecer a funcionalidade de
+                cada
+                opção.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Procedimentos para cadastrar clientes:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <strong>No sistema:</strong>
+
+                <li>Clique no ícone <img src="help_cliente01.png" class="img-small" alt="Ícone"> ou pressione F3.</li>
+                <li>Para que o sistema gere um código sequencial (automático), clique na lâmpada amarela <img
+                        src="help_cliente02.png" class="img-small" alt="Lâmpada"></li>
+                <li>Você pode, se desejar, informar/digitar o seu código de controle. Caso este código não esteja
+                    utilizado,
+                    o sistema permitirá o cadastro.</li>
+                <li>Informe todos os campos pertinentes ao cliente e tecle F10 para salvar o cadastro.</li>
+
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Para que seja possivel salvar um cadastro é obrigatorio o
+                preenchimento dos campos:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Convênio</li>
+                <li>Nome</li>
+                <li>Endereço completo</li>
+                <li>Sexo</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Como alterar os dados de um cliente?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li>Pressione F3 e digite o código do convênio e do cliente já cadastrado. Caso não saiba o código,
+                    clique
+                    em consulta (F6).</li>
+                <li>A pesquisa poderá ser realizada através do nome do cliente, do convênio ou do CPF do cliente.
+                    Encontrado
+                    o Cliente, faça as alterações desejadas e clique em Salvar (F10).</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível excluir os clientes?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Sim, mas deve-se atentar aos seguintes detalhes:</p>
+
+                <li>Se existir movimentação (venda/nota fiscal de saída) vinculada a este cliente, a exclusão não será
+                    permitida.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos de cadastro de clientes
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_cliente04.png" alt="Tela de Cadastro de Cliente">
+                <li><strong>Convênio:</strong> Informe o código do convênio a que pertence o cliente.(Obrigatorio)</li>
+                <li><strong>Código:</strong> Gerado automaticamente pelo sistema ou pode ser informado
+                    manualmente.(Obrigatorio)</li>
+                <li><strong>Nome:</strong> Informe o nome do cliente.(Obrigatorio)</li>
+                <li><strong>Apelido:</strong>Apelido do cliente.</li>
+                <li><strong>CEP:</strong> Digite o CEP(Obrigatorio), e o sistema pesquisará na base de dados da Sortee.
+                    Caso
+                    retorne que não encontrou os dados de endereço, digite esses dados da seguinte forma: <br>
+                    <strong>***RUA, NÚMERO (respeitando o espaço após a vírgula), se não tiver número coloque 0 ou então
+                        deixe sem nada, não colocar letras após a vírgula, pois em caso de emissão de Nota Fiscal
+                        Eletrônica
+                        dá erro.</strong>
+                </li>
+                <li><strong>Bairro:</strong> Informe o bairro.(Obrigatorio)</li>
+                <li><strong>Cidade:</strong> Informe a cidade.(Obrigatorio)</li>
+                <li><strong>UF:</strong> Informe o estado.(Obrigatorio)</li>
+                <li><strong>CPF/CNPJ:</strong> Informe o CPF/CNPJ.(Informçao importante pois em caso de emissao de NF-e
+                    de
+                    cancelamento da venda é necessario um CPF)</li>
+                <li><strong>R.G:</strong> Informe o número do documento de identidade.</li>
+                <li><strong>Chapa:</strong> Caso seja convênio de uma empresa onde o funcionário seja identificado pelo
+                    crachá, informe o número de identificação.</li>
+                <li><strong>Sexo:</strong> Informe o sexo do cliente.(Obrigatorio)</li>
+                <li><strong>Cadastro:</strong> Data de cadastro do cliente no sistema (preenchido automaticamente quando
+                    clicar em novo (F3)).</li>
+                <li><strong>Nascimento:</strong> Informe a data de nascimento do cliente.</li>
+                <li><strong>Telefone:</strong> Informe o telefone para contato com o cliente (se tiver mais de um
+                    telefone,
+                    digite na próxima linha).</li>
+            </ul>
+
+            <h3>Descrição das abas de cadastro de clientes:</h3>
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Financeiro:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_cliente05.png" alt="Aba Financeiro">
+
+                <li>Marque a situação do cliente na sua empresa.</li>
+                <li>Informe também, se o cliente possui algum limite de crédito, qual o dia de pagamento e se tem algum
+                    desconto (lembre-se que se o convênio tiver algum desconto ou tabela de descontos cadastrados, será
+                    aplicado desconto sobre desconto no ato da venda).</li>
+                <li>Marque a opção para cobrar juros caso o cliente pague com atraso. <br>
+                    <strong>Obs.: Para usar a função de cobrar juros é necessário ir nos parâmetros, selecionar a aba
+                        config
+                        2 e informar a porcentagem de juros e a partir de quantos dias começa a cobrar juros.</strong>
+                </li>
+                <li>Se o cliente desejar, pode ser cadastrado uma senha pessoal para vendas a prazo, para ele ou para
+                    dependentes.</li>
+
+
+
+                <img src="help_cliente06.png" alt="Aba Observação">
+
+                <li>É possível adicionar informações no cadastro do cliente, bem como e-mail, local de trabalho, nome do
+                    pai, nome da mãe, e no campo observação escreva alguma mensagem para ser exibida no ato da venda.
+                </li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Dependentes:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <img src="help_cliente07.png" alt="Aba Dependentes">
+
+                <li>Informe os dependentes que podem comprar na conta do cliente, da seguinte forma:</li>
+                <li>*** Nome do dependente.</li>
+                <li>*** Tipo: (F) Filho/Filha, (M) Mãe, (P) Pai, (E) Esposa, (R) Marido, (O) Outros.</li>
+                <li>*** Documento de identificação do dependente.</li>
+                <li>Para excluir algum dependente, selecione o mesmo e pressione a tecla Delete. Será exibida a seguinte
+                    mensagem:</li>
+
+                <img src="help_cliente08.png" alt="Excluir Dependente">
+                <p>Clique em "Sim" e depois clique em "Salvar" (F10).</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Agenda:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <img src="help_cliente09.png" alt="Aba Agenda">
+
+                <li>É possível agendar contatos futuros com clientes, pressione F11 para incluir assuntos a tratar.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Patologias:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <img src="help_cliente10.png" alt="Aba Patologias">
+
+                <li>É possível cadastrar patologias para os clientes.</li>
+                <li>Para cadastrar patologias, clique em "Vincular Patologias ao Cliente" e será exibida a seguinte
+                    tela:
+                </li>
+
+                <img src="help_cliente11.png" alt="Vincular Patologias">
+
+                <li>Selecione a patologia que deseja vincular ao cliente, depois clique em "SELECIONA".</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Imprimir:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <li>Salve os dados do cliente, depois retorne no cadastro e clique na aba "Imprimir". Será mostrado as
+                    opções ficha cadastral do cliente, Termo LGPD e o filtro para o relatório.</li>
+
+                <img src="help_cliente12.png" alt="Ficha Cadastral">
+                <p>Ao selecionar a <strong>ficha cadastral</strong> e clicar na impressora será mostrado da seguinte
+                    forma:
+                </p>
+                <p>Essa ficha cadastral é uma garantia de que o cliente está ciente sobre todas as compras realizadas
+                    por
+                    ele ou pelos dependentes cadastrados, e estão sujeitos às penalidades da lei, assim descritas no
+                    documento. Peça a ele que assine e entregue uma via e mantenha uma na farmácia.</p>
+                <img src="help_cliente13.png" alt="Ficha Cadastral Visualizada">
+                <p><strong>Aceite (LGPD)</strong></p>
+                <li><strong>Assinou o termo LGPD</strong></li>
+                <p>O Termo LGPD (Lei Geral de Proteção de Dados Pessoais) refere-se à legislação brasileira que regula o
+                    tratamento de dados pessoais de pessoas físicas, visando proteger os direitos fundamentais de
+                    liberdade,
+                    privacidade e o livre desenvolvimento da personalidade. A LGPD estabelece diretrizes para a coleta,
+                    armazenamento, uso e compartilhamento de dados pessoais por organizações, sejam elas públicas ou
+                    privadas. Ela obriga as empresas a obter o consentimento explícito dos titulares dos dados, garantir
+                    a
+                    segurança das informações e oferecer transparência sobre o uso dos dados. Além disso, prevê sanções
+                    para
+                    o descumprimento de suas normas, com o objetivo de assegurar a proteção dos dados pessoais no
+                    Brasil.
+                </p>
+                <img src="help_cliente18.png" alt="Aceite(LGPD)">
+                <p>O <strong>Filtro para relatório</strong> apresenta um relatorio com todos os clientes cadastrados no
+                    sistema</p>
+                <img src="help_cliente19.png" alt="filtro para relatório">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba LOGS's:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>Apresenta todas alterações realizadas nesse cadastro.</p>
+                <img src="help_cliente14.png" alt="Ficha Cadastral Visualizada">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Referências:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>É possível cadastrar informações de referências bancárias ou comerciais do cliente para aprovação de
+                    limite de crédito.
+                    <img src="help_cliente15.png" alt="Aba Referências">
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Renda:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>Campo para registro das informaçoes sobre a renda do cliente para liberaçao de limite de credito
+                    <img src="help_cliente16.png" alt="Aba Renda">
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Aba Estadual:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+
+                <p>Campo para registro da inscriçao estadual</p>
+                <img src="help_cliente17.png" alt="Aba Estadual">
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

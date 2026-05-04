@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Marketplace</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">Marketplace
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Lançamento de produtos
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <li>A ferramenta separa em dois lados, esquerdo são os produtos cadastrados no sistema dos quais serão lançados
+                    no lado direito, que são os que vão ser disponibilizados na plataforma.
+                </li>
+                <li>Utilize o filtro da esquerda para selecionar os produtos dos quais deseja visualizar e 
+                    selecionar o tipo de controle de estoque e preço</li>
+                <p></p>>
+                <div class="container-gif"><img src="lacando_prod_mp.gif"></div>
+                <p></p>
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Tipos de preço
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li><strong> Tipos de Preços: </strong>
+                    <p></p>
+                    <strong>Preço controlado MANUALMENTE: </strong> Você informa o valor (campo R$ Venda) que estará disponível, 
+                    independente do valor da loja.
+                    <p></p>
+                    <strong>Preço controlado em % (Percentual):</strong> Você informa o percentual (campo Ref R$ MP), que será acrescido 
+                    ao valor de venda do sistema, formando assim o novo valor de venda para o MP escolhido; Exemplo: 
+                    Você informa que deseja acrescentar 10% para o MP escolhido. Assim, caso seu valor de venda seja R$ 
+                    10,00, o sistema calculará mais 10%. O valor de venda final será R$ 11,00.
+                    <p></p>
+                    <strong>Sempre somar o valor de X ao preço de venda:</strong> Você informa (campo Ref R$ MP) o valor (em reais) que 
+                    será somado ao preço de venda do sistema.
+                    <p></p>
+                    <strong>Preço de venda com desconto em (%) percentual informado:</strong> Você informa (campo Ref R$ MP) o 
+                    percentual de desconto que deseja aplicar ao preço de venda do sistema.
+                    <p></p>
+                    <strong>Preço de venda com desconto do cadastro:</strong> O sistema utiliza como base o preço de venda e aplica o 
+                    desconto configurado no cadastro, formando o novo preço de venda para o MP escolhido.
+                    <p></p>
+                    <strong>R$ promoção ou preço de venda:</strong> O sistema prioriza o preço de promoção. Caso ele esteja com valor 
+                    igual a ZERO, será utilizado o preço de venda.
+                    <p></p>
+                    <strong>R$ tabloide ou preço de venda:</strong> O sistema prioriza o preço de tabloide. Caso ele esteja com valor igual 
+                    a ZERO, será utilizado o preço de venda.</li>
+                    <p></p>>
+                    <div class="container-gif"><img src="tipo_preco.gif"></div>
+                    <p></p>
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Tipos de estoque
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <li><strong> Tipos de estoque: </strong>
+                    <p></p>
+                    <strong>Estoque Controlado MANUALMENTE: </strong> você informa (Vai p/MP) a quantidade que deseja disponibilizar na plataforma
+                    <p></p>
+                    <strong>Estoque Controlado em % (Percentual)</strong> você informa (Vai p/MP) em porcentagem a quantidade do seu estoque de seja disponibilizar, 
+                    por exemplo, se tiver 10 anadores e informar 50%, na plataforma está disponível 5 anadores para venda.
+                    <p></p>
+                    <strong>Se houver saldo no sistema, disponibilizar sempre: </strong> você informa (Vai p/MP) sempre o valor que deseja disponibilizar do produto,
+                    por exemplo, se tiver 15 em estoque e informa para disponibilizar sempre 10, na plataforma está sempre 10 unidades, caso o saldo seja inferior ele informa o valor em questão.
+                    <p></p>
+                    <strong>3 | Agrupado, Controlado em % (Percentual): </strong>
+                    <p></p>
+                    <strong> Agrupado, Se houver saldo no sistema disp. sempre: </strong>
+                </li>
+
+            </ul>  

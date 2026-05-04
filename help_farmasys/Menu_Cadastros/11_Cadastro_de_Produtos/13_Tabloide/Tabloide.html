@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabloide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Tabloide</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é tabloide?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>É uma tabela criada para conceder descontos em vários produtos por um determinado período. Aperte no
+                topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar um tabloide?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <strong>No sistema:</strong>
+
+                <li>No menu utilitários, clique em parâmetros, na aba vendas informe se utiliza tabloide e como será a
+                    atualização desse tabloide, manual ou automática.</li>
+                <li><img src="help_cad_tabloide01.png" class="img-medium" alt="Parâmetros do Tabloide"></li>
+                <li><strong>Atualização automática:</strong> No período inicial / final do tabloide, o primeiro
+                    computador que acessar o sistema ativa / desativa o tabloide.</li>
+                <li><strong>Atualização manual:</strong> É necessário entrar no cadastro do tabloide para ativar /
+                    desativar.</li>
+                <li>Clique em salvar (F10) e reinicie o sistema.</li>
+                <li>Acesse o tabloide, clique na linha em branco e informe os dados da tabela que deseja incluir. Tecle
+                    ENTER até a próxima linha para salvar.</li>
+                <li>Selecione a tabela e clique na aba incluir produtos.</li>
+                <li><strong>Obs.:</strong> As informações do período inicial / final e descrição da tabela estarão no
+                    topo da tela.</li>
+                <li>Selecione os produtos que vão para o tabloide, clicando em <img src="help_cad_tabloide05.png"
+                        class="img-small" alt="Incluir Produtos"> e informe o valor que o produto custará pelo tabloide,
+                    depois clique em <img src="help_cad_tabloide02.png" alt="Salvar"></li>
+                <li>Incluídos os produtos, clique na aba ativar, selecione a tabela e clique na opção desejada.</li>
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Como alterar os dados de um tabloide?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <li>O tabloide deve estar desativado para que possa fazer as alterações. Selecione o tabloide em questão
+                    e faça as alterações.</li>
+                <li>Se houver alterações nos produtos, clique em salvar itens no tabloide. Após as alterações, ative o
+                    tabloide.</li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>É possível excluir o tabloide?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <li>Sim, mas deve-se atentar ao seguinte detalhe:</li>
+                <li>Se o tabloide estiver ativo, a exclusão não será permitida.</li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Descrição dos campos do cadastro de tabloide:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <img src="help_cad_tabloide03.png" alt="Tela de Cadastro de Tabloide">
+
+                <li><strong>Código:</strong> Gerado automaticamente pelo sistema.</li>
+                <li><strong>Ativa:</strong> Indica se a tabela está ativa ou não.</li>
+                <li><strong>Criação:</strong> Informa a data de criação da tabela.</li>
+                <li><strong>Início:</strong> Informe a data de início do tabloide.</li>
+                <li><strong>Fim:</strong> Informe a data final do tabloide.</li>
+                <li><strong>Prorrogar para:</strong> Informe uma data, caso queira prorrogar esse tabloide por mais um
+                    período.</li>
+                <li><strong>Loja:</strong> Apresenta a loja que está executando o tabloide.</li>
+                <li><strong>Descrição:</strong> Informe uma descrição para o tabloide.</li>
+                <li><strong>Observação:</strong> Informe caso tenha alguma observação referente ao tabloide.</li>
+                <li><strong>Comentário:</strong> Informe caso tenha algum comentário referente ao tabloide.</li>
+                <li><strong>Alteração:</strong> Caso haja alguma alteração no tabloide, será mostrada a data.</li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Descrição dos campos para incluir itens no tabloide:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <img src="help_cad_tabloide04.png" alt="Tela para Incluir/Excluir Produtos no Tabloide">
+
+                <li>Selecione o tabloide criado na tela anterior e note que aparecerão no topo da tela as datas de
+                    início, fim e o nome do tabloide.</li>
+                <li>Clique em <img src="help_cad_tabloide05.png" class="img-small" alt="Filtro de Produtos"> para
+                    realizar um filtro dos produtos e clique em OK.</li>
+                <li>Selecione os produtos, e com um duplo clique no mouse, eles serão inseridos no tabloide. Informe o
+                    valor que o produto custará no tabloide.</li>
+                <li>Inseridos todos os produtos, clique em <img src="help_cad_tabloide02.png" class="img-small"
+                        alt="Salvar"></li>
+            </ul>
+
+            <h3 class="clique">
+                <span class="seta seta-direita">+</span>Tela para ativar-desativar-excluir no tabloide:</h3>
+                    <ul class="mostra-esconde hidden-text">
+
+                        <img src="help_cad_tabloide06.png" alt="Tela para Ativar/Desativar/Excluir Tabloide">
+
+                        <li>Para ativar / desativar ou excluir um tabloide, selecione o tabloide e clique na operação
+                            desejada.</li>
+                        <li><strong>Obs.:</strong> Se nos parâmetros do sistema estiver selecionada a opção de
+                            atualização automática, não é necessário ativar/desativar o tabloide.</li>
+                    </ul>
+        </div>
+</body>
+
+</html>

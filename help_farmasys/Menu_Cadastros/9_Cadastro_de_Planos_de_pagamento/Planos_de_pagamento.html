@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos de Pagamentos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Planos de Pagamentos</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que são planos de pagamentos?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>São as formas de pagamentos adotadas pela empresa. Aperte no topico que deseja para conhecer a
+                funcionalidade de cada opção.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar planos de pagamento?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <strong>No sistema:</strong>
+
+                <li>Informe a descrição do plano de pagamento, os dias, selecione se ele está ativo e se ele é cartão.
+                    Tecle
+                    ENTER até a próxima linha para salvar.</li>
+                <li><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Como alterar os dados do plano de pagamento?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <li>Selecione o plano de pagamento, faça as alterações e tecle ENTER até a próxima linha para salvar.
+                </li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível excluir um plano de pagamento?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <li>Sim, selecione o plano de pagamento e selecione excluir (F4).</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <img src="planos_de_pagamento01.PNG" alt="Tela de Cadastro de Planos de Pagamento">
+                <li><strong>Descrição:</strong> Coloque a descrição do plano de pagamento.</li>
+                <li>Exemplos: 1x , 30 dias.</li>
+                <li><strong>Dias:</strong> Coloque aqui a projeção de pagamento.</li>
+                <li>Exemplo: No caso de 30 dias coloque 30.</li>
+                <li><strong>Ativo:</strong> Selecione se o plano de pagamento está ativo.</li>
+                <li><strong>Cartão:</strong> Selecione se o plano de pagamento será usado para pagar com cartão.</li>
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

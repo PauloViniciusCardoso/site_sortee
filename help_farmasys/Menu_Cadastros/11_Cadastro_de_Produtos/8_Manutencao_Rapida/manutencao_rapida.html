@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção Rápida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Manutenção Rápida</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é manutenção rápida?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p>É uma forma de realizar alterações em vários produtos ao mesmo tempo. Aperte no topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Quais os procedimentos para usar a manutenção rápida?</h3>
+            <ul class="mostra-esconde hidden-text">
+            <strong>No sistema:</strong>
+        
+            <li>Realize o filtro dos produtos que deseja fazer alterações e clique em <img src="help_manutencao_rapida01.png" class="img-small">.</li>
+            <li>Clique duas vezes com o botão esquerdo do mouse em qualquer lugar da tela e será exibida uma tela para que possam ser executadas as alterações.</li>
+            <li>Selecione os produtos e clique sobre qual alteração será feita.</li>
+            <li>Também é possível realizar alterações diretamente no produto, selecione o produto, faça as alterações e tecle ENTER para salvar.</li>
+        
+        <p><strong>Obs.:</strong></p>
+        
+            <li>Para selecionar vários produtos aleatoriamente mantenha a tecla CONTROL pressionada e selecione os produtos.</li>
+            <li>Para selecionar vários produtos em sequência mantenha a tecla SHIFT pressionada e selecione os produtos.</li>
+        
+        <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Descrição dos campos do filtro na manutenção rápida:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_manutencao_rapida02.png" alt="Tela de filtro da manutenção rápida">
+
+            <li><strong>Produtos:</strong> Pesquise pelo nome do produto.</li>
+            <li><strong>Registro MS:</strong> Pesquise pelo registro MS (registro do produto no ministério da saúde).</li>
+            <li><strong>Princípio ativo:</strong> Pesquise pelo princípio ativo do produto.</li>
+            <li><strong>Obs.:</strong> Para pesquisar por grupos de departamentos, departamentos, família, localização, laboratórios ou classificação tributária clique em <img src="help_manutencao_rapida03.png" class="img-small">.</li>
+            <li>Na seguinte tela marque os filtros que deseja pesquisar:</li>
+            <img src="help_manutencao_rapida04.png" alt="Tela de filtros">
+            <li><strong>Data de cadastro:</strong> Pesquisa pela data de cadastro do produto.</li>
+            <li><strong>Data de alteração:</strong> Pesquisa pela data de alteração do produto.</li>
+            <li><strong>Código agrupamento:</strong> Pesquisa pelo código de agrupamento de moléculas.</li>
+            <li><strong>N.C.M:</strong> Pesquisa pelo N.C.M. do produto.</li>
+            <li><strong>Apresentar curva:</strong> Caso seja realizada a curva ABC dos produtos será exibida nessa seleção.</li>
+            <li><strong>Com preço de promoção:</strong> Pesquisa os produtos com preço de promoção cadastrados.</li>
+            <li><strong>Desconto acima de 0.00%:</strong> Pesquisa os produtos com porcentagem de descontos cadastrados acima do valor mencionado.</li>
+            <li><strong>Somente fracionados:</strong> Pesquisa produtos cadastrados como fracionados.</li>
+            <li><strong>Possui ofertas, brindes:</strong> Pesquisa pelos produtos que têm ofertas, trocas e brindes cadastrados.</li>
+            <li><strong>Ativos:</strong> Pesquisa pelos produtos ativos, inativos ou todos.</li>
+            <li><strong>Psicos:</strong> Quando selecionada a opção SIM, pesquisa somente produtos marcados como psicotrópicos e se selecionado NÃO, os produtos marcados como psicotrópicos não serão incluídos na pesquisa.</li>
+            <li><strong>Genéricos:</strong> Quando selecionada a opção SIM, pesquisa somente produtos marcados como genéricos e se selecionado NÃO, os produtos marcados como genéricos não serão incluídos na pesquisa.</li>
+            <li><strong>Compõe pedido de compra:</strong> Quando selecionada a opção SIM, pesquisa somente produtos marcados como compõe pedido de compra e se selecionado NÃO, os produtos marcados como compõe pedido de compra não serão incluídos na pesquisa.</li>
+            <li><strong>Antibióticos:</strong> Quando selecionada a opção SIM, pesquisa somente produtos marcados como antibióticos e se selecionado NÃO, os produtos marcados como antibióticos não serão incluídos na pesquisa.</li>
+            <li><strong>P.B.M:</strong> Quando selecionada a opção SIM, pesquisa somente produtos marcados como P.B.M. e se selecionado NÃO, os produtos marcados como P.B.M. não serão incluídos na pesquisa.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Tela da lista de produtos filtrados:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_manutencao_rapida05.png" alt="Lista de produtos filtrados">
+        
+                    
+                        <li>Nesta tela os produtos filtrados serão exibidos conforme cadastro.</li>
+                        <li>Para alterar um produto, selecione o mesmo, clique no campo correspondente, faça a alteração e tecle ENTER para salvar.</li>
+                        <li>Para alterar vários produtos, clique duas vezes com o botão esquerdo do mouse sobre a tela e aparecerá uma outra tela no canto direito, conforme imagem ao lado.</li>
+                        <li>Selecione os produtos e clique duas vezes no campo correspondente e serão alterados automaticamente.</li>
+                        <li>Clique com o botão direito do mouse sobre os campos MARCAR COMO PBM, COMPOR PEDIDO DE COMPRA, (G) GENÉRICO E ANTIBIÓTICOS, e serão habilitadas as funções para desmarcar.</li>
+                    
+                    <p><strong>OBS.:</strong></p>
+                    
+                        <li>Para selecionar vários produtos aleatoriamente mantenha a tecla CONTROL pressionada e selecione os produtos.</li>
+                        <li>Para selecionar vários produtos em sequência mantenha a tecla SHIFT pressionada e selecione os produtos.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Tela para ajustar preços nos produtos:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_manutencao_rapida07.png" alt="Tela para ajustar preços">
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Tela para agrupar vários produtos em uma mesma molécula:</h3>
+            <ul class="mostra-esconde hidden-text">
+        <img src="help_manutencao_rapida08.png" alt="Tela para agrupar produtos">
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>O que é agrupamento de moléculas?</h3>
+            <ul class="mostra-esconde hidden-text">
+        <p>É uma forma de classificar vários produtos em um produto principal, para futuros pedidos de compra.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Quais os procedimentos para usar o agrupamento de moléculas?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <p><strong>No sistema:</strong></p>
+        <img src="apenas selecionados.png" alt="agrupar selecionados">
+        
+            <li>Selecione os produtos a serem agrupados na mesma molécula e informe o produto que será o principal, depois clique em <img src="help_manutencao_rapida09.png" class="img-small">.</li>
+            <li>Caso queira desagrupar os produtos de uma molécula, selecione os produtos que estão agrupados e informe o produto principal e clique em <img src="help_manutencao_rapida10.png" class="img-small">.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

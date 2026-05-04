@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Bloqueio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Tabela de Bloqueio</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é transferência de clientes?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p>É uma maneira de transferir clientes de um convênio para outro. Aperte no topico que deseja para conhecer
+                a
+                funcionalidade de cada opção.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Qual o procedimento para transferir um cliente?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <strong>No sistema:</strong>
+
+                <li>Selecione o convênio de origem, informe o nome e/ou a cidade, o status do cliente, o convênio de
+                    destino
+                    e se vai transferir a movimentação financeira do cliente.</li>
+                <li>Depois de selecionar todos os clientes a serem transferidos, clique no botão "Transferir" para
+                    concluir
+                    a operação.</li>
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos da transferência de clientes - Convênio de
+                Origem
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_transfere_cliente03.png" alt="Tela de Transferência de Cliente do Convênio de Origem"
+                    style="width: 80%; height: auto;">
+                <li><strong>Origem:</strong> Informe o convênio de origem.</li>
+                <li><strong>Nome do cliente:</strong> Informe o nome do cliente.</li>
+                <li><strong>Cidade:</strong> Informe a cidade.</li>
+                <li><strong>Status do cliente:</strong> Informe a situação do cliente na sua empresa.</li>
+                <li><strong>Pesquisar clientes:</strong> Para pesquisar algum cliente que não tenha a informação do
+                    convênio
+                    a que ele pertence.</li>
+                <li><strong>Marcar todos:</strong> Selecione se deseja marcar todos os clientes cadastrados no convênio.
+                </li>
+                <li><strong>Desmarcar todos:</strong> Selecione se desejar desmarcar todos os clientes cadastrados no
+                    convênio.</li>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos da transferência de clientes - Convênio de
+                Destino
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_transfere_cliente02.png" alt="Tela de Transferência de Cliente do Convênio de Destino"
+                    style="width: 80%; height: auto;">
+                <li><strong>Destino:</strong> Informe o convênio de destino.</li>
+                <li><strong>Transfere os clientes com movimento:</strong> Transfere toda a movimentação do cliente.</li>
+                <li><strong>Transfere os clientes com débito:</strong> Transfere todos os débitos do cliente.</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>

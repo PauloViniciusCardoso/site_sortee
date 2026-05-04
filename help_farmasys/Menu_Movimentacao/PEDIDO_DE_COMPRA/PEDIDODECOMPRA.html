@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Compra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Pedido de Compra</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é Pedido de Compra?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p class="justified-text">A ferramenta de pedido de compra foi desenvolvida para otimizar e automatizar o
+                processo de aquisição de
+                materiais e produtos dentro de uma organização. Essa solução não só facilita a criação e gestão de
+                pedidos de compra, mas também fornece uma gama abrangente de análises e relatórios que são essenciais
+                para a tomada de decisões estratégicas. Clique nos tópicos listados abaixo, para entender sobre esta
+                importante ferramenta e suas funcionalidades.</p>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Configuração no cadastro dos produtos
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Parametros iniciais no cadastro de produtos.</p>
+                <p>Para que um produto possa compor um <strong>pedido de compra</strong>, é preciso que na <strong>Guia
+                        Classif</strong>, a seguinte opção esteja
+                    marcada no cadastro.
+                    <br>
+                    <br>
+                    <img src="image33.png" class="img-medium" alt="Guia Classificação">
+                    <br>
+                    <br>
+                </p>
+
+                <p class="justified-text"><strong>Guia Valores:</strong> apresentará informações referentes ao pedido de
+                    compra. <img src="image35.png" 
+                    style="width: 300px; 
+                           height: auto; 
+                           image-rendering: -webkit-optimize-contrast; 
+                           image-rendering: crisp-edges; 
+                           display: block; 
+                           margin-left: auto; 
+                           margin-right: auto;" 
+                    alt="Guia valores"></p>
+                <br>
+                <br>
+                <li class="justified-text"><strong>Estoque mínimo:</strong> É a quantidade mínima de um produto que deve
+                    ser mantida em estoque
+                    para garantir a continuidade das operações e evitar rupturas. Serve como um colchão de segurança
+                    para lidar com variações na demanda ou atrasos no fornecimento.</li>
+                <li class="justified-text"><strong>Estoque múltiplo:</strong> Refere-se à quantidade de vezes que o
+                    estoque mínimo é suficiente
+                    para atender à demanda durante o tempo de reposição. Em outras palavras, é um multiplicador do
+                    estoque mínimo que determina a quantidade total a ser encomendada quando o nível de estoque atinge o
+                    ponto de reposição.</li>
+                <li class="justified-text"><strong>Lote econômico:</strong>Também conhecido como EOQ (Economic Order
+                    Quantity), é a quantidade
+                    ideal de um produto que deve ser comprada de uma só vez, a fim de minimizar os custos totais
+                    relacionados ao estoque, como custos de pedido e custos de armazenamento.</li>
+                <li class="justified-text"><strong>Dispara lote econômico:</strong> É o ponto em que o nível de estoque
+                    atinge o valor do
+                    estoque mínimo multiplicado pelo estoque múltiplo, sinalizando a necessidade de realizar um novo
+                    pedido para reabastecer o estoque na quantidade do lote econômico.</li>
+                <br>
+                <br>
+
+                <img src="image34.png" class="img-medium" alt="Guia Valores">
+                <br>
+                <br>
+            </ul>
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Filtro para um novo pedido
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p class="justified-text">A tela de criar novo pedido permite ao usuário trabalhar com diversas configurações e filtros, de modo que possa otimizar a análise.</p>
+                <p class="justified-text">Para iniciar um pedido de compras, clique no ícone <strong>Novo Pedido</strong>. Será exibida a tela de configuração.</p>
+                <img src="image25.png" class="img-medium" alt="Parametrização do Pedido">
+                <h2>Período</h2>
+                <p class="justified-text">É o intervalo entre as vendas que o usuário deseja analisar, para que o sistema sugira uma demanda de produtos a serem repostos no estoque.</p>
+
+                <h2>Tipo de análise das vendas</h2>
+                <p class="justified-text">Dentre as mais utilizadas, a curva ABC é a que proporciona um resultado mais preciso das informações, levando em conta o estoque, as unidades vendidas e o mínimo para o período estabelecido. Porém, o usuário deverá se atentar para as variações de demanda e sazonalidades, como, por exemplo, estações, onde no inverno temos o aumento dos produtos antigripais, e feriados prolongados, como o carnaval, devido ao aumento de produtos relacionados ao consumo excessivo de bebidas alcoólicas.</p>
+                
+
+                <p class="justified-text">Quando relacionada a curva ABC com a opção +Estoque Mínimo, o sistema levará em consideração o cadastro do produto, quanto à opção "Estoque Mínimo" ajustada na tela de valores, sugerindo que, se o produto em questão não tiver estoque suficiente, será ajustado no pedido ao mínimo pré-estabelecido no cadastro.
+                    No pedido, existem ainda as opções de "Vendas por Reposição" e de considerar somente o estoque mínimo cadastrado no produto.</p>
+
+                <h2>Opçoes de filtro para criação de pedido:</h2>
+                <img src="image31.png" class="img-medium" alt="Estoque Mínimo">
+                <br>
+                <br>
+
+                <li class="justified-text"><strong>Vendas (reposição) e somente estoque zerado:</strong>
+                    Selecionando esta opção, serão filtrados somente os itens que tiveram vendas conforme o período informado. 
+                    <li class= "justified-text>"><strong> Somente estoque zerado:</strong>
+                        Marcando esta opção, ela irá filtrar os itens vendidos, porém serão inclusos no pedido apenas os itens com estoque 0 (zero).
+                    </li>
+                <li class="justified-text"><strong>Formas de entrega:</strong> 
+                    Filtra os itens conforme o tipo de entrega, podendo ser balcão, domicílio ou executadas em outra loja.
+                </li>
+                <li class="justified-text"><strong>Estoque mínimo:</strong> 
+                    Filtra os produtos conforme o estoque mínimo ajustado no cadastro.
+                </li>
+                <li class="justified-text"><strong>Incluir transferências:</strong> 
+                    Filtra os itens que tiveram saídas executadas por notas de transferência entre matriz e filiais.
+                </li>
+                <li class="justified-text"><strong>Incluir estoque não vendido:</strong> 
+                    Filtra os produtos que não tiveram vendas no período.
+                </li>
+                <li class="justified-text"><strong>Genéricos (Somente):</strong> 
+                    Filtra os itens marcados no cadastro como genéricos.
+                </li>
+                <li class="justified-text"><strong>Produtos constantes no tabloide ativo:</strong> Filtra os produtos que estão vinculados em tabloides.
+                </li>
+                <li class="justified-text"><strong>Agrupar produtos da mesma molécula?:</strong> 
+                    Esta opção é específica para produtos genéricos, onde temos produtos com a mesma molécula + apresentação, de laboratórios distintos. Neste caso, o sistema vai realizar toda a projeção dos produtos agrupados, mas definirá a compra pela molécula principal, conforme cadastrada nos itens.</li>
+                <li class="justified-text"><strong>Não incluir produtos vencendo:</strong> 
+                    Filtra os produtos que estão marcados no cadastro como "vencendo".
+                </li>
+                <li class="justified-text"><strong>Converter unidades fracionadas:</strong> 
+                    Ajusta os valores e quantidades conforme a fração do cadastro.
+                    
+                <li class="justified-text"><strong>Considerar notas abertas no estoque:</strong> 
+                    Remove do pedido os itens que estão inclusos nas notas em aberto.
+                </li>
+                <li class="justified-text"><strong>Psicos (Somente):</strong> 
+                    Filtra somente produtos classificados como psicotrópicos.
+                </li>
+                <li class="justified-text"><strong>Incluir produtos vendidos através de PBM:</strong> 
+                    Filtra os produtos que foram vendidos através de operadores logísticos (TRN, ePharma, Vidalink, Orizon, etc.).
+                </li>
+                <li class="justified-text"><strong>PBM (Somente):</strong> 
+                    Filtra os produtos que estão classificados como PBMs no cadastro.
+                </li>
+                <li class="justified-text"><strong>Excluir produtos apenas com uma venda (cupom):</strong>
+                    Filtra produtos que foram vendidos somente 1 (uma) vez, mesmo que em quantidade maior.
+                </li>
+                <li class="justified-text"><strong>Excluir produtos com projeção inferior a 1 unidade inteira:</strong>
+                    Filtra os produtos em que a quantidade vendida no período for menor que 1 caixa fechada (fracionados no cadastro).
+                </li>
+                <li class="justified-text"><strong>Não incluir produtos cadastrados nos últimos dias:</strong> 
+                    Filtra os produtos que têm cadastro recente e não os inclui no pedido.
+                </li>
+                <li class="justified-text"><strong>Incluir somente produtos cadastrados nos últimos dias:</strong> 
+                    Filtra produtos cadastrados recentemente, incluindo-os no pedido.
+                </li>
+            </ul>
+
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Dados para curva ABC
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p class="justified-text">Quando selecionado a opcao de CURVA ABC nos filtros iniciais do pedido de compra, irá aparecer a parte em que podemos configurar, 
+                    onde os produtos, serão analisados e organizados dentro do pedido, de acordo com sua classificão, este é um
+                    método de gestão de estoque que categoriza os itens com base em seu valor financeiro e importância
+                    para o negócio.</p>
+                <h2>O que Significa cada classificação:</h2>
+                <br>
+                <br>
+                <img src="image8.png" class= "img-medium"alt="Curva ABC">
+                <br>
+                <br>
+                <li class="justified-text"><strong>Curva A:</strong> São produtos de alto giro com vendas diárias
+                    significativas. Portanto, é crucial manter uma quantidade mais substancial desses produtos em estoque.</li>
+                <li class="justified-text"><strong>Curva B:</strong> Similar à Categoria A, esses produtos têm demanda
+                    diária, porém apresentam um giro de estoque um pouco menor.</li>
+                <li class="justified-text"><strong>Curva C:</strong> Inclui os produtos com baixo giro de estoque e
+                    compras esporádicas. </li>
+                <li class="justified-text"><strong>Curva D:</strong> Para estabelecimentos com estoque mais amplo, a
+                    Categoria D pode ser relevante. Abrange medicamentos e produtos vendidos por encomenda, representando uma parcela menor
+                    nas vendas do estabelecimento.</li>
+
+
+                <h2>Percentual de representação</h2>
+                <p class="justified-text"> Será onde o comprador, ira informar qual a % de representação do estoque, em que cada classificação sera levado em consideração para o calculo dos produtos pela curva ABC.
+                    Neste exemplo da imagem, a sugestão inicial de compra para cada curva será a seguinte:</p>
+            
+                <li class="justified-text"><strong>Curva A:</strong> 0% até 65%, ou seja, 65% dos produtos.</li>
+                <li class="justified-text"><strong>Curva B:</strong> 66% até 70%, ou seja, 5% dos produtos.</li>
+                <li class="justified-text"><strong>Curva C:</strong> 71% até 97%, ou seja, 26% dos produtos.</li>
+                <li class="justified-text"><strong>Curva D:</strong> 98% até 100%, ou seja, 2% dos produtos.</li>
+
+                <p class="justified-text"> <strong> Observação:</strong> O responsável pelas compras, devera se atentar a diversos fatores, que influenciam em um pedido de compras, pricipalmente a logística dos fornecedores, que podem variar de região para região, na composição da curva ABC, tendo assim um pedido mais preciso e correto. </p>
+                
+                    <h2>Estoque para X Dias</h2>
+                
+               
+                <p class="justified-text">Define a projeção de estoque para cada produto, classificando-o de acordo com
+                    sua relevância e
+                    estabelecendo um período de cobertura.
+                <p class="justified-text">O sistema utiliza os dados de vendas do período informado, para calcular a
+                    demanda de cada produto. Com base neste cálculo e no período de cobertura definido pelo usuário, o sistema ajustará
+                    a quantidade ideal de estoque a ser mantida de acordo com os dias informados, garantindo assim a disponibilidade dos produtos para
+                    atender à demanda prevista.</p>
+
+                <h2>Margem de segurança</h2>
+             
+                <p class="justified-text">Essa funcionalidade permitirá que o usuário, estabeleça um percentual adicional de
+                    estoque para cada produto, visando garantir a disponibilidade do item em caso de aumento inesperado na demanda. Ao definir uma
+                    margem de segurança, você estará criando um estoque extra, que atuará como uma proteção contra
+                    possíveis flutuações nas vendas.</p>
+                <p class="justified-text"><strong>Exemplo:</strong> Se o sistema sugerir a compra de 100 unidades de um
+                    determinado produto e o usuário configurar uma margem de segurança de 1.15, o sistema automaticamente calculará e adicionará 15
+                    unidades extras ao pedido (15%). Dessa forma, você terá 115 unidades em estoque, o
+                    que pode ser suficiente para atender a uma demanda maior do que a prevista inicialmente.</p>
+
+                <h2>Atualizar para 1</h2>
+                
+                <p class="justified-text">O sistema atualiza para 1 unidade a compra de algum item que teve venda dentro
+                    dos dias informados.
+                </p>
+                <p class="justified-text"><strong>Exemplo:</strong> O item que teve venda dentro de 36 dias da
+                    classificação C e D o sistema
+                    irá atualizar para comprar 1 unidade do item.</p>
+                <p class="justified-text"><strong>Esta opção é recomendada para utilizar somente nas curvas C e
+                        D.</strong></p>
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Grupos
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>A aba "Grupos" tem como objetivo principal filtrar e selecionar os produtos que farão parte de um
+                    novo pedido, de forma a otimizar o processo de criação e garantir que apenas os itens desejados
+                    sejam incluídos.</p>
+                <br>
+                <br>
+                <img src="image22.png" class="img-medium" alt="Grupos">
+                <br>
+                <br>
+                <p class="justified-text">Ao acessar essa aba, o usuário encontra uma lista de critérios de
+                    classificação dos produtos em seu cadastro, como:
+                </p>
+                <li class="justified-text"><strong>Grupo de departamentos:</strong> Agrupa os produtos por áreas
+                    específicas da empresa, como medicamentos, perfumaria e etc. sendo este, responsável por uma uma classificação macro nos produtos</li>
+                <li class="justified-text"><strong>Departamentos:</strong> Subdivide os grupos de departamentos em categorias mais específicas (genéricos, Similar, eticos, fraldas, leites, etc...).
+                </li>
+                <li class="justified-text"><strong>Famílias:</strong> Resposável por uma subclassificação além de agrupar os  produtos com características semelhantes, como medicamentos para dor, produtos de higiene pessoal, etc...</li>
+                <li class="justified-text"><strong>Locação:</strong> Indica a localizaçao de um determinado item em seu estoque (prateleiras, refrigerados, armario de controlados, etc...).</li>
+                <li class="justified-text"><strong>Laboratórios:</strong> Indica o fabricante do produto.</li>
+                <li class="justified-text"><strong>Classificação Tributária:</strong> Refere-se à classificação fiscal do produto para fins de tributação (ICMS, ST, ISENTO, ISS).</li>
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Memória
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p class="justified-text">A memorização de filtros foi incluída no sistema para facilitar a geração de pedidos frequentes, como os pedidos semanais de genéricos, éticos, similares, ou até mesmo pedidos de produtos não medicamentos que podem ser executados quinzenalmente, conforme a rotina de cada estabelecimento.</p>
+                <br> 
+                <br>
+                <img src="image5.png" class= "img-medium" alt="Memória">
+                <br>
+                <br>
+
+                <li class="justified-text"><strong>Memorizar o filtro:</strong> Para que o sistema gere um modelo com base no filtro executado, para que otimize os proximos pedidos, o usuário podera renomear esta memorizaçao a fim de facilitar sua localização (ex.: "Pedido semanal para genéricos").</li>
+                <li class="justified-text"><strong>Criar pedido:</strong> Selecione o modelo memorizado anteriorme para gerar um novo com base nos filtros deste modelo memorizado
+                </li>
+                <li class="justified-text"><strong>Excluir modelo:</strong> Permite a exclusão de um modelo memorizado.</li>
+
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Visualizando e analisando o pedido gerado</h4>
+                <ul class="mostra-esconde hidden-text">
+
+                    <p class="justified-text">Nesta tela temos o pedido gerado pelo sistema, através do método utilizado na configuração anterior. 
+                        <li>Serão exibidos os itens de acordo com as informações processadas. Note que cada item possui diversos dados que devem ser analisados pelo comprador. Cada coluna da tela mostra uma determinada informação, que poderá ser utilizada para a análise do pedido gerado.</li> 
+                        <li>Dentre as mais utilizadas, temos: quantidade, preços, estoque, mínimo (gerado pela curva ABC ou pelo mínimo do cadastro de produtos) e classificação do mesmo quando gerado pela curva ABC.</li>
+                        </p>
+                    
+                    <p>Para que possa analisar os produtos processados pelo sistema, selecione o pedido em questão, pressione enter, para que sejam exibidos na tela.</p>
+                    <br>
+                    <br>
+                    <img src="image1.png" class="img-medium" alt="Visualizando o pedido gerado">
+                    <br>
+                    <br>
+                <p class="justified-text"><strong>Opções no alto da tela que ajudam a compor esta análise:</strong></p>
+                    <ul class="justified-text">
+                        <li><strong>Agrupa:</strong> É possível executar a junção de mais de 1 pedido.</li>
+                        <li><strong>Relatório:</strong> Gera um relatório impresso com as informações processadas.</li>
+                        <li><strong>Vizualiza:</strong> Exibe na tela o relatório, para que possa ser exportado em diversos formatos ou até mesmo impresso.</li>
+                        <li><strong>Estoque:</strong> Atualiza o saldo de estoque dos produtos no pedido selecionado.</li>
+                        <li><strong>Compras:</strong> Exibe as últimas 10 compras do produto selecionado no pedido.</li>
+                        <li><strong>Análise:</strong> Ao selecionar um produto e clicar neste ícone, será exibida a tela de análise do produto.</li>
+                        <li><strong>Molécula:</strong> Caso o item selecionado tenha agrupamento de moléculas, todos serão exibidos na tela.</li>
+                        <li><strong>Cotação:</strong> Executa uma cotação interna no sistema, de acordo com os dados de equivalências cadastrados.</li>
+                        <li><strong>Quebra:</strong> Quebra o pedido por fornecedores, conforme cotação executada.</li>
+                        <li><img src="image40.png"class="img-small" alt="Atalhos pedido de compra">: Exibe uma tela com os atalhos para otimizar comandos no pedido de compra.</li>
+                        <strong>NOTA:</strong>
+                        <p>As colunas na cor <span style="color: rgb(96, 190, 83);"> %R$ Compra, Qtde </span> são campos editáveis</p>
+                    </ul>
+                <p class="justified-text"><strong>Opções no canto esquerdo da tela que ajudam a compor esta análise:</strong></p>
+                <ul class="justified-text">
+                    <li><img src="image41.png"class="img-small" alt="Atalhos pedido de compra canto esquerdo">: Selecione os itens que nao deseja manter neste pedido e clique neste icone.</li>
+                    <li><img src="image42.png"class="img-small" alt="Atalhos pedido de compra canto esquerdo">: Clique neste icone para incluir novos itens, que nao foram gerados pelo filtro utilizado ao criar um novo pedido.</li>
+                    <li><img src="image43.png"class="img-small" alt="Atalhos pedido de compra canto esquerdo">: Para transferir itens de um pedido para outro, clique neste icone.</li>
+                    <li><img src="image44.png"class="img-small" alt="Atalhos pedido de compra canto esquerdo">: Ao clicar neste icone e pressionar em seu teclado seta pra baixo, serão exibidas as operacoes financeiras do produto selecionado.</li>
+                </ul>
+                <ul class="justified-text">
+                <li> No final da tela, serão exibidas legendas para as cores dos produtos, e seus significados.
+                    <br>
+                    <br>
+                        <img src="image45.png"class="img-medium" alt="Atalhos pedido de compra canto esquerdo">
+                    <br>
+                </ul>
+                </p>          
+                
+                
+                    <p class="justified-text"><strong>Obs:</strong>Quando o pedido for gerado pela curva ABC, informações do produto, como posição do item frente à
+                        curva ABC ou seu estoque minimo, aparecem confonrme exemplo a seguir:</p>
+                    <p class="justified-text">
+                        A/192/0.12
+                        representa que o item
+                        está na curva A, na posição 192, representando 0,12%.</p>
+                    <br>
+                    <br> 
+                    <img src="image14.png" class="img-medium" alt="Aba Itens">
+                    <br>
+                    <br>
+                    
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Eletrônico
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p class="justified-text"></p>No sistema, temos integrações com diversas empresas que fornecem produtos, tanto medicamentos quanto não medicamentos. Após a gerar e analisar de um pedido, o usuario poder enviá-lo e receber o retorno dessas empresas, informando se o pedido foi atendido ou não, e em casos de falta de produtos, conseguimos gerar um novo pedido a partir destas faltas.
+
+                    Nesta próxima tela, é possível configurar para gerar um pedido eletrônico no formato de layout previamente solicitado pelos fornecedores.</p>
+                    <br>
+                    <br>
+                    <img src="image21.png" class="img-medium" alt="Aba Eletrônico">
+                    <br>
+                    <br>
+                        <p class="justified-text">Para isso, selecione um fornecedor já existente na lista e dê um duplo clique para associá-lo.</p>
+                    <li class="justified-text"> O sistema ira vicular o código da loja, previamente configurado pelo suporte.
+                    </li>
+                    <li class="justified-text"> O valor total do seu pedido analisando se, ele atende ao valor mínimo estabelecido pelo fornecedor.
+                    </li>
+                    <li class="justified-text">Clique no botão "Gerar Pedido Eletrônico".
+
+                        <p><strong>O sistema irá gerar o pedido de forma automática, e será salvo no caminho informado
+                                na tela.</strong></p>
+
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Diversos
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <p class="justified-text">A aba "Diversos" oferece uma série de opções e filtros que permitem
+                        personalizar e refinar o
+                        processo de geração de pedidos de compra. Essa aba é fundamental para garantir que o pedido
+                        gerado atenda às necessidades específicas da farmácia e seja o mais preciso possível.</p>
+                    <br>
+                    <br>
+                    <img src="image29.png" alt="Apuração">
+                    <br>
+                    <br>
+                    <h2>Como usar:</h2>
+
+                    <li class="justified-text"><strong>Período de apuração do pedido:</strong> Mostra o período em que o
+                        pedido foi gerado,
+                        podendo ser alterado.</li>
+                    <li class="justified-text"><strong>Pedidos do fornecedor:</strong> Neste campo você consegue filtrar
+                        o pedido por
+                        fornecedor. Se você
+                        clicar em vendas do ano passado, ele demonstra as vendas dos últimos 30 dias, porém, referente
+                        ao ano
+                        passado.</li>
+                    <li class="justified-text"><strong>Modelo do relatório:</strong> Neste campo você consegue
+                        selecionar os diferentes modelos
+                        de
+                        visualização dos relatórios com produtos do pedido.</li>
+                    <li class="justified-text"><strong>Altera o valor do produto:</strong> Altera o preço de acordo com
+                        a opção selecionada.
+                    </li>
+                    <li class="justified-text"><strong>Importar o arquivo do pedido:</strong> Importa um pedido de
+                        compra de acordo com o
+                        modelo do
+                        sistema.</li>
+                    <li class="justified-text"><strong>Agrupar Moléculas:</strong> Serve para você agrupar produtos em
+                        um mesmo fornecedor. Por
+                        exemplo,
+                        você compra um Anador com o fornecedor X e Y, porém, se você comprar o Anador com o fornecedor
+                        Y, você tem
+                        5% de desconto com eles. Então, se você definir a molécula no cadastro do produto, todos os
+                        Anadores
+                        vinculados vão gerar o pedido para o fornecedor Y.</li>
+                    <li class="justified-text"><strong>Último fornecedor:</strong> Monta o pedido de acordo com o último
+                        fornecedor da última
+                        compra
+                        daquele produto.</li>
+                    <li class="justified-text"><strong>Atualizar datas de movimentação:</strong> Atualiza as datas de
+                        última compra e última
+                        venda na tela
+                        de itens (às vezes é um pedido antigo e você deseja atualizar essas colunas).</li>
+                    <li class="justified-text"><strong>Apresenta curva ABC do cadastro:</strong> Todo dia o sistema
+                        atualiza a curva ABC, mas
+                        nessa opção
+                        você pode selecionar uma que você criou ou a que é feita automaticamente pelo sistema.</li>
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span> Aba Encomendas/Faltas
+                </h3>
+                
+                <ul class="mostra-esconde hidden-text">
+                    <h2>O que é?</h2>
+                    <p>
+                        São os itens lançados no emissor para atender uma demanda específica, divididos em dois tipos de lançamentos:
+                    </p>
+                    <li class="justified-text">
+                        <strong>Encomendas:</strong> Produtos solicitados pelo cliente ou de baixo giro, sem necessidade de manter em estoque constante.
+                    </li>
+                    <li class="justified-text">
+                        <strong>Faltas:</strong> Produtos indisponíveis no estoque ou novos itens que ainda não foram adicionados.
+                    </li>
+                
+                    <h2>No Emissor</h2>
+                    <li class="justified-text">
+                        Para lançar uma falta ou encomenda, consulte o item desejado pressionando F6. Selecione o item e pressione F1 para registrá-lo conforme necessário.
+                    </li>
+                
+                    <br><br>
+                    <img src="image9.png" alt="Encomendas">
+                    <br><br>
+                
+                    <p class="justified-text">
+                        A <strong>opção de Encomendas/Faltas</strong> tem como objetivo principal gerenciar a reposição de produtos em falta no estoque e as encomendas solicitadas pelos clientes. Por meio dela, é possível visualizar, filtrar e realizar ações relacionadas a faltas e encomendas, garantindo a disponibilidade dos produtos para os clientes.
+                    </p>
+                
+                    <h2>Como usar:</h2>
+                    <li class="justified-text">
+                        <strong>Período entre:</strong> Selecione a data para a pesquisa e marque as opções de faltas e encomendas. Também é possível filtrar itens já vinculados a pedidos anteriores, não vinculados, ou ambos.
+                    </li>
+                    <li class="justified-text">
+                        <strong>Clique em "Pesquisar":</strong> Todas as faltas e encomendas no período selecionado serão exibidas.
+                    </li>
+                    <li class="justified-text">
+                        Clique em <strong>Transferir itens para o pedido</strong> para adicionar os produtos desejados à sua lista de pedidos.
+                    </li>
+                
+                    <br><br>
+                    <img src="image19.png" alt="Encomendas">
+                    <br><br>
+                </ul>
+                
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span> Aba Análise de Risco
+                </h3>
+                
+                <ul class="mostra-esconde hidden-text">
+                    <p class="justified-text">
+                        Esta seção da ferramenta tem como objetivo ajudar a identificar produtos que podem gerar prejuízos para a empresa. Por meio de uma análise detalhada, o sistema identifica itens que estão parados no estoque por muito tempo, com pouca saída ou que representam um investimento financeiro alto e com baixo retorno.
+                    </p>
+                
+                    <br><br>
+                    <img src="image11.png" alt="Análise de Risco">
+                    <br><br>
+                
+                    <h2>Como usar:</h2>
+                    <li class="justified-text">
+                        <strong>Identificação de Produtos com Alerta:</strong> Com base no histórico de movimentação, o sistema analisa vendas, estoque atual e outros dados para identificar produtos que represantam cautela ou prejuízos.
+                    </li>
+                    <li class="justified-text">
+                        <strong>Cálculo do Risco:</strong> Para cada produto de risco identificado, o sistema calcula o valor potencial de prejuízo financeiro caso não seja vendido.
+                    </li>
+                    <li class="justified-text">
+                        <strong>Visualização dos Resultados:</strong> Os produtos de risco são exibidos em uma lista com informações detalhadas, incluindo o valor estimado de prejuízo e os itens que requerem cautela, permitindo ao comprador analisar se deve adquirir os produtos.
+                    </li>
+                </ul>
+                
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Estoque de Lojas
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <div class="image-container">
+                        <img src="image13.png" alt="Estoque de Lojas">
+                        <img src="image39.png" alt="Estoque de Lojas">
+                    </div>
+
+                    <h2>Como usar:</h2>
+
+                    <p class="justified-text">Essa aba serve como um centro de controle para visualizar e analisar o
+                        estoque de diversas lojas
+                        de forma integrada, facilitando a tomada de decisões sobre compras e transferências de produtos.
+                    </p>
+                    <li class="justified-text"><strong>Visualizar o Estoque: </strong> Tenha uma visão clara da
+                        quantidade de cada produto
+                        disponível em cada loja, facilitando a identificação de produtos em falta ou com excesso de
+                        estoque.</li>
+                    <li class="justified-text"><strong>Customizar seus Pedidos:</strong> Ajuste as quantidades de cada
+                        produto de acordo com a
+                        demanda real de cada loja, garantindo que você não peça produtos em excesso nem deixe faltar
+                        itens importantes.</li>
+                    <li class="justified-text"><strong>Excluir Produtos:</strong> Remova facilmente produtos do seu
+                        pedido, caso necessário,
+                        simplesmente digitando "0" na quantidade ajustada.</li>
+                    <li class="justified-text"><strong>Exportar seus Dados:</strong> Gere o relatório em formato CSV.
+                    </li>
+
+
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Faltas Crônicas
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <br>
+                    <br>
+                    <img src="image28.png" alt="Faltas Crônicas">
+                    <br>
+                    <br>
+                    <p class="justified-text">Esta aba foi desenvolvida para auxiliar na gestão de produtos que, apesar
+                        de terem sido pedidos a
+                        um fornecedor, não foram entregues no prazo esperado. Ao identificar essas "faltas crônicas", a
+                        ferramenta permite que você direcione sua demanda para outros fornecedores, garantindo a
+                        continuidade do seu estoque e evitando rupturas.</p>
+
+                    <h2>Como usar:</h2>
+
+                    <li class="justified-text"><strong>Identificação de Faltas:</strong> O sistema monitora os pedidos
+                        realizados e identifica
+                        aqueles produtos que não foram entregues pelos fornecedores.</li>
+                    <li class="justified-text"><strong>Classificação como "Faltas Crônicas":</strong> Os produtos que
+                        apresentam um histórico
+                        de não entrega são classificados como "faltas crônicas" e destacados na aba.</li>
+                    <li class="justified-text"><strong>Geração de Novos Pedidos:</strong> Com base na lista de "faltas
+                        crônicas", você pode
+                        gerar novos pedidos para outros fornecedores, garantindo a reposição dos produtos em falta.</li>
+
+
+
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Performance
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <br>
+                    <br>
+                    <img src="image26.png" alt="Performance">
+                    <br>
+                    <br>
+                    <p class="justified-text">A aba "Performance" acompanha de perto o desempenho financeiro dos
+                        diferentes grupos de produtos
+                        ou departamentos da sua empresa. Com ela, você pode:</p>
+                    <li class="justified-text"><strong>Visualizar as Vendas e Compras:</strong> Acompanhe o valor CMV (Custo da mercadoria vendida) e das
+                        compras realizadas em cada grupo, permitindo identificar os produtos e departamentos que geram
+                        mais receita e os que demandam maior investimento.</li>
+                    <li class="justified-text"><strong>Comparar Períodos:</strong> Compare os resultados de diferentes
+                        meses para identificar
+                        tendências de crescimento ou queda nas vendas e compras, além de identificar possíveis
+                        sazonalidades.</li>
+                    <li class="justified-text"><strong>Avaliar a Rentabilidade:</strong>Através do cálculo do CMV e do
+                        percentual de compras,
+                        você pode avaliar a rentabilidade de cada grupo e identificar oportunidades de otimização.</li>
+                    <li class="justified-text"><strong>Tomar Decisões Estratégicas:</strong>As informações apresentadas
+                        na aba permitem tomar
+                        decisões mais assertivas sobre a alocação de recursos, a definição de metas de vendas e a
+                        otimização do mix de produtos.</li>
+
+                    <p class="justified-text"><strong>OBS:</strong>CMV (Custo da Mercadoria Vendida): Nesta tela, o
+                        sistema traz o CMV de
+                        acordo com o agrupamento selecionado,
+                        listando por departamento. Ele traz o valor das suas vendas e compras dentro de 3 meses,
+                        auxiliando na hora
+                        de enxergar se você está sobrecarregando seu estoque (comprando mais) ou se vai ter uma possível
+                        falta de
+                        produtos (vendendo mais do que compra).</p>
+                    <p class="justified-text"><strong>Exemplo:</strong></p>
+                    <br>
+                    <br>
+                    <img src="image6.png" class="img-medium" alt="Performance">
+                    <br>
+                    <br>
+                    <p class="justified-text">Neste caso, eu comprei 25,68 de anticoncepcionais e vendi 25,87,
+                        representando 99,27% sobre as
+                        vendas. A
+                        conta é 25,87 / 25,68 * 100 = 99,2655, arredondando fica 99,27%</p>
+
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Tabloide
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <br>
+                    <br>
+                    <img src="image12.png" alt="Tabloide">
+                    <br>
+                    <br>
+                    <p class="justified-text">A aba "Tablóide" aproveita as promoções especiais e otimiza suas compras.
+                        Ao selecionar um
+                        tablóide, você adiciona automaticamente ao seu pedido um conjunto de produtos com condições
+                        especiaisde preço.</p>
+                    <h2>Como usar:</h2>
+                    <li class="justified-text"><strong>Identifique as Promoções:</strong> Navegue pela lista de
+                        tablóides disponíveis para
+                        encontrar a promoção que deseja.</li>
+                    <li class="justified-text"><strong>Selecione o Tablóide:</strong> Clique no tablóide desejado para
+                        adicioná-lo ao seu
+                        pedido.</li>
+                    <li class="justified-text"><strong>Verifique os Detalhes:</strong> Revise os produtos incluídos no
+                        pedido e as condições da
+                        promoção.</li>
+                    <li class="justified-text"><strong>Personalize o Pedido (opcional):</strong> Se necessário, ajuste
+                        as quantidades ou exclua
+                        produtos do pedido.</li>
+
+
+                </ul>
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Contas a Pagar
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <br>
+                    <br>
+                    <img src="image24.png" alt="Contas a Pagar">
+                    <br>
+                    <br>
+                    <p class="justified-text">A principal função dessa aba é fornecer ao usuário uma visão clara e
+                        atualizada do orçamento
+                        disponível para realizar novas compras. Ao consultar essa aba, o responsável pela compra pode:
+                    </p>
+                    <li class="justified-text"><strong>Verificar o saldo disponível:</strong> Saber exatamente quanto
+                        dinheiro pode ser
+                        utilizado para adquirir novos produtos.</li>
+                    <li class="justified-text"><strong>Planejar as compras:</strong> Definir as prioridades e
+                        quantidades a serem compradas com
+                        base no orçamento disponível.</li>
+                    <li class="justified-text"><strong>Evitar ultrapassar o limite de gastos:</strong> Garantir que as
+                        compras estejam
+                        alinhadas com o orçamento pré-estabelecido.</li>
+
+                </ul>
+
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>Aba Pedir na Loja
+                </h3>
+                <ul class="mostra-esconde hidden-text">
+                    <br>
+                    <br>
+
+                    <img src="image16.png" alt="Pedir na Loja">
+                    <br>
+                    <br>
+                    <p class="justified-text">Nesse tópico é possível fazer um pedido em lojas integradas que possuem
+                        produtos sobrando no
+                        estoque, e podem ser enviados para outra farmacia.</p>
+
+                    <h2>Como usar:</h2>
+
+                    <li class="justified-text"><strong>Seleção da Loja:</strong>O usuário escolhe a loja para a qual
+                        deseja realizar o pedido.
+                    </li>
+                    <li class="justified-text"><strong>Busca e Adição de Produtos:</strong>O usuário busca os produtos
+                        desejados e os adiciona
+                        à lista de pedidos, definindo a quantidade desejada.</li>
+                    <li class="justified-text"><strong>Verificação de Estoque:</strong>O sistema consulta o estoque da
+                        loja destino e informa a
+                        quantidade disponível para cada produto.</li>
+                    <li class="justified-text"><strong>Geração da Nota Provisória:</strong>O usuário pode gerar uma nota
+                        provisória para
+                        revisar o pedido antes de enviá-lo.</li>
+                    <li class="justified-text"><strong>Envio do Pedido:</strong> Ao confirmar o pedido, as informações
+                        são enviadas para a loja
+                        destino, iniciando o processo de compra e entrega.</li>
+
+                </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Naturezas de Saída</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Cadastro de Naturezas de Saída</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é o natureza de saída?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+            <p>É uma operação fiscal que define se a nota emitida recolhe ou não impostos, movimenta ou não estoque
+                e
+                financeiro.</p>
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Procedimentos para cadastrar naturezas de saída:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>No Sistema:</p>
+
+                <li>Clique no campo descrição, informe um nome para a natureza.</li>
+                <li>Informe se envolve itens (S/N), se será à prazo ou à vista (S/N), CFOP para dentro e fora do estado,
+                    se
+                    movimenta estoque (S/N), se gera custo médio (S/N) e o tipo: Transferência(T), Compra(C), Outros(O).
+                </li>
+                <li>Tecle ENTER e será salvo automaticamente pelo sistema.</li>
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Como alterar os dados de uma natureza de saída?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>Selecione a natureza e clique em <img src="help_natsaida01.png" class="img-small"> e será exibida a
+                    seguinte tela:</p>
+                <img src="help_natsaida02.png" alt="Exemplo de tela de alteração">
+
+                <p>Faça as alterações e clique em salvar ou pressione F10.</p>
+                <p><strong>Obs.:</strong> Se a natureza possuir alguma movimentação, os campos que estiverem em CINZA
+                    não
+                    poderão ser alterados.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível excluir uma natureza de saída?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+
+                <p>Sim, mas deve-se atentar aos seguintes detalhes:</p>
+                <p>Se existirem movimentações fiscais vinculadas a esta natureza, a exclusão não será permitida.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos do cadastro de naturezas de saída:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="help_natsaida03.png" alt="Tela de cadastro">
+
+                <li><strong>Cód:</strong> Gerado automaticamente pelo sistema.</li>
+                <li><strong>Descrição:</strong> Nome da natureza.</li>
+                <li><strong>Itens(S/N):</strong> Informe se a natureza possui itens.</li>
+                <li><strong>À Prazo(S/N):</strong> Informe se a natureza será à prazo.</li>
+                <li><strong>À Vista(S/N):</strong> Informe se a natureza será à vista.</li>
+                <li><strong>CFOP Dentro:</strong> Informe o CFOP correspondente à operação fiscal para dentro do estado.
+                </li>
+                <li><strong>CFOP Fora:</strong> Informe o CFOP correspondente à operação fiscal para fora do estado.
+                </li>
+                <li><strong>Estoque(S/N):</strong> Informe se a natureza movimenta estoque.</li>
+                <li><strong>Tipo:</strong> Tipo de natureza (T - Transferência, C - Compra, O - Outros, etc.).</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas Bancárias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Contas Bancárias</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que são contas bancárias?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+            <p>São todas as contas que a empresa possui, para movimentações financeiras.</p>
+            <p>Exemplos de contas: Caixa, Cofre, Conta bancárias.</p>
+            <p>Aperte no topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar uma conta bancária?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p><strong>No sistema:</strong></p>
+
+                <li>Informe a descrição da conta, se ela é conta bancária e se ela está ativa. O código deixe em branco,
+                    pois o sistema gera automaticamente, tecle ENTER até a próxima linha para salvar.</li>
+
+                <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Como alterar os dados da conta bancária?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Selecione a conta, faça as alterações e tecle ENTER até a próxima linha para salvar.</p>
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>É possível excluir a conta bancária?
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <p>Sim, mas deve-se atentar aos seguintes detalhes:</p>
+                <li>Se existirem movimentações vinculadas a esta conta, a exclusão não será permitida.</li>
+            </ul>
+
+
+
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>Descrição dos campos:
+            </h3>
+            <ul class="mostra-esconde hidden-text">
+                <img src="contas_bancarias01.PNG" alt="Tela de cadastro de contas bancárias">
+                <li><strong>Código:</strong> Gerado automaticamente pelo sistema.</li>
+                <li><strong>Descrição:</strong> Coloque a descrição da sua conta.</li>
+                <li><strong>Conta bancária:</strong> Selecione se for conta bancária.</li>
+                <li><strong>Ativa:</strong> Selecione se estiver ativa.</li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>

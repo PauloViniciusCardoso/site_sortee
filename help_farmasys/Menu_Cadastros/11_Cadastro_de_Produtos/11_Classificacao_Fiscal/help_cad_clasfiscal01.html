@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação Fiscal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Classificação Fiscal</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é classificação fiscal?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p>É o conjunto de operações que envolve o NCM (Nomenclatura Comum do Mercosul) e a situação tributária do produto. Aperte no topico que deseja para conhecer a funcionalidade de cada opção.</p>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar uma classificação fiscal?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <strong>No sistema:</strong>
+        
+            <li>Selecione a linha que está em branco, preencha com os dados pertinentes à classificação fiscal e tecle ENTER até a próxima linha para salvar.</li>
+        
+        <p><strong>OBS.:</strong> As informações sobre cada campo estão no final da página.</p>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Como alterar os dados de uma classificação fiscal?</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        
+            <li>Selecione a classificação fiscal, faça as alterações desejadas e tecle ENTER até a próxima linha para salvar.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>É possível excluir a classificação fiscal?</h3>
+            <ul class="mostra-esconde hidden-text">
+    
+            <li>Sim, mas deve-se atentar aos seguintes detalhes:</li>
+            <li>Se existirem produtos vinculados a esta classificação fiscal, a exclusão não será permitida.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Descrição dos campos de classificação fiscal:</h3>
+            <ul class="mostra-esconde hidden-text">
+        
+        <img src="help_cad_clasfiscal01.png" alt="Tela de Cadastro de Classificação Fiscal">
+        
+            <li><strong>Código:</strong> Gerado automaticamente pelo sistema.</li>
+            <li><strong>C.S.T.:</strong> Informe a razão social do convênio.</li>
+            <li><strong>NCM:</strong> Informe o NCM do produto (notas fiscais de medicamentos vêm com NCM, verifique se o NCM está correto).</li>
+            <li><strong>Obs:</strong> Informe se tiver alguma observação referente ao NCM.</li>
+            <li><strong>GrupoNFe:</strong> Informe o grupo NFe ao qual pertence o NCM (Medicamento / Outros).</li>
+            <li><strong>Código TIPI:</strong> Informe o código TIPI do NCM.</li>
+        </ul>
+    </div>
+</body>
+
+</html>

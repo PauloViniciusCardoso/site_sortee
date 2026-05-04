@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Médicos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Cadastro de Médicos</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que são médicos?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p>É o profissional autorizado pelo estado para exercer a Medicina. Se ocupa da saúde humana e/ou animal, prevenindo, diagnosticando, tratando e curando as doenças.[cite: 4]</p>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Qual o procedimento para cadastrar médicos?</h3>
+            <ul class="mostra-esconde hidden-text">
+        <strong>No sistema:</strong>
+            <li>Clique em novo e informe o CRM, nome, especialidade, cidade, UF, CR.[cite: 4]</li>
+            <li><strong>OBS.:</strong> as informações sobre cada campo, estão no final da página.[cite: 4]</li>
+        </ul>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Como alterar os dados de um médico?</h3>
+            <ul class="mostra-esconde hidden-text">
+            <li>Digite o nome do médico e tecle ENTER, faça as alterações e tecle ENTER até a proxíma linha para salvar.[cite: 4]</li>
+        </ul>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>É possível excluir um cadastro de um médico?</h3>
+            <ul class="mostra-esconde hidden-text">
+            <li>Sim, mas deve-se atentar aos seguintes detalhes:[cite: 4]</li>
+            <li>Se tiver receitas associadas a esse médico, a exclusão não será permitida.[cite: 4]</li>
+        </ul>
+         
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Descrição dos campos:</h3>
+            <ul class="mostra-esconde hidden-text">
+        <img src="help_medicos.png" alt="Tela de Cadastro de Médicos">
+            <li><strong>CRM:</strong> Informe o numero da carteira de identidade médica.[cite: 4]</li>
+            <li><strong>Nome:</strong> Informe o nome do médico.[cite: 4]</li>
+            <li><strong>Especialidade:</strong> Informe a especialidade do médico. Exemplo: Clínico geral.[cite: 4]</li>
+            <li><strong>Cidade:</strong> Informe a cidade do médico.[cite: 4]</li>
+            <li><strong>UF:</strong> Informe o estado do médico.[cite: 4]</li>
+            <li><strong>CR:</strong> Informe 1- Médicos 2- Veterinario 3- Ondonto 4- Médicos estrangeiros.[cite: 4]</li>
+        </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>

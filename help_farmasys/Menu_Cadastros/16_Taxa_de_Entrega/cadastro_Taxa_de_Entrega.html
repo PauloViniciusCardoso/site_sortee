@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxa de Entrega</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Taxa de Entrega</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é uma taxa de entrega?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+        <p>É um valor cobrado pela farmacia para disponibilizar a entrega de mercadorias na residencia de seus clientes. Aperte no topico que deseja para conhecer a funcionalidade de cada opção.
+        </p>
+
+        <h3 class="clique hover-title">
+            <span class="seta seta-direita">+</span>Procedimentos para cadastrar taxa de entrega:</h3>
+            <ul class="mostra-esconde hidden-text">
+        <strong>No sistema:</strong>
+        
+            <li>Clique em Cadastro/Alteração</li>
+            <li>Preencha os campos com as informaçoes da taxa de entrega</li>
+            <li>clique em salvar</li>
+            </ul>
+       
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Descrição dos campos Cadastro/Alteração:</h3>
+            <ul class="mostra-esconde hidden-text">
+        <img src="image2.png" alt="Cadastro/Alteração">
+        <li><strong>Código:</strong> Campo exibido como "NOVO" para indicar a criação de uma nova taxa.</li>
+        <li><strong>Data de início:</strong> Campo para inserir a data de início da validade da taxa.</li>
+        <li><strong>Ativo:</strong> Checkbox para indicar se a taxa está ativa.</li>
+        <li><strong>Tipo:</strong> 1 - Normal 2 - Selecionável na PV (Pré Venda)</li>
+        <li><strong>Localidade:</strong> Campo para inserir a local onde a taxa será aplicada.</li>
+        <li><strong>Valido para:</strong> Marque os dias que a taxa funcionará.</li>
+        <li><strong>Limite de valores:</strong> Informe condições de valor da entrega. Ex: compras até 30 reais será
+            cobrado 5 reais de taxa. </li>
+        <li><strong>Botão Salvar:</strong> Botão para salvar as informações inseridas e configurar a nova taxa de
+            entrega.</li>
+        </ul>
+
+        <h3 class="clique">
+            <span class="seta seta-direita">+</span>Taxas cadastradas</h3>
+            <ul class="mostra-esconde hidden-text">
+        <p>Nessa tela é apresentada as taxas cadastradas na aba <strong>Cadasto/alteração</strong>.</p>
+        <img src="image1.png" alt="Taxas Cadastradas">
+    </ul>
+
+       
+    </div>
+</body>
+
+</html>

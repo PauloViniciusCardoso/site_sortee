@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota fiscal de saida</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../script.js" defer></script>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" bgproperties="fixed">
+
+    <header>
+        <h5>Nota fiscal de saida</h5>
+    </header>
+
+    <div class="container">
+
+        <div id="dynamicContent">
+
+            <H3 class="header-title">O que é Nota fiscal de saida?
+                <div class="search-container">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Buscar no manual...">
+                </div>
+            </H3>
+
+        <p>A nota fiscal de saída é um documento fiscal obrigatório que comprova a venda de medicamentos, produtos farmacêuticos e outros itens comercializados pela farmácia. Ela registra todas as informações relevantes sobre a transação, como os produtos vendidos, os valores, os impostos e os dados do comprador.</p>
+        
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>1º Passo</h3>
+                <ul class="mostra-esconde hidden-text">
+            <p>Para poder criar uma nota fiscal, clique em novo. <img src="Novo.png" class="img-small" alt="Novo"> </p>
+            
+            <p>Após preencher os dados iniciais, acesse a tela de valores e pressione a tecla Enter duas vezes. Essa ação irá preencher automaticamente os campos "Modelo" e "Série" com as informações padrão do sistema. Em seguida, selecione a natureza da operação. As opções mais comuns incluem:
+
+             <li>Devolução de venda para cliente: Utilizada quando o cliente devolve um produto.</li>
+             <li>Devolução de mercadoria para fornecedor: Empregada para retornar produtos ao fornecedor.</li>
+             <li>Nota fiscal de perda: Emitida em caso de perda ou extravio de mercadorias.</li>
+             <li>Cobertura de cupom fiscal: Utilizada para emitir uma nota fiscal que complementa um cupom fiscal.</li>
+             <p>"É importante escolher a natureza da operação correta para que os cálculos dos impostos e as demais informações da nota fiscal sejam gerados de forma precisa."</p>
+            
+            <img src="Valores.png" class="img-medium" alt="Valores">
+              </ul>
+              
+              <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>2º Passo</h3>
+                <ul class="mostra-esconde hidden-text">
+              <p>Em seguida, informe o Destinatário da nota. Para isso, utilize a ferramenta de busca para localizar o cliente, convênio, fornecedor ou loja desejado. É fundamental que o destinatário já esteja cadastrado no sistema para que a nota fiscal seja emitida corretamente.</p>
+           
+            <img src="destinatario.png" class="img-medium" alt="destinatario">
+            
+        </ul>
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>3º Passo</h3>
+                <ul class="mostra-esconde hidden-text">
+                <p>Nesta tela, você pode importar os produtos que farão parte da sua nota fiscal. Para facilitar a seleção dos itens, o sistema oferece diversos filtros de busca:</p>
+
+                <li><strong>Produtos vendidos em determinado período:</strong> Ideal para devoluções de venda ou cobertura de cupons, permitindo localizar rapidamente os itens comercializados em um intervalo de tempo específico.</li>
+                <li><strong>Produtos de entrada por fornecedor:</strong> Utilizado para devoluções de compras, facilitando a identificação dos produtos adquiridos de um determinado fornecedor.</li>
+                <li><strong>Produtos de convênio:</strong> Perfeito para o fechamento mensal de convênios, permitindo importar todos os produtos vendidos para um convênio específico.</li>
+                <li><strong>Estoque atual:</strong> Importa todos os produtos disponíveis em estoque, útil para notas fiscais que envolvem a venda de todo o estoque da farmácia.</li>
+                
+                <img src="importar.png" class="img-medium" alt="importar">
+            </ul>
+
+            <h3 class="clique hover-title">
+                <span class="seta seta-direita">+</span>4º Passo</h3>
+                <ul class="mostra-esconde hidden-text">
+                <li>Na aba de itens, é possível realizar o lançamento manual de produtos. Utilize a aba 'Lançamento de Produto' para adicionar itens à nota fiscal de forma individual.</p>
+                <img src="lançamento do produto.png" class="img-medium" alt="lançamento do produto">
+                <li>A lista de produtos exibe todos os itens que farão parte da nota fiscal.</p>
+                <img src="lista de produtos.png" class="img-medium" alt="lista de produtos">
+            </ul>
+            
+                <h3 class="clique hover-title">
+                    <span class="seta seta-direita">+</span>5º Passo</h3>
+                    <ul class="mostra-esconde hidden-text">
+                <li>Após clicar em <img src="salvar.png" class="img-small" alt="salvar">, o sistema oferecerá a opção de realizar o check-in dos produtos para confirmar a sua integridade e quantidade. Essa etapa é opcional. Ao confirmar a nota fiscal, ela será incluída na fila de transmissão.</li>
+
+                <li>Para transmitir a nota fiscal, acesse a tela de <img src="icone consulta.png" class="img-small" alt="consulta">. Selecione a nota desejada e clique em 'Transmitir NF-e'. Em seguida, escolha a transportadora responsável pela entrega da mercadoria. Na maioria dos casos, a opção 'Própria' pode ser selecionada. Confirme a sua escolha.</li>
+                <img src="transmitir nota.png" class="img-medium" alt="transmitir">
+                
+                <li>Você será direcionado para a tela de transmissão da nota fiscal. Clique em 'Emitir NF-e' e confirme a operação.</li>   
+                <img src="emissor nfe.png" class="img-medium" alt="emissor">
+                <li>Se esta for a sua primeira emissão de nota fiscal, o sistema solicitará a confirmação do seu certificado digital. Clique em 'Sim' para prosseguir.</li>
+                <img src="certificado digital.png" class="img-medium" alt="certificado digital">
+                <li>A emissão da nota fiscal está concluída. Verifique o status no sistema:
+                <img src="autorizada.png" class="img-medium" alt="autorizada">
+                <li>Autorizada: A nota está pronta para ser impressa ou enviada eletronicamente.
+                <li>Rejeitada: Houve algum erro na emissão. Consulte o detalhamento do motivo da rejeição e corrija as informações antes de tentar emitir novamente.A nota será emitida, confira o status que estará como autorizada ou rejeitada, caso esteja rejeitada é preciso verificar o problema e corrigir, e se estiver autorizada, voce pode imprimir a nota.</li>
+            </ul>
+        </ul>
+            
+           
