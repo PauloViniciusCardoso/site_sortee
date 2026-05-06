@@ -9,3 +9,22 @@ const updateHeader = () => {
 };
 updateHeader();
 window.addEventListener('scroll', updateHeader, { passive: true });
+
+// Lógica para abrir/fechar o Chat Suporte (Widget)
+const chatWidgetBtn = document.getElementById('chatWidgetBtn');
+const chatWidgetContainer = document.getElementById('chatWidgetContainer');
+
+if (chatWidgetBtn && chatWidgetContainer) {
+  // Verifica no cache se o widget foi deixado aberto na página anterior
+  if (localStorage.getItem('chatWidgetOpen') === 'true') {
+    chatWidgetContainer.classList.add('open');
+  }
+
+  chatWidgetBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    chatWidgetContainer.classList.toggle('open');
+    
+    // Salva o estado atual no cache para as próximas páginas
+    localStorage.setItem('chatWidgetOpen', chatWidgetContainer.classList.contains('open'));
+  });
+}

@@ -544,6 +544,47 @@ footer {
    z-index: 60
 }
 
+/* Ajustes para quando usar a tag button */
+button.support-float {
+   border: none;
+   cursor: pointer;
+   font-family: inherit;
+   font-size: 1rem;
+}
+
+/* Estilo do container do widget de suporte */
+.chat-widget-container {
+   position: fixed;
+   right: 22px;
+   bottom: 140px; /* Distância acima do botão */
+   width: 380px;
+   height: 600px;
+   max-width: 90vw;
+   max-height: 75vh;
+   background: #fff;
+   border-radius: 16px;
+   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.15);
+   z-index: 1000;
+   overflow: hidden;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(20px);
+   transition: all 0.3s ease;
+}
+
+.chat-widget-container.open {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+}
+
+.chat-widget-container iframe {
+   width: 100%;
+   height: 100%;
+   border: none;
+   display: block;
+}
+
 .reveal {
    opacity: 0;
    transform: translateY(22px);
