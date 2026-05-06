@@ -531,6 +531,19 @@ footer {
    z-index: 60
 }
 
+.support-float {
+   position: fixed;
+   right: 22px;
+   bottom: 84px;
+   background: linear-gradient(135deg, var(--orange), var(--orange2));
+   color: #1b1006;
+   border-radius: 999px;
+   padding: 15px 19px;
+   font-weight: 900;
+   box-shadow: 0 18px 40px rgba(255, 122, 0, .35);
+   z-index: 60
+}
+
 .reveal {
    opacity: 0;
    transform: translateY(22px);
