@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('content-frame').src = 'http://farmacia.sortee.com.br/versao_f.htm';
         });
 
+    // Toggle do menu responsivo mobile
+    const menuBtn = document.getElementById('menuBtn');
+    const navMenu = document.getElementById('navMenu');
+    if (menuBtn && navMenu) {
+        menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
+    }
+
     // Função para alternar a visibilidade dos submenus
 function toggleMenu(event) {
     const target = event.target.closest('.menu-pai');
@@ -97,6 +104,11 @@ function toggleMenu(event) {
         link.addEventListener('click', function (event) {
             // Carregar conteúdo no iframe
             loadContent(event);
+
+            // Fecha o menu no modo mobile ao selecionar um link (para liberar espaço na tela)
+            if (navMenu && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+            }
 
             // Evitar que o clique no link também feche o submenu
             event.stopPropagation();

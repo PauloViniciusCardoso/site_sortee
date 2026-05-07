@@ -6,16 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manual do Sistema Farmasys</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para o menu responsivo mobile */
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+        }
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: linear-gradient(135deg, #ff7a00, #ff9d2e);
+            color: #1b1006;
+            border-radius: 12px;
+            padding: 10px 13px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(255, 122, 0, .30);
+        }
+        @media(max-width:900px) {
+            .menu-btn {
+                display: block;
+            }
+            #navMenu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 10px;
+                right: 10px;
+                background: #fff;
+                border: 1px solid #e8e9ee;
+                border-radius: 12px;
+                padding: 15px;
+                box-shadow: 0 30px 70px rgba(0, 0, 0, .14);
+                z-index: 1000;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+            #navMenu.open {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div class="container-fluid" id="content-container">
         <div class="row">
             <div class="col">
-                <header>
-                    <img id="logo-sortee" src="logo_sortee.png" class="img-small" alt="Logo">
+                <header class="topbar">
+                    <div class="nav-header">
+                        <img id="logo-sortee" src="logo_sortee.png" class="img-small" alt="Logo">
+                        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰ Menu</button>
+                    </div>
                 </header>
-                <nav>
+                <nav id="navMenu">
                     <div tabindex="0" class="menu-pai menu-principal">Módulo Cadastros</div>
                     <div class="menufilho">
                         <div tabindex="0" tabindex="0" class="menu-pai">Convenio</div>
