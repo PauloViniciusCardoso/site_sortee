@@ -612,8 +612,9 @@ button.support-float {
    nav {
       position: absolute;
       top: 78px;
-      left: 4%;
       right: 4%;
+      left: auto;
+      min-width: 250px;
       display: none;
       flex-direction: column;
       background: #fff;
