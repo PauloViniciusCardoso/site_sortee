@@ -284,12 +284,33 @@
 
   <button class="support-float" id="chatWidgetBtn" aria-label="Acessar Chat de Suporte">Chat Suporte</button>
 
-  <div id="chatWidgetContainer" class="chat-widget-container">
-       
-    <iframe
-      src="https://acessozap3.cloudeficaz.com.br/widget?website_token=eDCg3tXqd5VFe6DiqfssLj8D"
-      frameborder="0"></iframe>
-  </div>
+ <script>
+    window.chatwootSettings = {
+      position: "right",
+      type: "standard",
+      launcherTitle: "Fale conosco no chat"
+    };
+
+    (function(d, t) {
+      var BASE_URL = "https://acessozap3.cloudeficaz.com.br";
+      var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      g.src = BASE_URL + "/packs/js/sdk.js";
+      g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function () {
+        window.chatwootSDK.run({
+          websiteToken: 'eDCg3tXqd5VFe6DiqfssLj8D',
+          baseUrl: BASE_URL
+        });
+      };
+    })(document, "script");
+
+    // abre o widget automaticamente
+    window.addEventListener('chatwoot:ready', function () {
+      window.$chatwoot.toggle('open');
+    });
+  </script>
 
   <a class="whatsapp-float" href="https://wa.me/5535997082497?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Sortee."
     target="_blank" rel="noopener" aria-label="Falar no WhatsApp">WhatsApp</a>
