@@ -661,12 +661,73 @@ button.support-float {
 
 
 /* Ajustes versão com imagens locais */
+.brand {
+  perspective: 800px;
+}
+
+.brand {
+  perspective: 800px;
+}
+
 .brand-logo {
-   width: 170px;
-   height: 72px;
+   width: 64px;
+   height: 64px;
    object-fit: contain;
    display: block;
-   filter: drop-shadow(0 12px 22px rgba(255, 122, 0, .15))
+   filter: drop-shadow(0 12px 22px rgba(255, 122, 0, .15));
+   animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+   transform-style: preserve-3d;
+}
+
+@keyframes piao {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  55% {
+    /* gira rápido no início, muitas voltas */
+    transform: rotateY(1080deg) rotateX(0deg);
+  }
+  75% {
+    /* desacelera e começa a cambalear, como perdendo o equilíbrio */
+    transform: rotateY(1260deg) rotateX(6deg);
+  }
+  85% {
+    transform: rotateY(1350deg) rotateX(-4deg);
+  }
+  95% {
+    /* quase parado, últimos tremores */
+    transform: rotateY(1395deg) rotateX(2deg);
+  }
+  100% {
+    /* para e reinicia o ciclo */
+    transform: rotateY(1440deg) rotateX(0deg);
+  }
+}
+.hero-panel--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  perspective: 800px;
+}
+
+.hero-panel-logo {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 22px rgba(255, 122, 0, .25));
+  animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  transform-style: preserve-3d;
+}
+
+@media(max-width:900px) {
+  .hero-panel--logo {
+    min-height: 260px;
+  }
+  .hero-panel-logo {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .footer-logo {
