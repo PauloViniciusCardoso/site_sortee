@@ -662,11 +662,7 @@ button.support-float {
 
 /* Ajustes versão com imagens locais */
 .brand {
-  perspective: 800px;
-}
-
-.brand {
-  perspective: 800px;
+   perspective: 800px;
 }
 
 .brand-logo {
@@ -675,8 +671,13 @@ button.support-float {
    object-fit: contain;
    display: block;
    filter: drop-shadow(0 12px 22px rgba(255, 122, 0, .15));
-   animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+   /* animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; */
    transform-style: preserve-3d;
+   transition: transform 0.3s ease;
+}
+
+.brand:hover .brand-logo {
+   animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
 @keyframes piao {
@@ -703,6 +704,7 @@ button.support-float {
     transform: rotateY(1440deg) rotateX(0deg);
   }
 }
+
 .hero-panel--logo {
   display: flex;
   align-items: center;
