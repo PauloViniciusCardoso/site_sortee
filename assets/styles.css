@@ -1241,3 +1241,21 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Ajuste da imagem principal na seção Hero */
+.hero-grid img {
+   width: 100%;
+   height: auto;           
+   max-width: 500px;    
+   display: block;
+   margin: 0 auto;    
+   object-fit: contain;    
+}
+
+/* Ajustes específicos para a versão mobile */
+@media(max-width: 900px) {
+   .hero-grid img {
+      max-width: 80%;      
+      margin-top: 20px;  
+   }
+}
