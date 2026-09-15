@@ -556,7 +556,8 @@ button.support-float {
 .chat-widget-container {
    position: fixed;
    right: 22px;
-   bottom: 140px; /* Distância acima do botão */
+   bottom: 140px;
+   /* Distância acima do botão */
    width: 380px;
    height: 600px;
    max-width: 90vw;
@@ -681,55 +682,61 @@ button.support-float {
 }
 
 @keyframes piao {
-  0% {
-    transform: rotateY(0deg) rotateX(0deg);
-  }
-  55% {
-    /* gira rápido no início, muitas voltas */
-    transform: rotateY(1080deg) rotateX(0deg);
-  }
-  75% {
-    /* desacelera e começa a cambalear, como perdendo o equilíbrio */
-    transform: rotateY(1260deg) rotateX(6deg);
-  }
-  85% {
-    transform: rotateY(1350deg) rotateX(-4deg);
-  }
-  95% {
-    /* quase parado, últimos tremores */
-    transform: rotateY(1395deg) rotateX(2deg);
-  }
-  100% {
-    /* para e reinicia o ciclo */
-    transform: rotateY(1440deg) rotateX(0deg);
-  }
+   0% {
+      transform: rotateY(0deg) rotateX(0deg);
+   }
+
+   55% {
+      /* gira rápido no início, muitas voltas */
+      transform: rotateY(1080deg) rotateX(0deg);
+   }
+
+   75% {
+      /* desacelera e começa a cambalear, como perdendo o equilíbrio */
+      transform: rotateY(1260deg) rotateX(6deg);
+   }
+
+   85% {
+      transform: rotateY(1350deg) rotateX(-4deg);
+   }
+
+   95% {
+      /* quase parado, últimos tremores */
+      transform: rotateY(1395deg) rotateX(2deg);
+   }
+
+   100% {
+      /* para e reinicia o ciclo */
+      transform: rotateY(1440deg) rotateX(0deg);
+   }
 }
 
 .hero-panel--logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 360px;
-  perspective: 800px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 360px;
+   perspective: 800px;
 }
 
 .hero-panel-logo {
-  width: 220px;
-  height: 220px;
-  object-fit: contain;
-  filter: drop-shadow(0 12px 22px rgba(255, 122, 0, .25));
-  animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  transform-style: preserve-3d;
+   width: 220px;
+   height: 220px;
+   object-fit: contain;
+   filter: drop-shadow(0 12px 22px rgba(255, 122, 0, .25));
+   animation: piao 5s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+   transform-style: preserve-3d;
 }
 
 @media(max-width:900px) {
-  .hero-panel--logo {
-    min-height: 260px;
-  }
-  .hero-panel-logo {
-    width: 160px;
-    height: 160px;
-  }
+   .hero-panel--logo {
+      min-height: 260px;
+   }
+
+   .hero-panel-logo {
+      width: 160px;
+      height: 160px;
+   }
 }
 
 .footer-logo {
@@ -1090,173 +1097,177 @@ footer {
       border-color: rgba(255, 122, 0, .25)
    }
 }
+
 /* QUEM SOMOS - BLOCO VISUAL */
 
 .grid-quem {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   margin-top: 30px;
 }
 
 .card-quem {
-  background: #fff;
-  border: 1px solid rgba(255,122,0,0.15);
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-  transition: 0.3s;
+   background: #fff;
+   border: 1px solid rgba(255, 122, 0, 0.15);
+   border-radius: 18px;
+   padding: 22px;
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+   transition: 0.3s;
 }
 
 .card-quem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(255,122,0,0.15);
+   transform: translateY(-5px);
+   box-shadow: 0 20px 50px rgba(255, 122, 0, 0.15);
 }
 
 .card-quem h3 {
-  margin-bottom: 10px;
-  color: var(--orange);
+   margin-bottom: 10px;
+   color: var(--orange);
 }
 
 .card-quem p {
-  color: #555;
+   color: #555;
 }
 
 /* BLOCO DE DESTAQUE */
 .card-quem.destaque {
-  background: linear-gradient(135deg, var(--white), var(--orange2));
-  color: #111;
+   background: linear-gradient(135deg, var(--white), var(--orange2));
+   color: #111;
 }
 
 .card-quem.destaque h3,
 .card-quem.destaque p {
-  color: #111;
+   color: #111;
 }
 
 /* ANIMAÇÃO */
 .reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s ease;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: 0.6s ease;
 }
 
 .reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+   opacity: 1;
+   transform: translateY(0);
 }
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
-  .grid-quem {
-    grid-template-columns: 1fr;
-  }
+   .grid-quem {
+      grid-template-columns: 1fr;
+   }
 }
+
 .estados-carousel {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 18px;
-  overflow: hidden;
-  border-radius: 16px;
-  background: rgba(255,255,255,0.35);
-  border: 1px solid rgba(255,255,255,0.45);
-  padding: 10px;
-  box-sizing: border-box;
+   width: 100%;
+   max-width: 100%;
+   margin-top: 18px;
+   overflow: hidden;
+   border-radius: 16px;
+   background: rgba(255, 255, 255, 0.35);
+   border: 1px solid rgba(255, 255, 255, 0.45);
+   padding: 10px;
+   box-sizing: border-box;
 }
 
 .estados-track {
-  display: flex;
-  gap: 10px;
-  width: fit-content;
-  max-width: none;
-  animation: estadosScroll 24s linear infinite;
-  will-change: transform;
+   display: flex;
+   gap: 10px;
+   width: fit-content;
+   max-width: none;
+   animation: estadosScroll 24s linear infinite;
+   will-change: transform;
 }
 
 .estados-track span {
-  flex: 0 0 auto;
-  white-space: nowrap;
-  background: #fff;
-  color: #c85f00;
-  font-weight: 800;
-  font-size: 12px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+   flex: 0 0 auto;
+   white-space: nowrap;
+   background: #fff;
+   color: #c85f00;
+   font-weight: 800;
+   font-size: 12px;
+   padding: 7px 12px;
+   border-radius: 999px;
+   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .card-quem.destaque {
-  overflow: hidden;
+   overflow: hidden;
 }
 
 .estados-carousel:hover .estados-track {
-  animation-play-state: paused;
+   animation-play-state: paused;
 }
 
 @keyframes estadosScroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+   from {
+      transform: translateX(0);
+   }
+
+   to {
+      transform: translateX(-50%);
+   }
 }
+
 /* PARTE DA PAGINA PARECEIROS
 
 /* GRID INTEGRAÇÕES */
 .grid-integracoes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 30px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   margin-top: 30px;
 }
 
 /* CARD */
 .card-int {
-  background: #fff;
-  border: 1px solid rgba(255,122,0,0.15);
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-  transition: 0.3s;
+   background: #fff;
+   border: 1px solid rgba(255, 122, 0, 0.15);
+   border-radius: 18px;
+   padding: 22px;
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+   transition: 0.3s;
 }
 
 .card-int:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px rgba(255,122,0,0.15);
+   transform: translateY(-5px);
+   box-shadow: 0 20px 50px rgba(255, 122, 0, 0.15);
 }
 
 .card-int h3 {
-  color: var(--orange);
+   color: var(--orange);
 }
 
 /* DESTAQUE */
 .card-int.destaque {
-  background: linear-gradient(135deg, var(--orange), var(--orange2));
-  color: #111;
+   background: linear-gradient(135deg, var(--orange), var(--orange2));
+   color: #111;
 }
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
-  .grid-integracoes {
-    grid-template-columns: 1fr;
-  }
+   .grid-integracoes {
+      grid-template-columns: 1fr;
+   }
 }
 
 /* Ajuste da imagem principal na seção Hero */
 .hero-grid img {
    width: 100%;
-   height: auto;           
-   max-width: 500px;    
+   height: auto;
+   max-width: 500px;
    display: block;
-   margin: 0 auto;    
-   object-fit: contain;    
+   margin: 0 auto;
+   object-fit: contain;
 }
 
 /* Ajustes específicos para a versão mobile */
 @media(max-width: 900px) {
    .hero-grid img {
-      max-width: 80%;      
-      margin-top: 20px;  
+      max-width: 80%;
+      margin-top: 20px;
    }
 }
 
@@ -1278,13 +1289,15 @@ footer {
 
 /* Imagem Central flutuante */
 .hero-image-center {
-   width: 48%; /* Aumentamos um pouco para dar destaque */
+   width: 48%;
+   /* Aumentamos um pouco para dar destaque */
    height: auto;
    position: relative;
-   z-index: 10; /* Z-index maior para ficar na FRENTE da órbita */
+   z-index: 10;
+   /* Z-index maior para ficar na FRENTE da órbita */
    object-fit: contain;
    animation: floatCenter 6s ease-in-out infinite;
-   filter: drop-shadow(0 10px 20px rgba(255, 122, 0, 0.25)) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+   filter: drop-shadow(0 10px 20px rgba(255, 122, 0, 0.25)) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 /* Anéis de Órbita (FICAM ATRÁS) */
@@ -1292,7 +1305,8 @@ footer {
    position: absolute;
    border-radius: 50%;
    border: 1px dashed rgba(255, 122, 0, 0.3);
-   z-index: 5; /* Z-index menor para ficar por ATRÁS da imagem */
+   z-index: 5;
+   /* Z-index menor para ficar por ATRÁS da imagem */
 }
 
 /* Tamanho e direção de cada anel */
@@ -1303,33 +1317,45 @@ footer {
 }
 
 .outer-ring {
-   width: 100%; /* O anel ocupa todo o espaço do container para não se esconder atrás da imagem */
+   width: 100%;
+   /* O anel ocupa todo o espaço do container para não se esconder atrás da imagem */
    height: 100%;
-   animation: spinLeft 45s linear infinite; /* Tempo ajustado para 45s para um giro mais suave com mais ícones */
+   animation: spinLeft 45s linear infinite;
+   /* Tempo ajustado para 45s para um giro mais suave com mais ícones */
 }
 
 /* Posicionamento do item na roda */
 .orbit-item {
    position: absolute;
-   top: 0; left: 0;
-   width: 100%; height: 100%;
-   pointer-events: none; 
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
 }
 
 /* Contra-giro: Anula a rotação do anel para o ícone não girar solto */
 .orbit-counter-spin {
    position: absolute;
-   top: -24px; left: calc(50% - 24px);
-   width: 48px; height: 48px;
+   top: -24px;
+   left: calc(50% - 24px);
+   width: 48px;
+   height: 48px;
    pointer-events: none;
 }
 
-.inner-ring .orbit-counter-spin { animation: spinLeft 25s linear infinite; }
-.outer-ring .orbit-counter-spin { animation: spinRight 45s linear infinite; }
+.inner-ring .orbit-counter-spin {
+   animation: spinLeft 25s linear infinite;
+}
+
+.outer-ring .orbit-counter-spin {
+   animation: spinRight 45s linear infinite;
+}
 
 /* Mantém o ícone perfeitamente reto usando o offset de graus */
 .icon-upright {
-   width: 100%; height: 100%;
+   width: 100%;
+   height: 100%;
    background: #fff;
    border-radius: 50%;
    box-shadow: 0 6px 16px rgba(255, 122, 0, 0.15);
@@ -1339,8 +1365,8 @@ footer {
    align-items: center;
    justify-content: center;
    transition: transform 0.3s;
-   pointer-events: auto; 
-   cursor: pointer; 
+   pointer-events: auto;
+   cursor: pointer;
 }
 
 /* Efeito Hover: Pausa toda a animação quando o mouse passa por cima */
@@ -1349,31 +1375,60 @@ footer {
 .hero-orbit-wrapper:hover .orbit-counter-spin {
    animation-play-state: paused;
 }
+
 .hero-orbit-wrapper:hover .icon-upright {
    box-shadow: 0 8px 20px rgba(255, 122, 0, 0.3);
 }
 
 .icon-upright img {
-   width: 100%; height: 100%;
+   width: 100%;
+   height: 100%;
    object-fit: contain;
 }
 
 /* --- KEYFRAMES DE ROTAÇÃO E FLUTUAÇÃO --- */
-@keyframes spinRight { 100% { transform: rotate(360deg); } }
-@keyframes spinLeft  { 100% { transform: rotate(-360deg); } }
+@keyframes spinRight {
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes spinLeft {
+   100% {
+      transform: rotate(-360deg);
+   }
+}
+
 @keyframes floatCenter {
-   0%, 100% { transform: translateY(0); }
-   50%      { transform: translateY(-12px); }
+
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(-12px);
+   }
 }
 
 /* Responsividade para Celulares */
 @media (max-width: 900px) {
    .hero-orbit-wrapper {
-      max-width: 340px; 
-      margin-top: 50px;
+      width: 90%;
+      max-width: 360px;
+      aspect-ratio: 1 / 1;
+      margin: 40px auto;
    }
+
    .orbit-counter-spin {
-      width: 40px; height: 40px;
-      top: -20px; left: calc(50% - 20px);
+      width: 36px;
+      height: 36px;
+      top: -18px;
+      left: calc(50% - 18px);
    }
+
+   .hero-image-center {
+      width: 55%;
+   }
+
 }
