@@ -1259,3 +1259,121 @@ footer {
       margin-top: 20px;  
    }
 }
+
+/* =========================================================
+   ANIMAÇÃO DE ÓRBITA - ECOSSISTEMA SORTEE
+   ========================================================= */
+
+/* Container geral (mantém o aspecto quadrado) */
+.hero-orbit-wrapper {
+   position: relative;
+   width: 100%;
+   max-width: 500px;
+   aspect-ratio: 1;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Imagem Central flutuante */
+.hero-image-center {
+   width: 48%; /* Aumentamos um pouco para dar destaque */
+   height: auto;
+   position: relative;
+   z-index: 10; /* Z-index maior para ficar na FRENTE da órbita */
+   object-fit: contain;
+   animation: floatCenter 6s ease-in-out infinite;
+   filter: drop-shadow(0 10px 20px rgba(255, 122, 0, 0.25)) drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Anéis de Órbita (FICAM ATRÁS) */
+.orbit-ring {
+   position: absolute;
+   border-radius: 50%;
+   border: 1px dashed rgba(255, 122, 0, 0.3);
+   z-index: 5; /* Z-index menor para ficar por ATRÁS da imagem */
+}
+
+/* Tamanho e direção de cada anel */
+.inner-ring {
+   width: 68%;
+   height: 68%;
+   animation: spinRight 25s linear infinite;
+}
+
+.outer-ring {
+   width: 100%; /* O anel ocupa todo o espaço do container para não se esconder atrás da imagem */
+   height: 100%;
+   animation: spinLeft 45s linear infinite; /* Tempo ajustado para 45s para um giro mais suave com mais ícones */
+}
+
+/* Posicionamento do item na roda */
+.orbit-item {
+   position: absolute;
+   top: 0; left: 0;
+   width: 100%; height: 100%;
+   pointer-events: none; 
+}
+
+/* Contra-giro: Anula a rotação do anel para o ícone não girar solto */
+.orbit-counter-spin {
+   position: absolute;
+   top: -24px; left: calc(50% - 24px);
+   width: 48px; height: 48px;
+   pointer-events: none;
+}
+
+.inner-ring .orbit-counter-spin { animation: spinLeft 25s linear infinite; }
+.outer-ring .orbit-counter-spin { animation: spinRight 45s linear infinite; }
+
+/* Mantém o ícone perfeitamente reto usando o offset de graus */
+.icon-upright {
+   width: 100%; height: 100%;
+   background: #fff;
+   border-radius: 50%;
+   box-shadow: 0 6px 16px rgba(255, 122, 0, 0.15);
+   border: 1px solid rgba(255, 122, 0, 0.2);
+   padding: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: transform 0.3s;
+   pointer-events: auto; 
+   cursor: pointer; 
+}
+
+/* Efeito Hover: Pausa toda a animação quando o mouse passa por cima */
+.hero-orbit-wrapper:hover .inner-ring,
+.hero-orbit-wrapper:hover .outer-ring,
+.hero-orbit-wrapper:hover .orbit-counter-spin {
+   animation-play-state: paused;
+}
+.hero-orbit-wrapper:hover .icon-upright {
+   box-shadow: 0 8px 20px rgba(255, 122, 0, 0.3);
+}
+
+.icon-upright img {
+   width: 100%; height: 100%;
+   object-fit: contain;
+}
+
+/* --- KEYFRAMES DE ROTAÇÃO E FLUTUAÇÃO --- */
+@keyframes spinRight { 100% { transform: rotate(360deg); } }
+@keyframes spinLeft  { 100% { transform: rotate(-360deg); } }
+@keyframes floatCenter {
+   0%, 100% { transform: translateY(0); }
+   50%      { transform: translateY(-12px); }
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 900px) {
+   .hero-orbit-wrapper {
+      max-width: 340px; 
+      margin-top: 50px;
+   }
+   .orbit-counter-spin {
+      width: 40px; height: 40px;
+      top: -20px; left: calc(50% - 20px);
+   }
+}
