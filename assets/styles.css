@@ -1354,19 +1354,19 @@ footer {
 
 /* Mantém o ícone perfeitamente reto usando o offset de graus */
 .icon-upright {
-   width: 100%;
+   width: 100%; 
    height: 100%;
    background: #fff;
    border-radius: 50%;
    box-shadow: 0 6px 16px rgba(255, 122, 0, 0.15);
    border: 1px solid rgba(255, 122, 0, 0.2);
-   padding: 8px;
    display: flex;
    align-items: center;
    justify-content: center;
    transition: transform 0.3s;
    pointer-events: auto;
    cursor: pointer;
+   overflow: hidden;
 }
 
 /* Efeito Hover: Pausa toda a animação quando o mouse passa por cima */
@@ -1381,9 +1381,10 @@ footer {
 }
 
 .icon-upright img {
-   width: 100%;
-   height: 100%;
-   object-fit: contain;
+   width: 65%;
+   height: 65%;
+   object-fit: contain; 
+   display: block;
 }
 
 /* --- KEYFRAMES DE ROTAÇÃO E FLUTUAÇÃO --- */
