@@ -1369,6 +1369,12 @@ footer {
    overflow: hidden;
 }
 
+.icon-upright:focus-visible {
+   outline: 3px solid var(--orange);
+   outline-offset: 4px;
+   box-shadow: 0 8px 20px rgba(255, 122, 0, 0.4);
+}
+
 /* Efeito Hover: Pausa toda a animação quando o mouse passa por cima */
 .hero-orbit-wrapper:hover .inner-ring,
 .hero-orbit-wrapper:hover .outer-ring,
