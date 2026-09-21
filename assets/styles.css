@@ -106,8 +106,34 @@ nav a {
 .hero {
    position: relative;
    overflow: hidden;
-   background: radial-gradient(circle at 80% 20%, rgba(255, 122, 0, .22), transparent 33%), linear-gradient(135deg, #fff 0%, #fff4e9 100%);
-   padding: 95px 0 70px
+   padding: 95px 0 70px;
+   /* Gradiente esbranquiçado sobrepondo a imagem para manter a legibilidade */
+   background: 
+      linear-gradient(90deg, rgba(255, 250, 245, 0.96) 0%, rgba(255, 250, 245, 0.88) 45%, rgba(255, 226, 192, 0.6) 100%),
+      url('../IMAGENS/brand/inicial.png') no-repeat center center;
+   background-size: cover;
+}
+
+.hero:before {
+   content: "";
+   position: absolute;
+   inset: auto -8% -45% -8%;
+   height: 430px;
+   background: linear-gradient(135deg, var(--orange), var(--orange2));
+   border-radius: 50% 50% 0 0;
+   opacity: 0.05;
+   pointer-events: none;
+}
+
+/* Ajuste do fundo no celular para o texto não ficar embaralhado */
+@media(max-width:900px) {
+   .hero {
+      padding-top: 55px;
+      background: 
+         linear-gradient(180deg, rgba(255, 250, 245, 0.95) 0%, rgba(255, 244, 233, 0.88) 100%),
+         url('../IMAGENS/brand/inicial.png') no-repeat center center;
+      background-size: cover;
+   }
 }
 
 .hero:before {
@@ -1289,8 +1315,7 @@ footer {
 
 /* Imagem Central flutuante */
 .hero-image-center {
-   width: 48%;
-   /* Aumentamos um pouco para dar destaque */
+   width: 75%; /* Valor aumentado de 48% para 75% para dar bastante destaque */
    height: auto;
    position: relative;
    z-index: 10;
@@ -1438,4 +1463,20 @@ footer {
       width: 55%;
    }
 
+}
+
+.hero {
+   /* O !important garante que o fundo antigo seja ignorado */
+   background: 
+      linear-gradient(90deg, rgba(255, 250, 245, 0.96) 0%, rgba(255, 250, 245, 0.85) 45%, rgba(255, 226, 192, 0.5) 100%),
+      url('../IMAGENS/brand/inicial.png') center center / cover no-repeat !important;
+}
+
+/* Ajuste para telas menores (celular) */
+@media(max-width: 900px) {
+   .hero {
+      background: 
+         linear-gradient(180deg, rgba(255, 250, 245, 0.96) 0%, rgba(255, 244, 233, 0.85) 100%),
+         url('../IMAGENS/brand/inicial.png') center center / cover no-repeat !important;
+   }
 }
