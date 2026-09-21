@@ -100,6 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const video = document.getElementById('intro-video');
 
   if (videoContainer && video) {
+    // Adicione esta linha para acelerar o vídeo
+    // 1.5 = 50% mais rápido | 2.0 = dobro da velocidade
+    video.playbackRate = 1.5;
+
     // Quando o vídeo terminar de tocar, ele esconde a tela devagar
     video.addEventListener('ended', () => {
       videoContainer.classList.add('hidden');
@@ -116,12 +120,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Fallback de segurança (Backup)
-    // Se o vídeo travar ou for muito longo, força o sumiço após X segundos
-    // Ajuste "8000" para o tempo total em milissegundos do seu logoabertura.mp4 + uma margem.
     setTimeout(() => {
       if (!videoContainer.classList.contains('hidden')) {
         videoContainer.classList.add('hidden');
       }
-    }, 8000);
+    }, 8000); // <- DICA: Considere reduzir este tempo também
   }
 });
