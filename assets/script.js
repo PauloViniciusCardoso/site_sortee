@@ -1,4 +1,4 @@
-const menuBtn=document.getElementById('menuBtn');const navMenu=document.getElementById('navMenu');menuBtn?.addEventListener('click',()=>navMenu.classList.toggle('open'));document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>navMenu.classList.remove('open')));const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.15});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const menuBtn = document.getElementById('menuBtn'); const navMenu = document.getElementById('navMenu'); menuBtn?.addEventListener('click', () => navMenu.classList.toggle('open')); document.querySelectorAll('nav a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open'))); const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target) } }) }, { threshold: .15 }); document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 
 // Efeito do header ao rolar a página
@@ -23,7 +23,7 @@ if (chatWidgetBtn && chatWidgetContainer) {
   chatWidgetBtn.addEventListener('click', (e) => {
     e.preventDefault();
     chatWidgetContainer.classList.toggle('open');
-    
+
     // Salva o estado atual no cache para as próximas páginas
     localStorage.setItem('chatWidgetOpen', chatWidgetContainer.classList.contains('open'));
   });
@@ -86,8 +86,42 @@ if (orbitContainer) {
     anchor.appendChild(img);
     counterSpinDiv.appendChild(anchor);
     orbitItemDiv.appendChild(counterSpinDiv);
-    
+
     // Insere no container final
     orbitContainer.appendChild(orbitItemDiv);
   });
 }
+
+/* =========================================================
+   LÓGICA DO VÍDEO DE ABERTURA
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const videoContainer = document.getElementById('intro-video-container');
+  const video = document.getElementById('intro-video');
+
+  if (videoContainer && video) {
+    // Quando o vídeo terminar de tocar, ele esconde a tela devagar
+    video.addEventListener('ended', () => {
+      videoContainer.classList.add('hidden');
+
+      // Remove o elemento do HTML após a transição de CSS terminar (limpeza)
+      setTimeout(() => {
+        videoContainer.remove();
+      }, 1500);
+    });
+
+    // Fallback: se houver erro ao carregar o arquivo, mostra o site imediatamente
+    video.addEventListener('error', () => {
+      videoContainer.classList.add('hidden');
+    });
+
+    // Fallback de segurança (Backup)
+    // Se o vídeo travar ou for muito longo, força o sumiço após X segundos
+    // Ajuste "8000" para o tempo total em milissegundos do seu logoabertura.mp4 + uma margem.
+    setTimeout(() => {
+      if (!videoContainer.classList.contains('hidden')) {
+        videoContainer.classList.add('hidden');
+      }
+    }, 8000);
+  }
+});
