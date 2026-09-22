@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (videoContainer && video) {
     // Adicione esta linha para acelerar o vídeo
     // 1.5 = 50% mais rápido | 2.0 = dobro da velocidade
-    video.playbackRate = 1.5;
+    video.playbackRate = 2.5;
 
     // Quando o vídeo terminar de tocar, ele esconde a tela devagar
     video.addEventListener('ended', () => {
@@ -124,6 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!videoContainer.classList.contains('hidden')) {
         videoContainer.classList.add('hidden');
       }
-    }, 8000); // <- DICA: Considere reduzir este tempo também
+    }, 5000); // <- DICA: Considere reduzir este tempo também
   }
 });
