@@ -1513,3 +1513,141 @@ footer {
    object-fit: cover;
    /* Faz o vídeo cobrir toda a tela sem perder proporção */
 }
+
+/* =========================================================
+   SEÇÃO DE FEEDBACK DE CLIENTES
+   ========================================================= */
+.cta-card.feedback-container {
+   display: block;
+   padding: 42px 36px;
+}
+
+.feedback-wrapper {
+   width: 100%;
+}
+
+.feedback-header {
+   text-align: center;
+   margin-bottom: 34px;
+}
+
+.feedback-header h2 {
+   margin: 14px 0 0;
+   color: #1b1006;
+   font-size: clamp(1.75rem, 3vw, 2.6rem);
+}
+
+/* Grid: Um ao lado do outro no PC */
+.feedback-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 22px;
+   align-items: stretch;
+}
+
+/* Card individual: Foto ao lado da frase */
+.feedback-item {
+   background: rgba(255, 255, 255, 0.96);
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   border-radius: 22px;
+   padding: 22px;
+   display: flex;
+   align-items: center;
+   gap: 18px;
+   box-shadow: 0 14px 34px rgba(27, 16, 6, 0.12);
+   transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.feedback-item:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 20px 42px rgba(27, 16, 6, 0.18);
+}
+
+/* Foto retangular destacada */
+.feedback-photo {
+   width: 82px;
+   min-width: 82px;
+   height: 115px;
+   border-radius: 14px; 
+   object-fit: cover;
+   object-position: top center;
+   border: 3px solid var(--orange);
+   background: var(--cream);
+   box-shadow: 0 6px 16px rgba(255, 122, 0, 0.25);
+}
+
+/* Texto ao lado da foto */
+.feedback-content {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: left;
+}
+
+.feedback-quote {
+   font-size: 0.94rem;
+   line-height: 1.5;
+   color: var(--dark);
+   font-style: italic;
+   margin: 0 0 10px 0;
+}
+
+.feedback-author {
+   font-size: 0.95rem;
+   font-weight: 800;
+   color: var(--pumpkin-dark);
+   line-height: 1.2;
+}
+
+.feedback-role {
+   font-size: 0.8rem;
+   color: var(--gray);
+   margin-top: 2px;
+}
+
+/* =========================================================
+   RESPONSIVIDADE (TABLETS E CELULARES)
+   ========================================================= */
+/* Notebooks menores e Tablets em modo paisagem */
+@media (max-width: 1080px) {
+   .feedback-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/* Tablets em modo retrato e Celulares */
+@media (max-width: 768px) {
+   .cta-card.feedback-container {
+      padding: 28px 20px;
+   }
+
+   .feedback-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+   }
+
+   .feedback-item {
+      padding: 18px;
+      gap: 14px;
+   }
+
+   .feedback-photo {
+      width: 72px;
+      min-width: 72px;
+      height: 100px;
+      border-radius: 12px;
+   }
+}
+
+/* Celulares com telas muito pequenas */
+@media (max-width: 420px) {
+   .feedback-item {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .feedback-content {
+      text-align: center;
+      align-items: center;
+   }
+}
