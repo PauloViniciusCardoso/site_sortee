@@ -4,16 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light only" />
+  <meta name="supported-color-schemes" content="light" />
   <title>Quem Somos | Sortee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="preconnect" href="https://acessozap3.cloudeficaz.com.br">
   <link rel="preload" href="https://acessozap3.cloudeficaz.com.br/packs/js/sdk.js" as="script">
-
 </head>
 
 <body>
 
-  <header class="topbar">
+  <header class="topbar" id="topo">
     <div class="container nav">
 
       <a class="brand" href="index.html">
@@ -29,124 +34,448 @@
         <a href="index.html#parceiros">Parceiros</a>
         <a href="index.html#PBMs">PBMs</a>
         <a href="index.html#solucoes">Soluções</a>
-       <!-- <a href="help_farmasys/helpfarmasys.html" target="_blank">Tutorial</a> -->
-        <a href="index.html#Contato">Contato</a>
+        <!-- <a href="help_farmasys/helpfarmasys.html" target="_blank">Tutorial</a> -->
+        <a href="index.html#contato" class="nav-cta">Contato</a>
       </nav>
 
     </div>
   </header>
 
-  <section class="section quem-somos">
-    <div class="container">
+  <main>
+    <section class="section quem-somos">
+      <div class="container">
 
-      <div class="section-head">
-        <h1>Quem somos</h1>
-        <p>Tecnologia, experiência e presença nacional para impulsionar o seu negócio.</p>
-      </div>
-
-      <div class="grid-quem">
-
-        <!-- CRESCIMENTO REAL -->
-        <div class="card-quem reveal">
-          <h3>📈 Crescimento real</h3>
-          <p>
-            Redução de custos, otimização de processos e aumento de resultados de forma consistente.
-          </p>
+        <div class="section-head">
+          <span class="eyebrow reveal">Nossa história e propósito</span>
+          <h1 class="reveal delay-1">Quem somos</h1>
+          <p class="reveal delay-2">Tecnologia, experiência e presença nacional para impulsionar o seu negócio.</p>
         </div>
 
-        <!-- ESPECIALISTAS -->
-        <div class="card-quem reveal">
-          <h3>🚀 Especialistas em varejo</h3>
-          <p>
-            A Sortee Desenvolvimento de Sistemas é especializada em soluções tecnológicas para o varejo, com forte
-            atuação em drogarias, supermercados e comércios em geral.
-          </p>
-        </div>
+        <div class="grid-quem">
 
-        <!-- FORÇA FARMACÊUTICO -->
-        <div class="card-quem reveal">
-          <h3>💊 Força no farmacêutico</h3>
-          <p>
-            Integrações com redes, PBMs e ferramentas estratégicas que aumentam a performance e os resultados.
-          </p>
-        </div>
+          <!-- CRESCIMENTO REAL -->
+          <div class="card-quem reveal">
+            <h3>📈 Crescimento real</h3>
+            <p>
+              Redução de custos, otimização de processos e aumento de resultados de forma consistente.
+            </p>
+          </div>
 
-        <!-- GESTÃO -->
-        <div class="card-quem reveal">
-          <h3>⚙️ Gestão completa</h3>
-          <p>
-            Sistemas integrados que conectam vendas, estoque, financeiro, fiscal e automação comercial em uma única
-            plataforma.
-          </p>
-        </div>
+          <!-- ESPECIALISTAS -->
+          <div class="card-quem reveal">
+            <h3>🚀 Especialistas em varejo</h3>
+            <p>
+              A Sortee Desenvolvimento de Sistemas é especializada em soluções tecnológicas para o varejo, com forte
+              atuação em drogarias, supermercados e comércios em geral.
+            </p>
+          </div>
 
-        <!-- PRESENÇA -->
-        <div class="card-quem destaque reveal">
-          <h3>📍 Presença nacional</h3>
+          <!-- FORÇA FARMACÊUTICO -->
+          <div class="card-quem reveal">
+            <h3>💊 Força no farmacêutico</h3>
+            <p>
+              Integrações com redes, PBMs e ferramentas estratégicas que aumentam a performance e os resultados.
+            </p>
+          </div>
 
-          <p>
-            Presente em <strong>17 estados brasileiros</strong>, levando tecnologia e suporte de qualidade para todo o
-            país.
-          </p>
+          <!-- GESTÃO -->
+          <div class="card-quem reveal">
+            <h3>⚙️ Gestão completa</h3>
+            <p>
+              Sistemas integrados que conectam vendas, estoque, financeiro, fiscal e automação comercial em uma única
+              plataforma.
+            </p>
+          </div>
 
-          <div class="estados-carousel">
-            <div class="estados-track">
+          <!-- PRESENÇA -->
+          <div class="card-quem destaque reveal">
+            <h3>📍 Presença nacional</h3>
 
-              <span>AM</span>
-              <span>BA</span>
-              <span>CE</span>
-              <span>DF</span>
-              <span>ES</span>
-              <span>GO</span>
-              <span>MG</span>
-              <span>MS</span>
-              <span>MT</span>
-              <span>PA</span>
-              <span>PE</span>
-              <span>RJ</span>
-              <span>RN</span>
-              <span>RO</span>
-              <span>SE</span>
-              <span>SP</span>
-              <span>TO</span>
+            <p>
+              Presente em <strong>17 estados brasileiros</strong>, levando tecnologia e suporte de qualidade para todo o
+              país.
+            </p>
 
-              <!-- DUPLICADO -->
-              <span>AM</span>
-              <span>BA</span>
-              <span>CE</span>
-              <span>DF</span>
-              <span>ES</span>
-              <span>GO</span>
-              <span>MG</span>
-              <span>MS</span>
-              <span>MT</span>
-              <span>PA</span>
-              <span>PE</span>
-              <span>RJ</span>
-              <span>RN</span>
-              <span>RO</span>
-              <span>SE</span>
-              <span>SP</span>
-              <span>TO</span>
-
+            <div class="estados-carousel">
+              <div class="estados-track">
+                <span>AM</span><span>BA</span><span>CE</span><span>DF</span><span>ES</span><span>GO</span><span>MG</span><span>MS</span><span>MT</span><span>PA</span><span>PE</span><span>RJ</span><span>RN</span><span>RO</span><span>SE</span><span>SP</span><span>TO</span>
+                <!-- DUPLICADO -->
+                <span>AM</span><span>BA</span><span>CE</span><span>DF</span><span>ES</span><span>GO</span><span>MG</span><span>MS</span><span>MT</span><span>PA</span><span>PE</span><span>RJ</span><span>RN</span><span>RO</span><span>SE</span><span>SP</span><span>TO</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- SUPORTE -->
-        <div class="card-quem reveal">
-          <h3>🤝 Suporte próximo</h3>
-          <p>
-            Atendimento especializado, rápido e focado no sucesso do cliente.
-          </p>
+          <!-- SUPORTE -->
+          <div class="card-quem reveal">
+            <h3>🤝 Suporte próximo</h3>
+            <p>
+              Atendimento especializado, rápido e focado no sucesso do cliente.
+            </p>
+          </div>
+
         </div>
 
       </div>
+    </section>
 
+    <!-- BANNER DE TRANSIÇÃO (FOTO DE TODOS JUNTOS) -->
+    <section class="equipe-banner-divider" aria-label="Foto da Equipe Sortee">
+      <div class="equipe-banner-overlay">
+        <div class="container equipe-banner-content reveal">
+          <span class="eyebrow">Time Sortee</span>
+          <h2>Pessoas dedicadas a transformar o varejo todos os dias</h2>
+          <p>Por trás de cada linha de código e de cada atendimento, existe uma equipe inteira comprometida com o crescimento da sua empresa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO NOSSA EQUIPE (ORDEM ALFABÉTICA) -->
+    <section class="section soft" id="nossa-equipe">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">Quem faz acontecer</span>
+          <h2>Nossa Equipe</h2>
+          <p>Conheça os profissionais que constroem, evoluem e dão suporte às soluções da Sortee diariamente.</p>
+        </div>
+
+        <div class="grid-equipe">
+
+          <!-- 1. Adryan -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/adryan.jpg" alt="Adryan" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Adryan</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 2. Andreia -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/andreia.jpg" alt="Andreia" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Andreia</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 3. Aron -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/aron.jpg" alt="Aron" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Aron</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 4. Bruno Costa -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/bruno-costa.jpg" alt="Bruno Costa" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Bruno Costa</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 5. Bruno Lopes -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/bruno-lopes.jpg" alt="Bruno Lopes" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Bruno Lopes</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 6. Carlos -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/carlos.jpg" alt="Carlos" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Carlos</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 7. Carlos Henrique -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/carlos-henrique.jpg" alt="Carlos Henrique" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Carlos Henrique</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 8. Claudinei -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/claudinei.jpg" alt="Claudinei" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Claudinei</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 9. Débora -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/debora.jpg" alt="Débora" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Débora</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 10. Eduardo -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/eduardo.jpg" alt="Eduardo" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Eduardo</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 11. Estevam -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/estevam.jpg" alt="Estevam" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Estevam</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 12. Everton -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/everton.jpg" alt="Everton" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Everton</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 13. Gabriel -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/gabriel.jpg" alt="Gabriel" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Gabriel</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 14. Giovanni -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/giovanni.jpg" alt="Giovanni" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Giovanni</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 15. Guilherme -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/guilherme.jpg" alt="Guilherme" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Guilherme</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 16. Igor -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/igor.jpg" alt="Igor" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Igor</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 17. Jean -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/jean.jpg" alt="Jean" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Jean</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 18. Kaua -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/kaua.jpg" alt="Kaua" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Kaua</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 19. Lucas -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/lucas.jpg" alt="Lucas" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Lucas</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 20. Lucas Ciacci -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/lucas-ciacci.jpg" alt="Lucas Ciacci" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Lucas Ciacci</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 21. Luiz Fernando -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/luiz-fernando.jpg" alt="Luiz Fernando" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Luiz Fernando</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 22. Nicolas -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/nicolas.jpg" alt="Nicolas" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Nicolas</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 23. Paulo -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/paulo.jpg" alt="Paulo" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Paulo</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 24. Rodrigo -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/rodrigo.jpg" alt="Rodrigo" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Rodrigo</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 25. Vilnei -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/vilnei.jpg" alt="Vilnei" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Vilnei</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 26. Vinicius -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/vinicius.jpg" alt="Vinicius" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Vinicius</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 27. Vitória -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/vitoria.jpg" alt="Vitória" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Vitória</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+          <!-- 28. Weliton -->
+          <article class="card-equipe reveal">
+            <div class="equipe-foto-wrap">
+              <img src="IMAGENS/equipe/weliton.jpg" alt="Weliton" loading="lazy" onerror="this.src='IMAGENS/brand/logo_homem.webp'">
+            </div>
+            <div class="equipe-info">
+              <h4>Weliton</h4>
+              <span class="equipe-cargo">Cargo / Setor</span>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#topo"><img class="brand-logo footer-logo"
+            src="IMAGENS/brand/logo_sortee.png" alt="Sortee"></a>
+        <p>Soluções em automação comercial para drogarias, supermercados e varejo.</p>
+      </div>
+      <div>
+        <h4>Endereço</h4>
+        <p>Avenida Santa Luiza, 570<br>Santa Luiza - Varginha/MG</p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Telefone: (35) 3221-9744<br>Plantão: (35) 9230-1717<br>WhatsApp: 5535997082497<br>E-mail:
+          sortee@sortee.com.br</p>
+      </div>
     </div>
-  </section>
+    <div class="container copyright">© 2026 Sortee Desenvolvimento de Sistemas.</div>
+  </footer>
 
-  <!-- WhatsApp -->
+  <!-- WhatsApp / Chatwoot -->
   <script>
     window.chatwootSettings = {
       position: "right",
