@@ -124,6 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!videoContainer.classList.contains('hidden')) {
         videoContainer.classList.add('hidden');
       }
-    }, 5000); // <- DICA: Considere reduzir este tempo também
+    }, 3000); // <- DICA: Considere reduzir este tempo também
   }
 });
