@@ -127,3 +127,132 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000); // <- DICA: Considere reduzir este tempo também
   }
 });
+
+/* =========================================================
+   CARROSSEL VERTICAL DE FEEDBACKS (DE 3 EM 3 CARDS)
+   ========================================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const feedbackGrid = document.querySelector('.feedback-grid');
+  if (!feedbackGrid) return;
+
+  const items = Array.from(feedbackGrid.querySelectorAll('.feedback-item'));
+  const cardsPerSlide = 3;
+
+  // Se houver 3 ou menos cards, não precisa animar
+  if (items.length <= cardsPerSlide) return;
+
+  // Cria a estrutura do carrossel (Viewport + Track)
+  const viewport = document.createElement('div');
+  viewport.className = 'feedback-carousel-viewport';
+
+  const track = document.createElement('div');
+  track.className = 'feedback-carousel-track';
+
+  const slides = [];
+
+  // Agrupa os cards de 3 em 3 dentro de cada .feedback-slide
+  for (let i = 0; i < items.length; i += cardsPerSlide) {
+    const slide = document.createElement('div');
+    slide.className = 'feedback-slide';
+    items.slice(i, i + cardsPerSlide).forEach(card => slide.appendChild(card));
+    track.appendChild(slide);
+    slides.push(slide);
+  }
+
+  // Clona o primeiro grupo de 3 cards no final para fazer o efeito infinito suave
+  const firstClone = slides[0].cloneNode(true);
+  firstClone.setAttribute('aria-hidden', 'true');
+  track.appendChild(firstClone);
+
+  viewport.appendChild(track);
+  feedbackGrid.replaceWith(viewport);
+
+  // Cria os indicadores (bolinhas) abaixo do carrossel
+  const dotsContainer = document.createElement('div');
+  dotsContainer.className = 'feedback-dots';
+  const dots = slides.map((_, idx) => {
+    const dot = document.createElement('button');
+    dot.className = `feedback-dot ${idx === 0 ? 'active' : ''}`;
+    dot.setAttribute('aria-label', `Ver grupo de depoimentos ${idx + 1}`);
+    dot.addEventListener('click', () => {
+      currentIndex = idx;
+      moveToSlide(currentIndex, true);
+      resetTimer();
+    });
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
+
+  viewport.parentElement.appendChild(dotsContainer);
+
+  let currentIndex = 0;
+  let intervalId = null;
+  const slideDuration = 3000; // Tempo parado em cada trio (4.5 segundos)
+
+  const updateViewportHeight = () => {
+    const activeSlide = slides[currentIndex % slides.length];
+    if (activeSlide) {
+      viewport.style.height = `${activeSlide.offsetHeight}px`;
+    }
+  };
+
+  const updateDots = (index) => {
+    const realIndex = index % slides.length;
+    dots.forEach((d, i) => d.classList.toggle('active', i === realIndex));
+  };
+
+  const moveToSlide = (index, animate = true) => {
+    const slideHeight = slides[0].offsetHeight;
+    track.style.transition = animate
+      ? 'transform 0.75s cubic-bezier(0.22, 1, 0.36, 1)'
+      : 'none';
+    track.style.transform = `translateY(-${index * slideHeight}px)`;
+    updateViewportHeight();
+    updateDots(index);
+  };
+
+  const nextSlide = () => {
+    currentIndex++;
+    moveToSlide(currentIndex, true);
+
+    // Se chegou no clone do primeiro slide, reseta silenciosamente para o topo após a transição
+    if (currentIndex === slides.length) {
+      setTimeout(() => {
+        currentIndex = 0;
+        moveToSlide(currentIndex, false);
+      }, 760);
+    }
+  };
+
+  const startTimer = () => {
+    if (!intervalId) {
+      intervalId = setInterval(nextSlide, slideDuration);
+    }
+  };
+
+  const stopTimer = () => {
+    clearInterval(intervalId);
+    intervalId = null;
+  };
+
+  const resetTimer = () => {
+    stopTimer();
+    startTimer();
+  };
+
+  // Pausa ao passar o mouse ou tocar no celular
+  viewport.addEventListener('mouseenter', stopTimer);
+  viewport.addEventListener('mouseleave', startTimer);
+  viewport.addEventListener('touchstart', stopTimer, { passive: true });
+  viewport.addEventListener('touchend', startTimer, { passive: true });
+
+  // Ajusta a altura automaticamente se virar a tela ou redimensionar a janela
+  window.addEventListener('resize', () => {
+    moveToSlide(currentIndex, false);
+  });
+
+  // Inicializa a altura após carregar fontes e imagens
+  setTimeout(updateViewportHeight, 100);
+  window.addEventListener('load', updateViewportHeight);
+  startTimer();
+});

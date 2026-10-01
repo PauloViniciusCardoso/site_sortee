@@ -1518,7 +1518,7 @@ footer {
 }
 
 /* =========================================================
-   SEÇÃO DE FEEDBACK DE CLIENTES
+   SEÇÃO DE FEEDBACK DE CLIENTES (CARROSSEL VERTICAL 3 EM 3)
    ========================================================= */
 .cta-card.feedback-container {
    display: block;
@@ -1527,11 +1527,12 @@ footer {
 
 .feedback-wrapper {
    width: 100%;
+   position: relative;
 }
 
 .feedback-header {
    text-align: center;
-   margin-bottom: 34px;
+   margin-bottom: 24px;
 }
 
 .feedback-header h2 {
@@ -1540,12 +1541,32 @@ footer {
    font-size: clamp(1.75rem, 3vw, 2.6rem);
 }
 
-/* Grid: Um ao lado do outro no PC */
-.feedback-grid {
+/* Janela visível do carrossel vertical */
+.feedback-carousel-viewport {
+   overflow: hidden;
+   width: 100%;
+   position: relative;
+   padding: 12px 6px;
+   margin: -12px -6px;
+}
+
+/* Trilho que sobe e desce */
+.feedback-carousel-track {
+   display: flex;
+   flex-direction: column;
+   transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+   will-change: transform;
+}
+
+/* Cada grupo (slide) contém 3 cards */
+.feedback-slide {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 22px;
    align-items: stretch;
+   width: 100%;
+   flex-shrink: 0;
+   padding: 8px 4px;
 }
 
 /* Card individual: Foto ao lado da frase */
@@ -1557,13 +1578,13 @@ footer {
    display: flex;
    align-items: center;
    gap: 18px;
-   box-shadow: 0 14px 34px rgba(27, 16, 6, 0.12);
+   box-shadow: 0 10px 26px rgba(27, 16, 6, 0.10);
    transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
 .feedback-item:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 20px 42px rgba(27, 16, 6, 0.18);
+   transform: translateY(-4px);
+   box-shadow: 0 16px 34px rgba(27, 16, 6, 0.16);
 }
 
 /* Foto retangular destacada */
@@ -1571,7 +1592,7 @@ footer {
    width: 82px;
    min-width: 82px;
    height: 115px;
-   border-radius: 14px; 
+   border-radius: 14px;
    object-fit: cover;
    object-position: top center;
    border: 3px solid var(--orange);
@@ -1608,41 +1629,60 @@ footer {
    margin-top: 2px;
 }
 
+/* Indicadores (bolinhas) do carrossel */
+.feedback-dots {
+   display: flex;
+   justify-content: center;
+   gap: 8px;
+   margin-top: 18px;
+}
+
+.feedback-dot {
+   width: 10px;
+   height: 10px;
+   border-radius: 999px;
+   border: none;
+   background: rgba(27, 16, 6, 0.25);
+   cursor: pointer;
+   padding: 0;
+   transition: all 0.3s ease;
+}
+
+.feedback-dot.active {
+   height: 10px;
+   width: 28px;
+   background: #fff;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 /* =========================================================
    RESPONSIVIDADE (TABLETS E CELULARES)
    ========================================================= */
-/* Notebooks menores e Tablets em modo paisagem */
 @media (max-width: 1080px) {
-   .feedback-grid {
-      grid-template-columns: repeat(2, 1fr);
+   .feedback-slide {
+      grid-template-columns: 1fr;
+      gap: 14px;
    }
 }
 
-/* Tablets em modo retrato e Celulares */
 @media (max-width: 768px) {
    .cta-card.feedback-container {
       padding: 28px 20px;
    }
 
-   .feedback-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
-   }
-
    .feedback-item {
-      padding: 18px;
+      padding: 16px;
       gap: 14px;
    }
 
    .feedback-photo {
-      width: 72px;
-      min-width: 72px;
-      height: 100px;
+      width: 70px;
+      min-width: 70px;
+      height: 96px;
       border-radius: 12px;
    }
 }
 
-/* Celulares com telas muito pequenas */
 @media (max-width: 420px) {
    .feedback-item {
       flex-direction: column;
