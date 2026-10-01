@@ -13,16 +13,16 @@
    box-sizing: border-box
 }
 
-html {
-   scroll-behavior: smooth
+html,
+body {
+   max-width: 100%;
+   overflow-x: hidden;
 }
 
-body {
-   margin: 0;
-   font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
-   color: var(--dark);
-   background: #fff
+html {
+   scroll-behavior: smooth;
 }
+
 
 a {
    text-decoration: none;
@@ -1343,11 +1343,9 @@ footer {
 }
 
 .outer-ring {
-   width: 100%;
-   /* O anel ocupa todo o espaço do container para não se esconder atrás da imagem */
-   height: 100%;
+   width: 88%;
+   height: 88%;
    animation: spinLeft 45s linear infinite;
-   /* Tempo ajustado para 45s para um giro mais suave com mais ícones */
 }
 
 /* Posicionamento do item na roda */
@@ -1487,14 +1485,11 @@ footer {
    ========================================================= */
 .intro-video-container {
    position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
+   inset: 0;
+   width: 100%;
+   height: 100%;
    background-color: #fffaf5;
-   /* Cor de fundo combinando com o site */
    z-index: 9999;
-   /* Garante que fique por cima de tudo, incluindo o header */
    display: flex;
    align-items: center;
    justify-content: center;
